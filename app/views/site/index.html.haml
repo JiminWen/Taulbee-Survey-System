@@ -1,0 +1,53 @@
+!!!
+%html
+  %head
+    %title Taulbee Survey Data
+    :css
+      .heading{
+      	color:white;
+      	background-color:#500000;
+      	height:200%;
+      	margin:0;
+      	padding:0;
+      	font-size:40px;
+      }
+      
+      .centered{
+      	text-align:center;
+      }
+	
+      .symbol{
+      	display: block;
+      	margin-left: auto;
+      	margin-right: auto;
+      	opacity:0.5;
+      }
+  %body
+    %h1.centered.heading Taulbee Survey
+    - if !flash[:notice].blank?
+      .alert.alert-info
+        = flash[:notice]
+       
+    -# used to select the year for a previously uploaded file
+    %form{:action => site_studentFilterSelection_path}
+      %br/
+      %label Select which year's data you want to work on
+      %select{:name => "yearSelected"}
+        - @spreadsheets.each do |spreadsheet|
+          %option= spreadsheet.name 
+        end
+      %input{:type => "submit", :value => "Select"}/
+    %hr/
+        
+    -# used to upload a new file
+    = form_for @spreadsheet, :remote => true, authenticity_token:true, :id => "submitForm", html: { multipart: true } do |f|
+      = f.label :year
+      %select#queryList{:name => "year"}
+        - (1995..2055).each do |i|
+          %option{:value => i}= i
+      = f.label :attachment
+      = f.file_field :attachment
+      = f.submit "Save", class: "btn btn-primary"
+      
+    %div
+      %img.symbol{:src => "/images/anm_symbol.png"}

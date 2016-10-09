@@ -1,0 +1,63 @@
+!!!
+%html
+  %head
+    %title Taulbee Survey Data
+    :css
+      .heading{
+      	color:white;
+      	background-color:#500000;
+      	height:50px;
+      	margin:0;
+      	padding:0;
+      	font-size:40px;
+      }
+      
+      .centered{
+      	text-align:center;
+      }
+      
+      table, th, td {
+        border: 1px solid black;
+      }
+      
+      th, td {
+        padding: 1px 5px 1px 5px;
+      }
+  %body
+    %h1.centered.heading Taulbee Survey
+    %p
+      %a{:id => "Home", :href => site_index_path}
+        %img{:height => "30", :src => "/images/homepageicon.jpg", :width => "30"}/
+      %a{:id => "Back", :href => site_studentFilterSelection_path}
+        %img{:height => "30", :src => "/images/previous-icon.png", :width => "30"}/
+    %hr/
+    
+    -#table used to display all results
+    %h2 Result
+    - if @count
+      %h3 Count = #{@students.length}
+    %table#students
+      %thead
+        %tr
+        - @attributes.each do |attribute|
+          - if attribute[1] != "count"
+            %th{:align => "left"}= attribute[1]
+      %tbody
+        - if @students != nil
+          - @students.each do |student|
+            %tr
+              - @attributes.each do |attribute|
+                - if attribute[1] != "count"
+                  %td= student.send(attribute[1])
+    
+    -#%img{:align => "center", :height => "250", :src => "/images/table.png", :width => "600"}/
+    
+    
+    
+    %hr/
+%p
+  Download:
+  \#{link_to "CSV.csv", download_path(params.merge(format: 'csv'))}
+  %br
+  %br
+  =link_to "Repeat Query", site_studentFilterSelection_path(:repeat => 1)
