@@ -1,5 +1,5 @@
 require 'csv'
-
+#require 'libmagic-dev'
 class SpreadsheetsController < ApplicationController
   @@val = false
   
@@ -31,7 +31,12 @@ class SpreadsheetsController < ApplicationController
     params_to_pass = spreadsheet_params
     params_to_pass["name"] = params["year"]
     @spreadsheet = Spreadsheet.new(params_to_pass)
-    
+    @message="loading"
+  #  if uploaded_io.cont != "csv"
+   #   @message='invalid file'
+   # end
+   
+   
     #do the database population in separate thread
     Thread.new do
     

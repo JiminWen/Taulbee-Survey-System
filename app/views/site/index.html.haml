@@ -46,7 +46,7 @@
         - (1995..2055).each do |i|
           %option{:value => i}= i
       = f.label :attachment
-      = f.file_field :attachment
+      = f.file_field :attachment, accept: '.csv'
       = f.submit "Save", class: "btn btn-primary"
       
     %div

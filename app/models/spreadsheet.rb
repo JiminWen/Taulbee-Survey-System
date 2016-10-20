@@ -1,6 +1,18 @@
 class Spreadsheet < ActiveRecord::Base
     mount_uploader :attachment, AttachmentUploader # Tells rails to use this uploader for this model.
     validates :name, presence: true # Make sure the owner's name is present.
+ #   validates :file_format, if: :media?
+
+ #   def file_format
+  #  unless valid_extension? self.name
+  #    errors[:document] << "Invalid file format."
+  #  end
+  #  end
+
+  #  def valid_extension?(filename)
+  #  ext = File.extname(filename)
+  #  %w( csv ).include? ext.downcase
+   # end
     
     def saveAndMove
         saved = self.save 
