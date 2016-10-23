@@ -1,5 +1,6 @@
 require 'csv'
-#require 'libmagic-dev'
+#require 'mimemagic'
+#require_relative  './libmagic-dev'
 class SpreadsheetsController < ApplicationController
   @@val = false
   
@@ -24,19 +25,22 @@ class SpreadsheetsController < ApplicationController
     end
   end
 
+
+  
   #used to upload a csv file
   def create
-    
+    Rails.logger.debug params.inspect
+  #  raise params.inspect
     @@val = false #set false for file not finished parsing 
     params_to_pass = spreadsheet_params
     params_to_pass["name"] = params["year"]
+    #filename=
     @spreadsheet = Spreadsheet.new(params_to_pass)
-    @message="loading"
-  #  if uploaded_io.cont != "csv"
-   #   @message='invalid file'
-   # end
-   
-   
+    f=params["spreadsheet"]["attachment"].original_filename.inspect
+    @message=valid_extension?(f)
+    if @message==false
+        
+    end
     #do the database population in separate thread
     Thread.new do
     
@@ -73,6 +77,12 @@ class SpreadsheetsController < ApplicationController
       format.js
     end
 
+  end
+  
+  def valid_extension?(filename)
+    ext = File.extname(filename)
+    #raise ext.inspect
+    return ext==".csv\""
   end
   
   #called to create the entry per student

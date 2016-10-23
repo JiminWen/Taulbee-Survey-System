@@ -24,7 +24,13 @@
       dataType: "json",
       success: function(data){
         //$("#testing")[0].innerHTML = data["value"]
+        var format=#{@message}
         var finished = data["value"]
+        if (format==false){
+          $("#loading")[0].innerHTML = "Wrong file"
+          $("#returnButton")[0].hidden = false
+        }
+        else{
         if(finished == false)
         {
           var loadingString = 'Loading'
@@ -40,6 +46,7 @@
         {
           $("#loading")[0].innerHTML = "Finished!"
           $("#returnButton")[0].hidden = false
+        }
         }
       },
       failure: function(response){
