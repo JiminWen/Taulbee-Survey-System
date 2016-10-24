@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (0.3ms)[0m  [1m            SELECT sql
@@ -29,7 +30,1330 @@
   [1m[36m (11.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160406021822')[0m
 DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140)
 DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140)
+=======
+>>>>>>> a37251169ef83743dd04ddc0511be2f8b985f1a0
 DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140)
 DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140)
 DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140)
 DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140)
+<<<<<<< HEAD
+=======
+
+
+Started GET "/" for 128.194.5.220 at 2016-10-09 20:47:22 +0000
+Cannot render console from 128.194.5.220! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (192.5ms)
+Completed 200 OK in 3810ms (Views: 3776.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 128.194.5.220 at 2016-10-09 20:47:28 +0000
+Cannot render console from 128.194.5.220! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 128.194.5.220 at 2016-10-09 20:47:28 +0000
+Cannot render console from 128.194.5.220! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 128.194.5.220 at 2016-10-09 20:47:28 +0000
+Cannot render console from 128.194.5.220! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 128.194.5.220 at 2016-10-09 20:47:28 +0000
+Cannot render console from 128.194.5.220! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 128.194.5.220 at 2016-10-09 20:47:28 +0000
+Cannot render console from 128.194.5.220! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 128.194.5.220 at 2016-10-09 20:47:28 +0000
+Cannot render console from 128.194.5.220! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 128.194.5.220 at 2016-10-09 20:47:28 +0000
+Cannot render console from 128.194.5.220! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 128.194.5.220 at 2016-10-09 20:47:28 +0000
+Cannot render console from 128.194.5.220! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 128.194.5.220 at 2016-10-09 20:47:28 +0000
+Cannot render console from 128.194.5.220! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 128.194.5.220 at 2016-10-09 20:47:28 +0000
+Cannot render console from 128.194.5.220! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+>>>>>>> a37251169ef83743dd04ddc0511be2f8b985f1a0
+
+
+Started GET "/" for 165.91.12.109 at 2016-10-09 20:54:41 +0000
+Cannot render console from 165.91.12.109! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.4ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (107.4ms)
+Completed 200 OK in 637ms (Views: 591.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.109 at 2016-10-09 20:54:42 +0000
+Cannot render console from 165.91.12.109! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 165.91.12.109 at 2016-10-09 20:54:42 +0000
+Cannot render console from 165.91.12.109! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.12.109 at 2016-10-09 20:54:42 +0000
+Cannot render console from 165.91.12.109! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 165.91.12.109 at 2016-10-09 20:54:42 +0000
+Cannot render console from 165.91.12.109! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 165.91.12.109 at 2016-10-09 20:54:42 +0000
+Cannot render console from 165.91.12.109! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.109 at 2016-10-09 20:54:42 +0000
+Cannot render console from 165.91.12.109! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 165.91.12.109 at 2016-10-09 20:54:42 +0000
+Cannot render console from 165.91.12.109! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.109 at 2016-10-09 20:54:42 +0000
+Cannot render console from 165.91.12.109! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.109 at 2016-10-09 20:54:42 +0000
+Cannot render console from 165.91.12.109! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.12.109 at 2016-10-09 20:54:42 +0000
+Cannot render console from 165.91.12.109! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/" for 165.91.12.25 at 2016-10-10 15:11:37 +0000
+Cannot render console from 165.91.12.25! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.5ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (158.1ms)
+Completed 200 OK in 852ms (Views: 786.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.25 at 2016-10-10 15:11:38 +0000
+Cannot render console from 165.91.12.25! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 165.91.12.25 at 2016-10-10 15:11:38 +0000
+Cannot render console from 165.91.12.25! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.25 at 2016-10-10 15:11:38 +0000
+Cannot render console from 165.91.12.25! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 165.91.12.25 at 2016-10-10 15:11:38 +0000
+Cannot render console from 165.91.12.25! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.25 at 2016-10-10 15:11:39 +0000
+Cannot render console from 165.91.12.25! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.25 at 2016-10-10 15:11:39 +0000
+Cannot render console from 165.91.12.25! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.12.25 at 2016-10-10 15:11:39 +0000
+Cannot render console from 165.91.12.25! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/" for 165.91.13.68 at 2016-10-12 16:22:12 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.5ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (73.9ms)
+Completed 200 OK in 607ms (Views: 577.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.68 at 2016-10-12 16:22:14 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.68 at 2016-10-12 16:22:14 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 165.91.13.68 at 2016-10-12 16:22:14 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 165.91.13.68 at 2016-10-12 16:22:14 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.68 at 2016-10-12 16:22:14 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.13.68 at 2016-10-12 16:22:14 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.68 at 2016-10-12 16:22:14 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2002" for 165.91.13.68 at 2016-10-12 16:22:33 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2002"}
+  [1m[36mQuery Load (0.3ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (44.9ms)
+Completed 200 OK in 101ms (Views: 77.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 165.91.13.68 at 2016-10-12 16:22:39 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[35mStudent Load (28.6ms)[0m  SELECT "students"."id" FROM "students"
+Completed 200 OK in 480ms (Views: 2.1ms | ActiveRecord: 142.0ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=name" for 165.91.13.68 at 2016-10-12 16:23:16 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"name"}
+  [1m[36mStudent Load (58.2ms)[0m  [1mSELECT "students"."name" FROM "students"[0m
+Completed 200 OK in 267ms (Views: 0.4ms | ActiveRecord: 58.2ms)
+
+
+Started POST "/site/studentOutput" for 165.91.13.68 at 2016-10-12 16:24:46 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k/StuG5oliWexpx7N1DxY61IYL7jBwwJ/GnAa92mcyUWg/H0FHqRKfBSofWLN3uZaBWblStlEpDy1FrKQGpZAw==", "filter0"=>"name", "comparator0"=>"=", "attribute0"=>"name", "commit"=>"Apply", "saveName"=>""}
+  [1m[35mStudent Load (1.1ms)[0m  SELECT "students".* FROM "students" WHERE ( AND year = '2002')
+SQLite3::SQLException: near "AND": syntax error: SELECT "students".* FROM "students" WHERE ( AND year = '2002')
+  Rendered site/studentOutput.html.haml within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (SQLite3::SQLException: near "AND": syntax error: SELECT "students".* FROM "students" WHERE ( AND year = '2002')):
+    44:             %th{:align => "left"}= attribute[1]
+    45:       %tbody
+    46:         - if @students != nil
+    47:           - @students.each do |student|
+    48:             %tr
+    49:               - @attributes.each do |attribute|
+    50:                 - if attribute[1] != "count"
+  app/views/site/studentOutput.html.haml:47:in `_app_views_site_student_utput_html_haml___2990818733451746177_69821724375960'
+  app/controllers/site_controller.rb:174:in `studentOutput'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.2ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q4" for 165.91.13.68 at 2016-10-12 16:25:09 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q4"}
+  [1m[36mQuery Load (0.6ms)[0m  [1mSELECT "queries".* FROM "queries" WHERE (name = 'Q4')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?  [["query_id", 4]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 4]]
+  [1m[35mFilter Load (0.3ms)[0m  SELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?  [["query_id", 4]]
+  [1m[36mQuery Load (0.4ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  [1m[35mHeader Load (0.4ms)[0m  SELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 4]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (49.9ms)
+Completed 200 OK in 195ms (Views: 80.5ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/site/studentOutput" for 165.91.13.68 at 2016-10-12 16:25:21 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yscPy0lCe4xDpED4yIApazGB+2jrje3hlVMujG369QRPsFOHM1B8gC0wfXZ056OR9NwAQyPv83ib7rQt8DbfIg==", "filter0"=>"classification", "comparator0"=>"=", "filter1"=>"local_phone", "comparator1"=>"=", "attribute0"=>"count", "commit"=>"Apply", "saveName"=>""}
+  [1m[36mStudent Load (1.0ms)[0m  [1mSELECT "students".* FROM "students" WHERE ( AND year = '2002')[0m
+SQLite3::SQLException: near "AND": syntax error: SELECT "students".* FROM "students" WHERE ( AND year = '2002')
+  Rendered site/studentOutput.html.haml within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (SQLite3::SQLException: near "AND": syntax error: SELECT "students".* FROM "students" WHERE ( AND year = '2002')):
+    35:     -#table used to display all results
+    36:     %h2 Result
+    37:     - if @count
+    38:       %h3 Count = #{@students.length}
+    39:     %table#students
+    40:       %thead
+    41:         %tr
+  app/views/site/studentOutput.html.haml:38:in `_app_views_site_student_utput_html_haml___2990818733451746177_69821724375960'
+  app/controllers/site_controller.rb:174:in `studentOutput'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (127.2ms)
+
+
+Started GET "/site/index" for 165.91.13.68 at 2016-10-12 16:27:58 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.6ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (114.1ms)
+Completed 200 OK in 160ms (Views: 157.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2002" for 165.91.13.68 at 2016-10-12 16:31:48 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2002"}
+  [1m[36mQuery Load (0.6ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (29.2ms)
+Completed 200 OK in 169ms (Views: 166.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q6" for 165.91.13.68 at 2016-10-12 16:32:54 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q6"}
+  [1m[35mQuery Load (0.5ms)[0m  SELECT "queries".* FROM "queries" WHERE (name = 'Q6')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 6]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 6]]
+  [1m[36mFilter Load (0.3ms)[0m  [1mSELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 6]]
+  [1m[35mQuery Load (0.5ms)[0m  SELECT "queries".* FROM "queries"
+  [1m[36mHeader Load (0.4ms)[0m  [1mSELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 6]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (134.2ms)
+Completed 200 OK in 245ms (Views: 194.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q4" for 165.91.13.68 at 2016-10-12 16:33:00 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q4"}
+  [1m[35mQuery Load (0.4ms)[0m  SELECT "queries".* FROM "queries" WHERE (name = 'Q4')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 4]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 4]]
+  [1m[36mFilter Load (0.1ms)[0m  [1mSELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 4]]
+  [1m[35mQuery Load (0.3ms)[0m  SELECT "queries".* FROM "queries"
+  [1m[36mHeader Load (0.2ms)[0m  [1mSELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 4]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (65.1ms)
+Completed 200 OK in 112ms (Views: 104.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=first" for 165.91.13.68 at 2016-10-12 16:33:20 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"first"}
+  [1m[35mQuery Load (0.6ms)[0m  SELECT "queries".* FROM "queries" WHERE (name = 'first')
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 8]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 8]]
+  [1m[36mFilter Load (0.2ms)[0m  [1mSELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 8]]
+  [1m[35mQuery Load (0.4ms)[0m  SELECT "queries".* FROM "queries"
+  [1m[36mHeader Load (0.2ms)[0m  [1mSELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 8]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (28.9ms)
+Completed 200 OK in 150ms (Views: 76.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=first" for 165.91.13.68 at 2016-10-12 16:33:26 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"first"}
+  [1m[35mQuery Load (0.6ms)[0m  SELECT "queries".* FROM "queries" WHERE (name = 'first')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 8]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 8]]
+  [1m[36mFilter Load (0.1ms)[0m  [1mSELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 8]]
+  [1m[35mQuery Load (0.5ms)[0m  SELECT "queries".* FROM "queries"
+  [1m[36mHeader Load (0.3ms)[0m  [1mSELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 8]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (80.0ms)
+Completed 200 OK in 126ms (Views: 116.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q1" for 165.91.13.68 at 2016-10-12 16:33:42 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q1"}
+  [1m[35mQuery Load (0.3ms)[0m  SELECT "queries".* FROM "queries" WHERE (name = 'Q1')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 1]]
+  [1m[36mFilter Load (0.2ms)[0m  [1mSELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 1]]
+  [1m[35mQuery Load (0.3ms)[0m  SELECT "queries".* FROM "queries"
+  [1m[36mHeader Load (0.2ms)[0m  [1mSELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 1]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (59.0ms)
+Completed 200 OK in 98ms (Views: 92.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&yolo=YOLO&c_name=classification" for 165.91.13.68 at 2016-10-12 16:33:42 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "yolo"=>"YOLO", "c_name"=>"classification"}
+  [1m[35mStudent Load (32.9ms)[0m  SELECT "students"."classification" FROM "students"
+Completed 200 OK in 150ms (Views: 0.2ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q4" for 165.91.13.68 at 2016-10-12 16:34:06 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q4"}
+  [1m[36mQuery Load (0.3ms)[0m  [1mSELECT "queries".* FROM "queries" WHERE (name = 'Q4')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?  [["query_id", 4]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 4]]
+  [1m[35mFilter Load (0.2ms)[0m  SELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?  [["query_id", 4]]
+  [1m[36mQuery Load (0.3ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  [1m[35mHeader Load (0.3ms)[0m  SELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 4]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (61.9ms)
+Completed 200 OK in 124ms (Views: 103.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q4" for 165.91.13.68 at 2016-10-12 16:34:11 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q4"}
+  [1m[36mQuery Load (0.4ms)[0m  [1mSELECT "queries".* FROM "queries" WHERE (name = 'Q4')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?  [["query_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 4]]
+  [1m[35mFilter Load (0.2ms)[0m  SELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?  [["query_id", 4]]
+  [1m[36mQuery Load (0.4ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  [1m[35mHeader Load (0.2ms)[0m  SELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 4]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (177.6ms)
+Completed 200 OK in 221ms (Views: 213.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q5" for 165.91.13.68 at 2016-10-12 16:34:16 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q5"}
+  [1m[36mQuery Load (0.4ms)[0m  [1mSELECT "queries".* FROM "queries" WHERE (name = 'Q5')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?  [["query_id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 5]]
+  [1m[35mFilter Load (0.1ms)[0m  SELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?  [["query_id", 5]]
+  [1m[36mQuery Load (0.3ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  [1m[35mHeader Load (0.4ms)[0m  SELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 5]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (121.2ms)
+Completed 200 OK in 226ms (Views: 218.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&yolo=YOLO&c_name=classification" for 165.91.13.68 at 2016-10-12 16:34:16 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "yolo"=>"YOLO", "c_name"=>"classification"}
+  [1m[36mStudent Load (23.0ms)[0m  [1mSELECT "students"."classification" FROM "students"[0m
+Completed 200 OK in 123ms (Views: 0.3ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/site/receiveAjax?id=filter_1&yolo=YOLO&c_name=sex" for 165.91.13.68 at 2016-10-12 16:34:16 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_1", "yolo"=>"YOLO", "c_name"=>"sex"}
+  [1m[35mStudent Load (30.4ms)[0m  SELECT "students"."sex" FROM "students"
+Completed 200 OK in 113ms (Views: 0.3ms | ActiveRecord: 30.4ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q1" for 165.91.13.68 at 2016-10-12 16:35:09 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q1"}
+  [1m[36mQuery Load (0.4ms)[0m  [1mSELECT "queries".* FROM "queries" WHERE (name = 'Q1')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?  [["query_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 1]]
+  [1m[35mFilter Load (0.2ms)[0m  SELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?  [["query_id", 1]]
+  [1m[36mQuery Load (0.2ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  [1m[35mHeader Load (0.3ms)[0m  SELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 1]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (183.9ms)
+Completed 200 OK in 222ms (Views: 213.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&yolo=YOLO&c_name=classification" for 165.91.13.68 at 2016-10-12 16:35:10 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "yolo"=>"YOLO", "c_name"=>"classification"}
+  [1m[36mStudent Load (29.0ms)[0m  [1mSELECT "students"."classification" FROM "students"[0m
+Completed 200 OK in 147ms (Views: 0.3ms | ActiveRecord: 29.0ms)
+
+
+Started POST "/site/studentOutput" for 165.91.13.68 at 2016-10-12 16:37:32 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4zfUiouQTffDJbAQXydGSBMCRo0YtJE9GbK329m/8vlmQIjG8YJK+62xjZ7jQMyy1l+9ptDWj6QXDy16RHPY3w==", "filter0"=>"classification", "comparator0"=>"=", "attribute0"=>"count", "saveName"=>"second", "commit"=>"Save"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "queries" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "second"], ["created_at", "2016-10-12 16:37:33.005107"], ["updated_at", "2016-10-12 16:37:33.005107"]]
+  [1m[35m (11.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "filters" ("field", "comparator", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["field", "classification"], ["comparator", "="], ["created_at", "2016-10-12 16:37:33.022536"], ["updated_at", "2016-10-12 16:37:33.022536"]]
+  [1m[36m (10.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.3ms)[0m  [1mUPDATE "filters" SET "query_id" = ?, "updated_at" = ? WHERE "filters"."id" = ?[0m  [["query_id", 9], ["updated_at", "2016-10-12 16:37:33.038778"], ["id", 32]]
+  [1m[35m (11.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "headers" ("field", "created_at", "updated_at") VALUES (?, ?, ?)  [["field", "count"], ["created_at", "2016-10-12 16:37:33.090429"], ["updated_at", "2016-10-12 16:37:33.090429"]]
+  [1m[36m (10.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "headers" SET "query_id" = ?, "updated_at" = ? WHERE "headers"."id" = ?[0m  [["query_id", 9], ["updated_at", "2016-10-12 16:37:33.106455"], ["id", 62]]
+  [1m[35m (9.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://codeavor-songyuantang.c9users.io/site/studentFilterSelection
+Completed 302 Found in 123ms (ActiveRecord: 61.7ms)
+
+
+Started GET "/site/studentFilterSelection" for 165.91.13.68 at 2016-10-12 16:37:33 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  [1m[36mQuery Load (0.5ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (32.3ms)
+Completed 200 OK in 84ms (Views: 77.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q5" for 165.91.13.68 at 2016-10-12 16:37:51 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q5"}
+  [1m[35mQuery Load (0.4ms)[0m  SELECT "queries".* FROM "queries" WHERE (name = 'Q5')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 5]]
+  [1m[36mFilter Load (0.1ms)[0m  [1mSELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 5]]
+  [1m[35mQuery Load (0.4ms)[0m  SELECT "queries".* FROM "queries"
+  [1m[36mHeader Load (0.3ms)[0m  [1mSELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 5]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (160.7ms)
+Completed 200 OK in 209ms (Views: 203.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&yolo=YOLO&c_name=classification" for 165.91.13.68 at 2016-10-12 16:37:52 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "yolo"=>"YOLO", "c_name"=>"classification"}
+  [1m[35mStudent Load (35.2ms)[0m  SELECT "students"."classification" FROM "students"
+Completed 200 OK in 149ms (Views: 0.4ms | ActiveRecord: 35.2ms)
+
+
+Started GET "/site/receiveAjax?id=filter_1&yolo=YOLO&c_name=sex" for 165.91.13.68 at 2016-10-12 16:37:52 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_1", "yolo"=>"YOLO", "c_name"=>"sex"}
+  [1m[36mStudent Load (25.3ms)[0m  [1mSELECT "students"."sex" FROM "students"[0m
+Completed 200 OK in 128ms (Views: 0.2ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=first" for 165.91.13.68 at 2016-10-12 16:38:01 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"first"}
+  [1m[35mQuery Load (0.4ms)[0m  SELECT "queries".* FROM "queries" WHERE (name = 'first')
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 8]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 8]]
+  [1m[36mFilter Load (0.4ms)[0m  [1mSELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 8]]
+  [1m[35mQuery Load (0.3ms)[0m  SELECT "queries".* FROM "queries"
+  [1m[36mHeader Load (0.3ms)[0m  [1mSELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 8]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (14.5ms)
+Completed 200 OK in 124ms (Views: 115.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/site/index" for 165.91.13.68 at 2016-10-12 16:39:29 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.4ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2002" for 165.91.13.68 at 2016-10-12 16:41:39 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2002"}
+  [1m[36mQuery Load (0.7ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (28.1ms)
+Completed 200 OK in 81ms (Views: 78.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/site/studentOutput" for 165.91.13.68 at 2016-10-12 16:42:13 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1fdRazwWcLmM/rdc9hn2OGCHnBrDS/PG9EqLKLxWpyBQgA0nRgR3teJqitJKfnzCpdpnMQsp7V/69xGJIZqNBg==", "commit"=>"Apply", "saveName"=>""}
+  [1m[35mStudent Load (196.0ms)[0m  SELECT "students".* FROM "students" WHERE (year = '2002')
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_site_student_utput_html_haml___2990818733451746177_69821724375960 at /home/ubuntu/workspace/app/views/site/studentOutput.html.haml:60)
+  Rendered site/studentOutput.html.haml within layouts/application (324.2ms)
+Completed 200 OK in 372ms (Views: 174.4ms | ActiveRecord: 196.0ms)
+
+
+Started GET "/site/studentFilterSelection" for 165.91.13.68 at 2016-10-12 16:42:18 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  [1m[36mQuery Load (0.4ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (25.9ms)
+Completed 200 OK in 74ms (Views: 72.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 165.91.13.68 at 2016-10-12 16:42:20 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[35mStudent Load (137.8ms)[0m  SELECT "students"."id" FROM "students"
+Completed 200 OK in 238ms (Views: 1.2ms | ActiveRecord: 137.8ms)
+
+
+Started POST "/site/studentOutput" for 165.91.13.68 at 2016-10-12 16:42:25 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1kmf2Lw/8gGJLPGvgLAfV7gWf0MTkarQsLOAK5a9U89TPsOUxi31Dee4zCE815WtfUuEaNvztEm+DhqKC3F56Q==", "filter0"=>"id", "comparator0"=>"=", "filterValue0"=>"1", "attribute0"=>"id", "commit"=>"Apply", "saveName"=>""}
+  [1m[36mStudent Load (2.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE (id='1' AND year = '2002')[0m
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_site_student_utput_html_haml___2990818733451746177_69821724375960 at /home/ubuntu/workspace/app/views/site/studentOutput.html.haml:60)
+  Rendered site/studentOutput.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 106ms (Views: 101.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/CSV.csv?action=studentOutput&attribute0=id&authenticity_token=1kmf2Lw%2F8gGJLPGvgLAfV7gWf0MTkarQsLOAK5a9U89TPsOUxi31Dee4zCE815WtfUuEaNvztEm%2BDhqKC3F56Q%3D%3D&commit=Apply&comparator0=%3D&controller=site&filter0=id&filterValue0=1&format=csv&saveName=&utf8=%E2%9C%93" for 165.91.13.68 at 2016-10-12 16:42:41 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as CSV
+  Parameters: {"attribute0"=>"id", "authenticity_token"=>"1kmf2Lw/8gGJLPGvgLAfV7gWf0MTkarQsLOAK5a9U89TPsOUxi31Dee4zCE815WtfUuEaNvztEm+DhqKC3F56Q==", "commit"=>"Apply", "comparator0"=>"=", "filter0"=>"id", "filterValue0"=>"1", "saveName"=>"", "utf8"=>"✓"}
+  [1m[35mStudent Load (1.1ms)[0m  SELECT "students".* FROM "students" WHERE (id='1' AND year = '2002')
+  Rendered text template (0.0ms)
+Sent data  (12.2ms)
+Completed 200 OK in 21ms (Views: 12.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/CSV.csv?action=studentOutput&attribute0=id&authenticity_token=1kmf2Lw%2F8gGJLPGvgLAfV7gWf0MTkarQsLOAK5a9U89TPsOUxi31Dee4zCE815WtfUuEaNvztEm%2BDhqKC3F56Q%3D%3D&commit=Apply&comparator0=%3D&controller=site&filter0=id&filterValue0=1&format=csv&saveName=&utf8=%E2%9C%93" for 165.91.13.68 at 2016-10-12 16:42:45 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as CSV
+  Parameters: {"attribute0"=>"id", "authenticity_token"=>"1kmf2Lw/8gGJLPGvgLAfV7gWf0MTkarQsLOAK5a9U89TPsOUxi31Dee4zCE815WtfUuEaNvztEm+DhqKC3F56Q==", "commit"=>"Apply", "comparator0"=>"=", "filter0"=>"id", "filterValue0"=>"1", "saveName"=>"", "utf8"=>"✓"}
+  [1m[36mStudent Load (1.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE (id='1' AND year = '2002')[0m
+  Rendered text template (0.0ms)
+Sent data  (1.0ms)
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/site/studentOutput" for 165.91.13.68 at 2016-10-12 16:42:53 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1kmf2Lw/8gGJLPGvgLAfV7gWf0MTkarQsLOAK5a9U89TPsOUxi31Dee4zCE815WtfUuEaNvztEm+DhqKC3F56Q==", "commit"=>"Apply", "saveName"=>""}
+  [1m[35mStudent Load (160.7ms)[0m  SELECT "students".* FROM "students" WHERE (year = '2002')
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_site_student_utput_html_haml___2990818733451746177_69821724375960 at /home/ubuntu/workspace/app/views/site/studentOutput.html.haml:60)
+  Rendered site/studentOutput.html.haml within layouts/application (280.6ms)
+Completed 200 OK in 351ms (Views: 174.8ms | ActiveRecord: 160.7ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 165.91.13.68 at 2016-10-12 16:42:55 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[36mStudent Load (37.7ms)[0m  [1mSELECT "students"."id" FROM "students"[0m
+Completed 200 OK in 363ms (Views: 2.0ms | ActiveRecord: 37.7ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=directory_holds" for 165.91.13.68 at 2016-10-12 16:42:57 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"directory_holds"}
+  [1m[35mStudent Load (42.1ms)[0m  SELECT "students"."directory_holds" FROM "students"
+Completed 200 OK in 396ms (Views: 0.3ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=classification" for 165.91.13.68 at 2016-10-12 16:43:01 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"classification"}
+  [1m[36mStudent Load (143.1ms)[0m  [1mSELECT "students"."classification" FROM "students"[0m
+Completed 200 OK in 432ms (Views: 0.4ms | ActiveRecord: 143.1ms)
+
+
+Started POST "/site/studentOutput" for 165.91.13.68 at 2016-10-12 16:43:04 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1kmf2Lw/8gGJLPGvgLAfV7gWf0MTkarQsLOAK5a9U89TPsOUxi31Dee4zCE815WtfUuEaNvztEm+DhqKC3F56Q==", "filter0"=>"classification", "comparator0"=>"=", "attribute0"=>"id", "attribute1"=>"id", "commit"=>"Apply", "saveName"=>""}
+  [1m[35mStudent Load (2.1ms)[0m  SELECT "students".* FROM "students" WHERE ( AND year = '2002')
+SQLite3::SQLException: near "AND": syntax error: SELECT "students".* FROM "students" WHERE ( AND year = '2002')
+  Rendered site/studentOutput.html.haml within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.1ms)
+
+ActionView::Template::Error (SQLite3::SQLException: near "AND": syntax error: SELECT "students".* FROM "students" WHERE ( AND year = '2002')):
+    44:             %th{:align => "left"}= attribute[1]
+    45:       %tbody
+    46:         - if @students != nil
+    47:           - @students.each do |student|
+    48:             %tr
+    49:               - @attributes.each do |attribute|
+    50:                 - if attribute[1] != "count"
+  app/views/site/studentOutput.html.haml:47:in `_app_views_site_student_utput_html_haml___2990818733451746177_69821724375960'
+  app/controllers/site_controller.rb:174:in `studentOutput'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (153.6ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 165.91.13.68 at 2016-10-12 16:44:06 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[36mStudent Load (31.2ms)[0m  [1mSELECT "students"."id" FROM "students"[0m
+Completed 200 OK in 134ms (Views: 1.5ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/site/receiveAjax?id=filter_1&c_name=id" for 165.91.13.68 at 2016-10-12 16:44:12 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_1", "c_name"=>"id"}
+  [1m[35mStudent Load (17.8ms)[0m  SELECT "students"."id" FROM "students"
+Completed 200 OK in 107ms (Views: 1.3ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=prim_deg_col" for 165.91.13.68 at 2016-10-12 16:44:14 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"prim_deg_col"}
+  [1m[36mStudent Load (124.6ms)[0m  [1mSELECT "students"."prim_deg_col" FROM "students"[0m
+Completed 200 OK in 261ms (Views: 0.4ms | ActiveRecord: 124.6ms)
+
+
+Started POST "/site/studentOutput" for 165.91.13.68 at 2016-10-12 16:44:18 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1kmf2Lw/8gGJLPGvgLAfV7gWf0MTkarQsLOAK5a9U89TPsOUxi31Dee4zCE815WtfUuEaNvztEm+DhqKC3F56Q==", "filter0"=>"prim_deg_col", "comparator0"=>"=", "filter1"=>"id", "comparator1"=>"=", "filterValue1"=>"1", "attribute0"=>"id", "attribute1"=>"id", "commit"=>"Apply", "saveName"=>""}
+  [1m[35mStudent Load (1.3ms)[0m  SELECT "students".* FROM "students" WHERE ( AND id='1' AND year = '2002')
+SQLite3::SQLException: near "AND": syntax error: SELECT "students".* FROM "students" WHERE ( AND id='1' AND year = '2002')
+  Rendered site/studentOutput.html.haml within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: near "AND": syntax error: SELECT "students".* FROM "students" WHERE ( AND id='1' AND year = '2002')):
+    44:             %th{:align => "left"}= attribute[1]
+    45:       %tbody
+    46:         - if @students != nil
+    47:           - @students.each do |student|
+    48:             %tr
+    49:               - @attributes.each do |attribute|
+    50:                 - if attribute[1] != "count"
+  app/views/site/studentOutput.html.haml:47:in `_app_views_site_student_utput_html_haml___2990818733451746177_69821724375960'
+  app/controllers/site_controller.rb:174:in `studentOutput'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.3ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 165.91.13.68 at 2016-10-12 16:44:23 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[36mStudent Load (36.6ms)[0m  [1mSELECT "students"."id" FROM "students"[0m
+Completed 200 OK in 164ms (Views: 1.7ms | ActiveRecord: 36.6ms)
+
+
+Started POST "/site/studentOutput" for 165.91.13.68 at 2016-10-12 16:44:25 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1kmf2Lw/8gGJLPGvgLAfV7gWf0MTkarQsLOAK5a9U89TPsOUxi31Dee4zCE815WtfUuEaNvztEm+DhqKC3F56Q==", "filter0"=>"id", "comparator0"=>"=", "filterValue0"=>"1", "commit"=>"Apply", "saveName"=>""}
+  [1m[35mStudent Load (1.0ms)[0m  SELECT "students".* FROM "students" WHERE (id='1' AND year = '2002')
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_site_student_utput_html_haml___2990818733451746177_69821724375960 at /home/ubuntu/workspace/app/views/site/studentOutput.html.haml:60)
+  Rendered site/studentOutput.html.haml within layouts/application (35.1ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/site/index" for 165.91.13.68 at 2016-10-12 16:45:48 +0000
+Cannot render console from 165.91.13.68! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.4ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (64.4ms)
+Completed 200 OK in 112ms (Views: 109.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 165.91.13.5 at 2016-10-12 21:46:37 +0000
+Cannot render console from 165.91.13.5! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (62.9ms)
+Completed 200 OK in 583ms (Views: 533.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2002" for 66.76.2.61 at 2016-10-14 01:34:30 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2002"}
+  [1m[36mQuery Load (10.5ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (204.4ms)
+Completed 200 OK in 363ms (Views: 266.1ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/site/index" for 66.76.2.61 at 2016-10-14 01:35:15 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.7ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (33.1ms)
+Completed 200 OK in 123ms (Views: 120.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2002" for 66.76.2.61 at 2016-10-14 01:35:26 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2002"}
+  [1m[36mQuery Load (0.3ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (119.4ms)
+Completed 200 OK in 206ms (Views: 203.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q2" for 66.76.2.61 at 2016-10-14 01:35:29 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q2"}
+  [1m[35mQuery Load (0.4ms)[0m  SELECT "queries".* FROM "queries" WHERE (name = 'Q2')
+  [1m[36m (20.9ms)[0m  [1mSELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 2]]
+  [1m[36mFilter Load (0.6ms)[0m  [1mSELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 2]]
+  [1m[35mQuery Load (0.5ms)[0m  SELECT "queries".* FROM "queries"
+  [1m[36mHeader Load (0.8ms)[0m  [1mSELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 2]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (101.5ms)
+Completed 200 OK in 465ms (Views: 151.4ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/site/index" for 66.76.2.61 at 2016-10-14 01:38:11 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.7ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (30.0ms)
+Completed 200 OK in 81ms (Views: 77.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2002" for 66.76.2.61 at 2016-10-14 01:40:38 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2002"}
+  [1m[36mQuery Load (0.7ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (41.6ms)
+Completed 200 OK in 94ms (Views: 90.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/site/index" for 66.76.2.61 at 2016-10-14 01:41:02 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.4ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 152ms (Views: 150.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2002" for 66.76.2.61 at 2016-10-14 02:05:18 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2002"}
+  [1m[36mQuery Load (0.6ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (100.4ms)
+Completed 200 OK in 145ms (Views: 142.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q5" for 66.76.2.61 at 2016-10-14 02:05:25 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q5"}
+  [1m[35mQuery Load (0.3ms)[0m  SELECT "queries".* FROM "queries" WHERE (name = 'Q5')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 5]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 5]]
+  [1m[36mFilter Load (0.2ms)[0m  [1mSELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 5]]
+  [1m[35mQuery Load (0.6ms)[0m  SELECT "queries".* FROM "queries"
+  [1m[36mHeader Load (2.6ms)[0m  [1mSELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 5]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (140.7ms)
+Completed 200 OK in 355ms (Views: 184.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&yolo=YOLO&c_name=classification" for 66.76.2.61 at 2016-10-14 02:05:26 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "yolo"=>"YOLO", "c_name"=>"classification"}
+  [1m[35mStudent Load (45.3ms)[0m  SELECT "students"."classification" FROM "students"
+Completed 200 OK in 358ms (Views: 0.3ms | ActiveRecord: 46.6ms)
+
+
+Started GET "/site/receiveAjax?id=filter_1&yolo=YOLO&c_name=sex" for 66.76.2.61 at 2016-10-14 02:05:26 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_1", "yolo"=>"YOLO", "c_name"=>"sex"}
+  [1m[36mStudent Load (33.9ms)[0m  [1mSELECT "students"."sex" FROM "students"[0m
+Completed 200 OK in 160ms (Views: 0.2ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=directory_holds" for 66.76.2.61 at 2016-10-14 02:05:38 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"directory_holds"}
+  [1m[35mStudent Load (29.5ms)[0m  SELECT "students"."directory_holds" FROM "students"
+Completed 200 OK in 194ms (Views: 0.3ms | ActiveRecord: 29.5ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q1" for 66.76.2.61 at 2016-10-14 02:16:54 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q1"}
+  [1m[36mQuery Load (0.5ms)[0m  [1mSELECT "queries".* FROM "queries" WHERE (name = 'Q1')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?  [["query_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 1]]
+  [1m[35mFilter Load (0.2ms)[0m  SELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?  [["query_id", 1]]
+  [1m[36mQuery Load (0.2ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  [1m[35mHeader Load (0.4ms)[0m  SELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 1]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (173.7ms)
+Completed 200 OK in 219ms (Views: 209.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&yolo=YOLO&c_name=classification" for 66.76.2.61 at 2016-10-14 02:16:54 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "yolo"=>"YOLO", "c_name"=>"classification"}
+  [1m[36mStudent Load (25.8ms)[0m  [1mSELECT "students"."classification" FROM "students"[0m
+Completed 200 OK in 109ms (Views: 0.3ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=sex" for 66.76.2.61 at 2016-10-14 02:17:38 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"sex"}
+  [1m[35mStudent Load (33.0ms)[0m  SELECT "students"."sex" FROM "students"
+Completed 200 OK in 198ms (Views: 0.4ms | ActiveRecord: 33.0ms)
+
+
+Started GET "/" for 128.194.58.205 at 2016-10-16 02:57:34 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.5ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (337.1ms)
+Completed 200 OK in 1449ms (Views: 1408.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 128.194.58.205 at 2016-10-16 02:57:38 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 128.194.58.205 at 2016-10-16 02:57:38 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 128.194.58.205 at 2016-10-16 02:57:38 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 128.194.58.205 at 2016-10-16 02:57:38 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 128.194.58.205 at 2016-10-16 02:57:38 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 128.194.58.205 at 2016-10-16 02:57:38 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 128.194.58.205 at 2016-10-16 02:57:38 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 128.194.58.205 at 2016-10-16 02:57:38 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 128.194.58.205 at 2016-10-16 02:57:38 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 128.194.58.205 at 2016-10-16 02:57:38 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2002" for 128.194.58.205 at 2016-10-16 02:58:08 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2002"}
+  [1m[36mQuery Load (0.4ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (179.7ms)
+Completed 200 OK in 237ms (Views: 212.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2002" for 128.194.58.205 at 2016-10-16 02:58:23 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2002"}
+  [1m[35mQuery Load (0.5ms)[0m  SELECT "queries".* FROM "queries"
+  Rendered site/studentFilterSelection.html.haml within layouts/application (206.2ms)
+Completed 200 OK in 425ms (Views: 423.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 128.194.58.205 at 2016-10-16 02:59:28 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.5ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (362.9ms)
+Completed 200 OK in 1602ms (Views: 1428.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2002" for 128.194.58.205 at 2016-10-16 02:59:34 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2002"}
+  [1m[36mQuery Load (0.4ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (187.6ms)
+Completed 200 OK in 240ms (Views: 212.0ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2002" for 128.194.58.205 at 2016-10-16 02:59:37 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2002"}
+  [1m[35mQuery Load (0.5ms)[0m  SELECT "queries".* FROM "queries"
+  Rendered site/studentFilterSelection.html.haml within layouts/application (38.8ms)
+Completed 200 OK in 219ms (Views: 217.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/site/studentOutput" for 128.194.58.205 at 2016-10-16 02:59:40 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jOOI+qCk5djGDpSEP8InaUl7HJkS1T3ze1O4g0/ts0UJlNS22rbi1KiaqQqDpa2TjCbnstq3I2p17iIi0iGZYw==", "commit"=>"Apply", "saveName"=>""}
+  [1m[36mStudent Load (744.7ms)[0m  [1mSELECT "students".* FROM "students" WHERE (year = '2002')[0m
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_site_student_utput_html_haml___2437525811144705435_26650780 at /home/ubuntu/workspace/app/views/site/studentOutput.html.haml:60)
+  Rendered site/studentOutput.html.haml within layouts/application (1576.9ms)
+Completed 200 OK in 1608ms (Views: 860.3ms | ActiveRecord: 746.1ms)
+
+
+Started POST "/site/studentOutput" for 128.194.58.205 at 2016-10-16 02:59:41 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jOOI+qCk5djGDpSEP8InaUl7HJkS1T3ze1O4g0/ts0UJlNS22rbi1KiaqQqDpa2TjCbnstq3I2p17iIi0iGZYw==", "commit"=>"Apply", "saveName"=>""}
+  [1m[35mStudent Load (224.5ms)[0m  SELECT "students".* FROM "students" WHERE (year = '2002')
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_site_student_utput_html_haml___2437525811144705435_26650780 at /home/ubuntu/workspace/app/views/site/studentOutput.html.haml:60)
+  Rendered site/studentOutput.html.haml within layouts/application (586.7ms)
+Completed 200 OK in 615ms (Views: 389.5ms | ActiveRecord: 224.5ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 128.194.58.205 at 2016-10-16 02:59:42 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[36mStudent Load (142.4ms)[0m  [1mSELECT "students"."id" FROM "students"[0m
+Completed 200 OK in 368ms (Views: 1.4ms | ActiveRecord: 142.4ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 128.194.58.205 at 2016-10-16 02:59:46 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[35mStudent Load (19.6ms)[0m  SELECT "students"."id" FROM "students"
+Completed 200 OK in 224ms (Views: 1.4ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/site/receiveAjax?id=filter_1&c_name=id" for 128.194.58.205 at 2016-10-16 02:59:48 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_1", "c_name"=>"id"}
+  [1m[36mStudent Load (200.4ms)[0m  [1mSELECT "students"."id" FROM "students"[0m
+Completed 200 OK in 440ms (Views: 1.4ms | ActiveRecord: 200.4ms)
+
+
+Started GET "/site/receiveAjax?id=filter_1&c_name=directory_holds" for 128.194.58.205 at 2016-10-16 02:59:50 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_1", "c_name"=>"directory_holds"}
+  [1m[35mStudent Load (45.7ms)[0m  SELECT "students"."directory_holds" FROM "students"
+Completed 200 OK in 440ms (Views: 0.2ms | ActiveRecord: 45.7ms)
+
+
+Started POST "/site/studentOutput" for 128.194.58.205 at 2016-10-16 02:59:58 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jOOI+qCk5djGDpSEP8InaUl7HJkS1T3ze1O4g0/ts0UJlNS22rbi1KiaqQqDpa2TjCbnstq3I2p17iIi0iGZYw==", "filter0"=>"id", "comparator0"=>"=", "filterValue0"=>"1", "filter1"=>"directory_holds", "comparator1"=>"=", "attribute0"=>"prim_deg_cat", "commit"=>"Apply", "saveName"=>""}
+  [1m[36mStudent Load (4.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE (id='1' AND year = '2002')[0m
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_site_student_utput_html_haml___2437525811144705435_26650780 at /home/ubuntu/workspace/app/views/site/studentOutput.html.haml:60)
+  Rendered site/studentOutput.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 223ms (Views: 216.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 128.194.58.205 at 2016-10-16 03:00:04 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[35mStudent Load (26.3ms)[0m  SELECT "students"."id" FROM "students"
+Completed 200 OK in 244ms (Views: 1.3ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/site/receiveAjax?id=filter_1&c_name=id" for 128.194.58.205 at 2016-10-16 03:00:06 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_1", "c_name"=>"id"}
+  [1m[36mStudent Load (114.5ms)[0m  [1mSELECT "students"."id" FROM "students"[0m
+Completed 200 OK in 319ms (Views: 1.2ms | ActiveRecord: 114.5ms)
+
+
+Started GET "/site/receiveAjax?id=filter_1&c_name=prim_deg_maj_1_con_1" for 128.194.58.205 at 2016-10-16 03:00:08 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_1", "c_name"=>"prim_deg_maj_1_con_1"}
+  [1m[35mStudent Load (25.4ms)[0m  SELECT "students"."prim_deg_maj_1_con_1" FROM "students"
+Completed 200 OK in 264ms (Views: 0.3ms | ActiveRecord: 25.4ms)
+
+
+Started POST "/site/studentOutput" for 128.194.58.205 at 2016-10-16 03:00:12 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jOOI+qCk5djGDpSEP8InaUl7HJkS1T3ze1O4g0/ts0UJlNS22rbi1KiaqQqDpa2TjCbnstq3I2p17iIi0iGZYw==", "filter0"=>"id", "comparator0"=>"=", "filterValue0"=>"1", "filter1"=>"prim_deg_maj_1_con_1", "comparator1"=>"=", "attribute0"=>"prim_deg_maj_1_con_3", "commit"=>"Apply", "saveName"=>""}
+  [1m[36mStudent Load (0.9ms)[0m  [1mSELECT "students".* FROM "students" WHERE (id='1' AND year = '2002')[0m
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_site_student_utput_html_haml___2437525811144705435_26650780 at /home/ubuntu/workspace/app/views/site/studentOutput.html.haml:60)
+  Rendered site/studentOutput.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/CSV.csv?action=studentOutput&attribute0=prim_deg_maj_1_con_3&authenticity_token=jOOI%2BqCk5djGDpSEP8InaUl7HJkS1T3ze1O4g0%2Fts0UJlNS22rbi1KiaqQqDpa2TjCbnstq3I2p17iIi0iGZYw%3D%3D&commit=Apply&comparator0=%3D&comparator1=%3D&controller=site&filter0=id&filter1=prim_deg_maj_1_con_1&filterValue0=1&format=csv&saveName=&utf8=%E2%9C%93" for 128.194.58.205 at 2016-10-16 03:00:20 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as CSV
+  Parameters: {"attribute0"=>"prim_deg_maj_1_con_3", "authenticity_token"=>"jOOI+qCk5djGDpSEP8InaUl7HJkS1T3ze1O4g0/ts0UJlNS22rbi1KiaqQqDpa2TjCbnstq3I2p17iIi0iGZYw==", "commit"=>"Apply", "comparator0"=>"=", "comparator1"=>"=", "filter0"=>"id", "filter1"=>"prim_deg_maj_1_con_1", "filterValue0"=>"1", "saveName"=>"", "utf8"=>"✓"}
+  [1m[35mStudent Load (1.0ms)[0m  SELECT "students".* FROM "students" WHERE (id='1' AND year = '2002')
+  Rendered text template (0.0ms)
+Sent data  (21.4ms)
+Completed 200 OK in 27ms (Views: 21.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 128.194.58.205 at 2016-10-16 03:00:33 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[36mStudent Load (27.3ms)[0m  [1mSELECT "students"."id" FROM "students"[0m
+Completed 200 OK in 237ms (Views: 1.3ms | ActiveRecord: 27.3ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=email" for 128.194.58.205 at 2016-10-16 03:00:36 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"email"}
+  [1m[35mStudent Load (24.1ms)[0m  SELECT "students"."email" FROM "students"
+Completed 200 OK in 270ms (Views: 0.9ms | ActiveRecord: 24.1ms)
+
+
+Started POST "/site/studentOutput" for 128.194.58.205 at 2016-10-16 03:00:39 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jOOI+qCk5djGDpSEP8InaUl7HJkS1T3ze1O4g0/ts0UJlNS22rbi1KiaqQqDpa2TjCbnstq3I2p17iIi0iGZYw==", "filter0"=>"email", "comparator0"=>"=", "attribute0"=>"first_tamu_term", "commit"=>"Apply", "saveName"=>""}
+  [1m[36mStudent Load (0.9ms)[0m  [1mSELECT "students".* FROM "students" WHERE ( AND year = '2002')[0m
+SQLite3::SQLException: near "AND": syntax error: SELECT "students".* FROM "students" WHERE ( AND year = '2002')
+  Rendered site/studentOutput.html.haml within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (SQLite3::SQLException: near "AND": syntax error: SELECT "students".* FROM "students" WHERE ( AND year = '2002')):
+    44:             %th{:align => "left"}= attribute[1]
+    45:       %tbody
+    46:         - if @students != nil
+    47:           - @students.each do |student|
+    48:             %tr
+    49:               - @attributes.each do |attribute|
+    50:                 - if attribute[1] != "count"
+  app/views/site/studentOutput.html.haml:47:in `_app_views_site_student_utput_html_haml___2437525811144705435_26650780'
+  app/controllers/site_controller.rb:174:in `studentOutput'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (376.6ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 128.194.58.205 at 2016-10-16 03:01:21 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[35mStudent Load (24.5ms)[0m  SELECT "students"."id" FROM "students"
+Completed 200 OK in 336ms (Views: 1.4ms | ActiveRecord: 24.5ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=prim_deg_col" for 128.194.58.205 at 2016-10-16 03:01:23 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"prim_deg_col"}
+  [1m[36mStudent Load (22.7ms)[0m  [1mSELECT "students"."prim_deg_col" FROM "students"[0m
+Completed 200 OK in 218ms (Views: 0.2ms | ActiveRecord: 22.7ms)
+
+
+Started POST "/site/studentOutput" for 128.194.58.205 at 2016-10-16 03:01:24 +0000
+Cannot render console from 128.194.58.205! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jOOI+qCk5djGDpSEP8InaUl7HJkS1T3ze1O4g0/ts0UJlNS22rbi1KiaqQqDpa2TjCbnstq3I2p17iIi0iGZYw==", "filter0"=>"prim_deg_col", "comparator0"=>"=", "commit"=>"Apply", "saveName"=>""}
+  [1m[35mStudent Load (1.2ms)[0m  SELECT "students".* FROM "students" WHERE ( AND year = '2002')
+SQLite3::SQLException: near "AND": syntax error: SELECT "students".* FROM "students" WHERE ( AND year = '2002')
+  Rendered site/studentOutput.html.haml within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (SQLite3::SQLException: near "AND": syntax error: SELECT "students".* FROM "students" WHERE ( AND year = '2002')):
+    44:             %th{:align => "left"}= attribute[1]
+    45:       %tbody
+    46:         - if @students != nil
+    47:           - @students.each do |student|
+    48:             %tr
+    49:               - @attributes.each do |attribute|
+    50:                 - if attribute[1] != "count"
+  app/views/site/studentOutput.html.haml:47:in `_app_views_site_student_utput_html_haml___2437525811144705435_26650780'
+  app/controllers/site_controller.rb:174:in `studentOutput'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (223.1ms)
+
+
+Started GET "/" for 165.91.12.158 at 2016-10-21 20:15:14 +0000
+Cannot render console from 165.91.12.158! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (38.3ms)
+Completed 200 OK in 401ms (Views: 380.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.158 at 2016-10-21 20:15:15 +0000
+Cannot render console from 165.91.12.158! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 165.91.12.158 at 2016-10-21 20:15:15 +0000
+Cannot render console from 165.91.12.158! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 165.91.12.158 at 2016-10-21 20:15:15 +0000
+Cannot render console from 165.91.12.158! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.158 at 2016-10-21 20:15:15 +0000
+Cannot render console from 165.91.12.158! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.12.158 at 2016-10-21 20:15:15 +0000
+Cannot render console from 165.91.12.158! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 165.91.12.158 at 2016-10-21 20:15:15 +0000
+Cannot render console from 165.91.12.158! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 165.91.12.158 at 2016-10-21 20:15:15 +0000
+Cannot render console from 165.91.12.158! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.158 at 2016-10-21 20:15:15 +0000
+Cannot render console from 165.91.12.158! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.158 at 2016-10-21 20:15:15 +0000
+Cannot render console from 165.91.12.158! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.12.158 at 2016-10-21 20:15:15 +0000
+Cannot render console from 165.91.12.158! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/" for 165.91.12.158 at 2016-10-21 20:15:25 +0000
+Cannot render console from 165.91.12.158! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.13.96 at 2016-10-21 20:15:26 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.96 at 2016-10-21 20:15:26 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.13.96 at 2016-10-21 20:15:26 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.96 at 2016-10-21 20:15:26 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 165.91.13.96 at 2016-10-21 20:15:26 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 165.91.13.96 at 2016-10-21 20:15:26 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 165.91.13.96 at 2016-10-21 20:15:26 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 165.91.13.96 at 2016-10-21 20:15:26 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.96 at 2016-10-21 20:15:26 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.13.96 at 2016-10-21 20:15:26 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.13.96 at 2016-10-21 20:15:26 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/site/studentFilterSelection?yearSelected=1995" for 165.91.13.96 at 2016-10-21 20:15:37 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"1995"}
+  [1m[36mQuery Load (0.4ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (53.8ms)
+Completed 200 OK in 206ms (Views: 192.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/site/studentFilterSelection?queryLoad=Q2" for 165.91.13.96 at 2016-10-21 20:15:46 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"queryLoad"=>"Q2"}
+  [1m[35mQuery Load (0.2ms)[0m  SELECT "queries".* FROM "queries" WHERE (name = 'Q2')
+  [1m[36m (2.2ms)[0m  [1mSELECT COUNT(*) FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "headers" WHERE "headers"."query_id" = ?  [["query_id", 2]]
+  [1m[36mFilter Load (0.2ms)[0m  [1mSELECT "filters".* FROM "filters" WHERE "filters"."query_id" = ?[0m  [["query_id", 2]]
+  [1m[35mQuery Load (0.2ms)[0m  SELECT "queries".* FROM "queries"
+  [1m[36mHeader Load (0.3ms)[0m  [1mSELECT "headers".* FROM "headers" WHERE "headers"."query_id" = ?[0m  [["query_id", 2]]
+  Rendered site/studentFilterSelection.html.haml within layouts/application (82.5ms)
+Completed 200 OK in 221ms (Views: 102.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 165.91.13.96 at 2016-10-21 20:15:55 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/spreadsheets" for 165.91.13.96 at 2016-10-21 20:16:03 +0000
+Cannot render console from 165.91.13.96! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v7+vUvCR0TtMkmWZvMXcY6RJAKACsvAqDQtIKEF4LObNQC1miJ2LIHF+3E72uhNr6Aa4AjnJbiyZIlldr1KXjg==", "year"=>"2006", "commit"=>"Save"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: spreadsheet):
+  app/controllers/spreadsheets_controller.rb:124:in `spreadsheet_params'
+  app/controllers/spreadsheets_controller.rb:31:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (33.9ms)
