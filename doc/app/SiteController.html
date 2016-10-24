@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>class SiteController - Rails Application Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-index">#index</a>
+    
+    <li ><a href="#method-i-receiveAjax">#receiveAjax</a>
+    
+    <li ><a href="#method-i-saveQuery">#saveQuery</a>
+    
+    <li ><a href="#method-i-studentFilterSelection">#studentFilterSelection</a>
+    
+    <li ><a href="#method-i-studentOutput">#studentOutput</a>
+    
+    <li ><a href="#method-i-unsavedQuery">#unsavedQuery</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-SiteController">
+  <h1 id="class-SiteController" class="class">
+    class SiteController
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/site_controller.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@spreadsheet</span> = <span class="ruby-constant">Spreadsheet</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@spreadsheets</span> = <span class="ruby-constant">Spreadsheet</span>.<span class="ruby-identifier">all</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-receiveAjax" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">receiveAjax</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>receives the ajax call to dynamically populate filter value drop downs</p>
+          
+          
+
+          
+          <div class="method-source-code" id="receiveAjax-source">
+            <pre><span class="ruby-comment"># File app/controllers/site_controller.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">receiveAjax</span>
+  <span class="ruby-comment">#grabs all uniq values for the given column</span>
+  <span class="ruby-identifier">dataToSend</span> = <span class="ruby-constant">Student</span>.<span class="ruby-identifier">select</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:c_name</span>].<span class="ruby-identifier">to_sym</span>).<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:c_name</span>].<span class="ruby-identifier">to_sym</span>).<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">inspect</span>
+  
+  <span class="ruby-identifier">data</span> = {<span class="ruby-value">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dataToSend</span>}
+  
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">data</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-saveQuery" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">saveQuery</span><span
+            class="method-args">(params)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>when the user clicks to save a query, must save all the filter columns,
+filter values, and attributes selected then send the user back to the
+filter selection page</p>
+          
+          
+
+          
+          <div class="method-source-code" id="saveQuery-source">
+            <pre><span class="ruby-comment"># File app/controllers/site_controller.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">saveQuery</span>(<span class="ruby-identifier">params</span>)
+  <span class="ruby-identifier">filters</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/filter\d+/</span>) }
+  <span class="ruby-identifier">comparators</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/comparator\d+/</span>) }
+  <span class="ruby-identifier">filterValues</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/filterValue\d+/</span>) }
+  <span class="ruby-identifier">attributes</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/attribute\d+/</span>) }
+  
+  <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Query</span>.<span class="ruby-identifier">create</span>({<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;saveName&quot;</span>]})
+  
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">filters</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">filter</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">filterRecord</span> = <span class="ruby-constant">Filter</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value">:field</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">filters</span>[<span class="ruby-string">&quot;filter&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span>], <span class="ruby-value">:comparator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comparators</span>[<span class="ruby-string">&quot;comparator&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span>], <span class="ruby-value">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">filterValues</span>[<span class="ruby-string">&quot;filterValue&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span>])
+    <span class="ruby-ivar">@query</span>.<span class="ruby-identifier">filters</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">filterRecord</span>
+    <span class="ruby-identifier">i</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">attribute</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">headerRecord</span> = <span class="ruby-constant">Header</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value">:field</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">attributes</span>[<span class="ruby-string">&quot;attribute&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span>])
+    <span class="ruby-ivar">@query</span>.<span class="ruby-identifier">headers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">headerRecord</span>
+    <span class="ruby-identifier">i</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-ivar">@query</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:query</span>] = <span class="ruby-ivar">@query</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">site_studentFilterSelection_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-studentFilterSelection" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">studentFilterSelection</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>page that displays the fitler selection</p>
+          
+          
+
+          
+          <div class="method-source-code" id="studentFilterSelection-source">
+            <pre><span class="ruby-comment"># File app/controllers/site_controller.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">studentFilterSelection</span>
+
+  <span class="ruby-comment">#stores the selected year</span>
+  <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;yearSelected&quot;</span>])
+    <span class="ruby-identifier">session</span>[<span class="ruby-string">&quot;yearSelected&quot;</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;yearSelected&quot;</span>]
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment">#if year wasn&#39;t stored, it should be a new selected year, store it</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">session</span>[<span class="ruby-string">&quot;yearSelected&quot;</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
+    <span class="ruby-ivar">@students</span> = <span class="ruby-constant">Student</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;year = \&#39;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">session</span>[<span class="ruby-string">&quot;yearSelected&quot;</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\&#39;&quot;</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-ivar">@queries</span> = <span class="ruby-constant">Query</span>.<span class="ruby-identifier">all</span> <span class="ruby-comment">#gets all the stored queries</span>
+  
+  <span class="ruby-comment">#if a query was loaded</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;queryLoad&quot;</span>]
+    <span class="ruby-ivar">@query</span> = (<span class="ruby-constant">Query</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;name = &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\&#39;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;queryLoad&quot;</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\&#39;&quot;</span>))[<span class="ruby-value">0</span>]
+    <span class="ruby-ivar">@filterCount</span> = <span class="ruby-ivar">@query</span>.<span class="ruby-identifier">filters</span>.<span class="ruby-identifier">count</span>
+    <span class="ruby-ivar">@headerCount</span> = <span class="ruby-ivar">@query</span>.<span class="ruby-identifier">headers</span>.<span class="ruby-identifier">count</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:repeat</span>]
+    <span class="ruby-comment">#if the user said to repeat the query</span>
+    <span class="ruby-identifier">values</span> = {}
+    <span class="ruby-identifier">values</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">flash</span>[<span class="ruby-value">:filters</span>])
+    <span class="ruby-identifier">values</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">flash</span>[<span class="ruby-value">:comparators</span>])
+    <span class="ruby-identifier">values</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">flash</span>[<span class="ruby-value">:filterValues</span>])
+    <span class="ruby-identifier">values</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">flash</span>[<span class="ruby-value">:headers</span>])
+    <span class="ruby-ivar">@query</span> = <span class="ruby-identifier">unsavedQuery</span>(<span class="ruby-identifier">values</span>)
+    <span class="ruby-ivar">@filterCount</span> = <span class="ruby-identifier">flash</span>[<span class="ruby-value">:filters</span>].<span class="ruby-identifier">count</span>
+    <span class="ruby-ivar">@headerCount</span> = <span class="ruby-identifier">flash</span>[<span class="ruby-value">:headers</span>].<span class="ruby-identifier">count</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment">#grab the existing filter values</span>
+  <span class="ruby-ivar">@filterValues</span> = []
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@query</span>
+    <span class="ruby-ivar">@query</span>.<span class="ruby-identifier">filters</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">filter</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@filterValues</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">filter</span>.<span class="ruby-identifier">value</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@query</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@filterCount</span> = <span class="ruby-value">0</span>
+    <span class="ruby-ivar">@headerCount</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-studentOutput" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">studentOutput</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>page that shows the results</p>
+          
+          
+
+          
+          <div class="method-source-code" id="studentOutput-source">
+            <pre><span class="ruby-comment"># File app/controllers/site_controller.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">studentOutput</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;commit&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Save&quot;</span>
+    <span class="ruby-identifier">saveQuery</span>(<span class="ruby-identifier">params</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment">#if the query is not being saved</span>
+    <span class="ruby-comment">#select all the filters and filter values chosen</span>
+    <span class="ruby-identifier">filters</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/filter\d+/</span>) }
+    <span class="ruby-identifier">comparators</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/comparator\d+/</span>) }
+    <span class="ruby-identifier">filterValues</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/filterValue\d+/</span>) }
+    <span class="ruby-ivar">@attributes</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/attribute\d+/</span>) }
+    
+    <span class="ruby-comment">#store all these values if the user chooses to repeat the query</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:existingQuery</span>] = <span class="ruby-value">1</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:filters</span>] = <span class="ruby-identifier">filters</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:comparators</span>] = <span class="ruby-identifier">comparators</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:filterValues</span>] = <span class="ruby-identifier">filterValues</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:headers</span>] = <span class="ruby-ivar">@attributes</span>
+    
+    <span class="ruby-comment">#determine if the user wants the count</span>
+    <span class="ruby-ivar">@count</span> = <span class="ruby-ivar">@attributes</span>.<span class="ruby-identifier">any?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">hash</span><span class="ruby-operator">|</span> <span class="ruby-identifier">hash</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;count&quot;</span>) }
+
+    <span class="ruby-comment">#if no filters selected, display all data for that year</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">filters</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">session</span>[<span class="ruby-string">&quot;yearSelected&quot;</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">queryString</span> = <span class="ruby-string">&quot;year = \&#39;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">session</span>[<span class="ruby-string">&quot;yearSelected&quot;</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\&#39;&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment">#create query string from selected values</span>
+      <span class="ruby-identifier">queryString</span> = <span class="ruby-string">&quot;&quot;</span>
+      <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+      <span class="ruby-identifier">filters</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">filter</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">filterValue</span> = <span class="ruby-identifier">filterValues</span>[<span class="ruby-string">&quot;filterValue&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span>]
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">filterValue</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+            <span class="ruby-identifier">queryString</span> = <span class="ruby-identifier">queryString</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; AND &quot;</span>
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-identifier">queryString</span> = <span class="ruby-identifier">queryString</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">filters</span>[<span class="ruby-string">&quot;filter&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">comparators</span>[<span class="ruby-string">&quot;comparator&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\&#39;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">filterValue</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\&#39;&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">i</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">session</span>[<span class="ruby-string">&quot;yearSelected&quot;</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">queryString</span> = <span class="ruby-identifier">queryString</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; AND year = \&#39;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">session</span>[<span class="ruby-string">&quot;yearSelected&quot;</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\&#39;&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    
+    
+
+    <span class="ruby-ivar">@students</span> = <span class="ruby-constant">Student</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">queryString</span>)
+    <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">csv</span> { <span class="ruby-identifier">send_data</span> <span class="ruby-constant">Student</span>.<span class="ruby-identifier">to_csv</span>(<span class="ruby-ivar">@students</span>, <span class="ruby-ivar">@attributes</span>.<span class="ruby-identifier">values</span>) }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-unsavedQuery" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">unsavedQuery</span><span
+            class="method-args">(params)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>make a query object, but don&#39;t actually save it to the database used
+for the repeat query functionality</p>
+          
+          
+
+          
+          <div class="method-source-code" id="unsavedQuery-source">
+            <pre><span class="ruby-comment"># File app/controllers/site_controller.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unsavedQuery</span>(<span class="ruby-identifier">params</span>)
+  <span class="ruby-identifier">filters</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/filter\d+/</span>) }
+  <span class="ruby-identifier">comparators</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/comparator\d+/</span>) }
+  <span class="ruby-identifier">filterValues</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/filterValue\d+/</span>) }
+  <span class="ruby-identifier">attributes</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/attribute\d+/</span>) }
+  
+  <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Query</span>.<span class="ruby-identifier">new</span>({<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;No Save&quot;</span>})
+  
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">filters</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">filter</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">filterRecord</span> = <span class="ruby-constant">Filter</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value">:field</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">filters</span>[<span class="ruby-string">&quot;filter&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span>], <span class="ruby-value">:comparator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comparators</span>[<span class="ruby-string">&quot;comparator&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span>], <span class="ruby-value">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">filterValues</span>[<span class="ruby-string">&quot;filterValue&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span>])
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">filterRecord</span>.<span class="ruby-identifier">inspect</span>
+    <span class="ruby-ivar">@query</span>.<span class="ruby-identifier">filters</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">filterRecord</span>
+    <span class="ruby-identifier">i</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">attribute</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">headerRecord</span> = <span class="ruby-constant">Header</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value">:field</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">attributes</span>[<span class="ruby-string">&quot;attribute&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span>])
+    <span class="ruby-ivar">@query</span>.<span class="ruby-identifier">headers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">headerRecord</span>
+    <span class="ruby-identifier">i</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@query</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
