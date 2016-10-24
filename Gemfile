@@ -58,6 +58,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara-webkit', '~> 1.11', '>= 1.11.1'
   gem 'headless'
+  gem 'launchy'
 end
 
 group :test do
@@ -73,5 +74,4 @@ group :production do
   gem 'rails_12factor'
 end
 
-
- 
+# add to end of Gemfile

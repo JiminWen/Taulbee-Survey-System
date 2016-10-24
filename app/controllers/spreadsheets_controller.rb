@@ -30,13 +30,13 @@ class SpreadsheetsController < ApplicationController
   #used to upload a csv file
   def create
     Rails.logger.debug params.inspect
-  #  raise params.inspect
+    #raise params.inspect
     @@val = false #set false for file not finished parsing 
     params_to_pass = spreadsheet_params
     params_to_pass["name"] = params["year"]
     #filename=
     @spreadsheet = Spreadsheet.new(params_to_pass)
-    f=params["spreadsheet"]["attachment"].original_filename.inspect
+    f=params["spreadsheet"]["attachment"].original_filename
     @message=valid_extension?(f)
     if @message==false
         

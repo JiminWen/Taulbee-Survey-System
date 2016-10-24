@@ -27,7 +27,7 @@
         var format=#{@message}
         var finished = data["value"]
         if (format==false){
-          $("#loading")[0].innerHTML = "Wrong file"
+          $("#loading")[0].innerHTML = "Wrong file format, CSV file is expected"
           $("#returnButton")[0].hidden = false
         }
         else{
