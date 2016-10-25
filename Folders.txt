@@ -1,2 +1,6 @@
 public/uploads/spreadsheet/attachment/
+<<<<<<< HEAD
 public/uploads/spreadsheet/attachment/58
+=======
+public/uploads/spreadsheet/attachment/8
+>>>>>>> 48da0a9b60a9037ebfba6f4caeeb8303e18530dc

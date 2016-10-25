@@ -31,6 +31,8 @@
     -# used to select the year for a previously uploaded file
     %form{:action => site_studentFilterSelection_path}
       %br/
+      %label SEARCH
+      %br/
       %label Select which year's data you want to work on
       %select{:name => "yearSelected"}
         - @spreadsheets.each do |spreadsheet|
@@ -42,12 +44,14 @@
         
     -# used to upload a new file
     = form_for @spreadsheet, :remote => true, authenticity_token:true, :id => "submitForm", html: { multipart: true } do |f|
-      //=f.label Upload the CSV file to be 
+      %br/
+      %label UPLOAD
+      %br/
       = f.label :year
       %select#queryList{:name => "year"}
         - (1995..2055).each do |i|
           %option{:value => i}= i
-      = f.label :attachment
+      %label Upload an attachment in CSV format
       = f.file_field :attachment, accept: '.csv'
       = f.submit "Save", class: "btn btn-primary"
       
