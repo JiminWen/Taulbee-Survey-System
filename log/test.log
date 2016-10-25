@@ -1607,3 +1607,905 @@ Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
   [1m[35m (6.4ms)[0m  DELETE FROM "students";
   [1m[36m (0.3ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
   [1m[35m (7.6ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:48 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.1ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (275.5ms)
+Completed 200 OK in 491ms (Views: 473.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/site/studentFilterSelection" for 127.0.0.1 at 2016-10-25 03:49:48 +0000
+Processing by SiteController#studentFilterSelection as HTML
+  [1m[35mQuery Load (0.2ms)[0m  SELECT "queries".* FROM "queries"
+  Rendered site/studentFilterSelection.html.haml within layouts/application (16.2ms)
+Completed 200 OK in 25ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/site/studentFilterSelection" for 127.0.0.1 at 2016-10-25 03:49:48 +0000
+Processing by SiteController#studentFilterSelection as HTML
+  [1m[36mQuery Load (0.2ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+Started POST "/site/studentOutput" for 127.0.0.1 at 2016-10-25 03:49:48 +0000
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R6tWZgNywVkSWBBcFzhGpcvVQOpv9bTWfT/s5oH2OrLgEhEqzl2EhcnfAwHu/V/ETSdEUKUjGO4BNBKRBJbA4w==", "saveName"=>"", "commit"=>"Apply"}
+  [1m[35mStudent Load (0.7ms)[0m  SELECT "students".* FROM "students"
+  Rendered site/studentOutput.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 1.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:48 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.6ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+Started GET "/assets/application-a34e4e19b5c3a925da24d4d65a54f104a988451f9db0dd7f9e8434000803dddb.css" for 127.0.0.1 at 2016-10-25 03:49:48 +0000
+Started GET "/assets/application-439e1ee5e6a6575d75c0e59ac188a31756fd530457997b37b63e7086f9458d72.js" for 127.0.0.1 at 2016-10-25 03:49:48 +0000
+  [1m[36m (11.1ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (7.5ms)[0m  DELETE FROM "data";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (7.7ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (7.1ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (8.0ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (7.1ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (7.6ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/studentFilterSelection" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#studentFilterSelection as HTML
+  [1m[36mQuery Load (0.1ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/site/studentOutput" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#studentOutput as HTML
+  [1m[35mStudent Load (0.7ms)[0m  SELECT "students".* FROM "students"
+  Rendered site/studentOutput.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.1ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.1ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/studentFilterSelection" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#studentFilterSelection as HTML
+  [1m[36mQuery Load (0.1ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/site/studentOutput" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#studentOutput as HTML
+  [1m[35mStudent Load (0.7ms)[0m  SELECT "students".* FROM "students"
+  Rendered site/studentOutput.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.1ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.1ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (11.0ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (7.5ms)[0m  DELETE FROM "data";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (7.7ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (7.3ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (7.3ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (7.2ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (7.9ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (8.4ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (6.7ms)[0m  DELETE FROM "data";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (7.2ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (6.8ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (7.7ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (7.0ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (7.1ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.1ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (9.3ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (7.3ms)[0m  DELETE FROM "data";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (7.8ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (7.5ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (7.3ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (7.8ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (7.6ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.1ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (9.1ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (7.7ms)[0m  DELETE FROM "data";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (9.0ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (6.3ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (9.0ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (7.8ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (7.6ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.1ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (9.6ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (6.8ms)[0m  DELETE FROM "data";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (7.0ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (7.7ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (7.7ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (7.5ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (7.3ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.1ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (9.8ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (7.6ms)[0m  DELETE FROM "data";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (7.8ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (7.7ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (7.4ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (7.6ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (7.3ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 03:49:49 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.1ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (9.4ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (7.9ms)[0m  DELETE FROM "data";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (7.0ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (7.7ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (7.5ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (7.7ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (6.7ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 04:46:13 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.1ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (260.5ms)
+Completed 200 OK in 441ms (Views: 423.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 04:53:09 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.1ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (282.9ms)
+Completed 200 OK in 511ms (Views: 482.0ms | ActiveRecord: 4.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/site/studentFilterSelection" for 127.0.0.1 at 2016-10-25 04:53:10 +0000
+Processing by SiteController#studentFilterSelection as HTML
+  [1m[35mQuery Load (0.2ms)[0m  SELECT "queries".* FROM "queries"
+  Rendered site/studentFilterSelection.html.haml within layouts/application (16.2ms)
+Completed 200 OK in 25ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/studentFilterSelection" for 127.0.0.1 at 2016-10-25 04:53:10 +0000
+Processing by SiteController#studentFilterSelection as HTML
+  [1m[36mQuery Load (0.2ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+Started POST "/site/studentOutput" for 127.0.0.1 at 2016-10-25 04:53:10 +0000
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R6tWZgNywVkSWBBcFzhGpcvVQOpv9bTWfT/s5oH2OrLgEhEqzl2EhcnfAwHu/V/ETSdEUKUjGO4BNBKRBJbA4w==", "saveName"=>"", "commit"=>"Apply"}
+  [1m[35mStudent Load (0.7ms)[0m  SELECT "students".* FROM "students"
+  Rendered site/studentOutput.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 1.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 04:53:10 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.5ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.5ms)
+Started GET "/assets/application-a34e4e19b5c3a925da24d4d65a54f104a988451f9db0dd7f9e8434000803dddb.css" for 127.0.0.1 at 2016-10-25 04:53:10 +0000
+Started GET "/assets/application-439e1ee5e6a6575d75c0e59ac188a31756fd530457997b37b63e7086f9458d72.js" for 127.0.0.1 at 2016-10-25 04:53:10 +0000
+  [1m[36m (10.0ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (10.7ms)[0m  DELETE FROM "data";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (8.4ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (7.9ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (9.5ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (7.7ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (7.7ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/studentFilterSelection" for 127.0.0.1 at 2016-10-25 04:53:11 +0000
+Processing by SiteController#studentFilterSelection as HTML
+  [1m[36mQuery Load (0.1ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/site/studentOutput" for 127.0.0.1 at 2016-10-25 04:53:11 +0000
+Processing by SiteController#studentOutput as HTML
+  [1m[35mStudent Load (0.8ms)[0m  SELECT "students".* FROM "students"
+  Rendered site/studentOutput.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 04:53:11 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.1ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 04:53:11 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/studentFilterSelection" for 127.0.0.1 at 2016-10-25 04:53:11 +0000
+Processing by SiteController#studentFilterSelection as HTML
+  [1m[36mQuery Load (0.1ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/site/studentOutput" for 127.0.0.1 at 2016-10-25 04:53:11 +0000
+Processing by SiteController#studentOutput as HTML
+  [1m[35mStudent Load (0.7ms)[0m  SELECT "students".* FROM "students"
+  Rendered site/studentOutput.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 04:53:11 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 04:53:11 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 04:54:30 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.1ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (261.5ms)
+Completed 200 OK in 447ms (Views: 431.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 05:00:26 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.1ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (278.8ms)
+Completed 200 OK in 473ms (Views: 456.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 05:00:26 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.6ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+Started GET "/assets/application-a34e4e19b5c3a925da24d4d65a54f104a988451f9db0dd7f9e8434000803dddb.css" for 127.0.0.1 at 2016-10-25 05:00:26 +0000
+Started GET "/assets/application-439e1ee5e6a6575d75c0e59ac188a31756fd530457997b37b63e7086f9458d72.js" for 127.0.0.1 at 2016-10-25 05:00:26 +0000
+Started POST "/spreadsheets" for 127.0.0.1 at 2016-10-25 05:00:27 +0000
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x007ff750181498 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-9212-1olmtut.csv>, @original_filename="cucumber_data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cucumber_data.csv\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save"}
+{"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x007ff750181498 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-9212-1olmtut.csv>, @original_filename="cucumber_data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cucumber_data.csv\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save", "controller"=>"spreadsheets", "action"=>"create"}
+  [1m[35m (0.5ms)[0m  begin transaction
+  Rendered spreadsheets/create.html.haml within layouts/application (3.2ms)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "spreadsheets" ("attachment", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attachment", "cucumber_data.csv"], ["name", "1995"], ["created_at", "2016-10-25 05:00:27.053801"], ["updated_at", "2016-10-25 05:00:27.053801"]]
+Completed 200 OK in 15ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/spreadsheets/receiveAjaxSpreadsheet?c_name=Howdy" for 127.0.0.1 at 2016-10-25 05:00:27 +0000
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "students" ("uin", "t_number", "name", "email", "classification", "first_tamu_term", "first_term_in_college", "prim_deg", "prim_deg_col", "prim_deg_cat", "prim_deg_maj_1", "prim_deg_maj_1_dep", "prim_deg_maj_1_con_1", "prim_deg_maj_1_con_2", "prim_deg_maj_1_con_3", "prim_deg_maj_2", "prim_deg_maj_2_dep", "prim_deg_maj_2_con_1", "prim_deg_maj_2_con_2", "prim_deg_maj_2_con_3", "prim_deg_min_1", "prim_deg_min_2", "sec_deg", "sec_deg_col", "sec_deg_cat", "sec_deg_maj_1", "sec_deg_maj_1_dep", "sec_deg_maj_1_con_1", "sec_deg_maj_1_con_2", "sec_deg_maj_1_con_3", "sec_deg_maj_2", "sec_deg_maj_2_dep", "sec_deg_maj_2_con_1", "sec_deg_maj_2_con_2", "sec_deg_maj_2_con_3", "sec_deg_min_1", "sec_deg_min_2", "deg_cand", "grad_term", "grad_status", "perm_st_1", "perm_city", "perm_state", "perm_zip", "perm_phone", "withdrawal_code", "term_attemp_hrs", "term_current_hrs", "term_earned_hrs", "term_passed_hrs", "term_gpa_hrs", "term_qual_pts", "term_gpa", "term_x_hrs", "term_i_hrs", "tamu_ov_attemp_hrs", "tamu_ov_earned_hrs", "tamu_ov_passed_hrs", "tamu_ov_gpa_hrs", "tamu_ov_qual_pts", "tamu_ov_gpa", "tamu_ov_variance", "term_variance", "tamu_honors_hrs", "ov_attemp_hrs", "ov_earned_hrs", "ov_passed_hrs", "trans_earned_hrs", "trans_passed_hrs", "tamu_grad_ov_gpa", "tamu_grad_deg_gpa", "tamu_grad_deg_plan", "law_attribute", "r_holds", "t_holds", "state_drops", "crs_w_q_grades", "hrs_w_q_grades", "crs_w_w_grades", "hrs_w_w_grades", "crs_w_i_grades", "hrs_w_i_grades", "crs_w_x_grades", "hrs_w_x_grades", "crs_w_fyge", "hrs_w_fyge", "regents_sch", "country_of_origin", "county_of_origin", "sex", "ethnicity", "first_generation", "residency", "date_of_birth", "visa", "citizen", "admit_type", "faid_offered", "faid_accepted", "high_school", "hs_class_size", "hs_class_rank", "hs_percentile", "sat_total", "sat_verbal_rdg", "sat_verbal_wtg", "sat_math", "gre_total", "gre_verbal", "gre_quantitative", "lsat_average_index", "lsat_average_score", "lsat_highest_score", "lsat_highest_index", "toefl_total", "study_abrd_exp_current", "study_abrd_exp_ever", "special_program_1", "special_program_2", "dorm", "dorm_room", "prev_inst_deg_level_1", "prev_institution_1", "prev_inst_deg_date_1", "prev_inst_deg_level_2", "prev_institution_2", "prev_inst_deg_date_2", "prev_inst_deg_level_3", "prev_institution_3", "prev_inst_deg_date_3", "prev_inst_deg_level_4", "prev_institution_4", "prev_inst_deg_date_4", "prev_inst_deg_level_5", "prev_institution_5", "prev_inst_deg_date_5", "advisor_name", "registered_term", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["uin", "UIN-1"], ["t_number", "t-number 1"], ["name", "Last 1, First 1"], ["email", "email 1"], ["classification", "U4"], ["first_tamu_term", "201131"], ["first_term_in_college", "201131"], ["prim_deg", "BS"], ["prim_deg_col", "EN"], ["prim_deg_cat", "Fall 2011 - College Station"], ["prim_deg_maj_1", "CECN"], ["prim_deg_maj_1_dep", "CSCE"], ["prim_deg_maj_1_con_1", " "], ["prim_deg_maj_1_con_2", " "], ["prim_deg_maj_1_con_3", " "], ["prim_deg_maj_2", " "], ["prim_deg_maj_2_dep", " "], ["prim_deg_maj_2_con_1", " "], ["prim_deg_maj_2_con_2", " "], ["prim_deg_maj_2_con_3", " "], ["prim_deg_min_1", "MATH"], ["prim_deg_min_2", " "], ["sec_deg", " "], ["sec_deg_col", " "], ["sec_deg_cat", " "], ["sec_deg_maj_1", " "], ["sec_deg_maj_1_dep", " "], ["sec_deg_maj_1_con_1", " "], ["sec_deg_maj_1_con_2", " "], ["sec_deg_maj_1_con_3", " "], ["sec_deg_maj_2", " "], ["sec_deg_maj_2_dep", " "], ["sec_deg_maj_2_con_1", " "], ["sec_deg_maj_2_con_2", " "], ["sec_deg_maj_2_con_3", " "], ["sec_deg_min_1", " "], ["sec_deg_min_2", " "], ["deg_cand", "N"], ["grad_term", " "], ["grad_status", " "], ["perm_st_1", "12000 Squirrel Tree Rd"], ["perm_city", "Willis"], ["perm_state", "TX"], ["perm_zip", "77318"], ["perm_phone", "9368901478"], ["withdrawal_code", " "], ["term_attemp_hrs", "15"], ["term_current_hrs", "15"], ["term_earned_hrs", " "], ["term_passed_hrs", " "], ["term_gpa_hrs", " "], ["term_qual_pts", " "], ["term_gpa", " "], ["term_x_hrs", "0"], ["term_i_hrs", "0"], ["tamu_ov_attemp_hrs", "122"], ["tamu_ov_earned_hrs", "112"], ["tamu_ov_passed_hrs", "116"], ["tamu_ov_gpa_hrs", "111"], ["tamu_ov_qual_pts", "360"], ["tamu_ov_gpa", "3.243"], ["tamu_ov_variance", "138"], ["term_variance", "  "], ["tamu_honors_hrs", "0"], ["ov_attemp_hrs", "122"], ["ov_earned_hrs", "120"], ["ov_passed_hrs", "124"], ["trans_earned_hrs", "8"], ["trans_passed_hrs", "8"], ["tamu_grad_ov_gpa", " "], ["tamu_grad_deg_gpa", " "], ["tamu_grad_deg_plan", "N"], ["law_attribute", " "], ["r_holds", "0"], ["t_holds", "0"], ["state_drops", "2"], ["crs_w_q_grades", "2"], ["hrs_w_q_grades", "6"], ["crs_w_w_grades", "0"], ["hrs_w_w_grades", "0"], ["crs_w_i_grades", "0"], ["hrs_w_i_grades", "0"], ["crs_w_x_grades", "0"], ["hrs_w_x_grades", "0"], ["crs_w_fyge", "1"], ["hrs_w_fyge", "4"], ["regents_sch", "N"], ["country_of_origin", " "], ["county_of_origin", "Montgomery"], ["sex", "M"], ["ethnicity", "W"], ["first_generation", "N"], ["residency", "R"], ["date_of_birth", "5-Dec-92"], ["visa", " "], ["citizen", "US"], ["admit_type", "FR"], ["faid_offered", "N"], ["faid_accepted", "N"], ["high_school", "Willis High School"], ["hs_class_size", "389"], ["hs_class_rank", "36"], ["hs_percentile", "91"], ["sat_total", "1250"], ["sat_verbal_rdg", "610"], ["sat_verbal_wtg", "510"], ["sat_math", "640"], ["gre_total", " "], ["gre_verbal", " "], ["gre_quantitative", " "], ["lsat_average_index", " "], ["lsat_average_score", " "], ["lsat_highest_score", " "], ["lsat_highest_index", " "], ["toefl_total", " "], ["study_abrd_exp_current", "N"], ["study_abrd_exp_ever", "N"], ["special_program_1", " "], ["special_program_2", " "], ["dorm", " "], ["dorm_room", " "], ["prev_inst_deg_level_1", "  "], ["prev_institution_1", " "], ["prev_inst_deg_date_1", " "], ["prev_inst_deg_level_2", " "], ["prev_institution_2", " "], ["prev_inst_deg_date_2", " "], ["prev_inst_deg_level_3", " "], ["prev_institution_3", " "], ["prev_inst_deg_date_3", " "], ["prev_inst_deg_level_4", " "], ["prev_institution_4", " "], ["prev_inst_deg_date_4", " "], ["prev_inst_deg_level_5", " "], ["prev_institution_5", " "], ["prev_inst_deg_date_5", " "], ["advisor_name", " "], ["registered_term", "201531"], ["year", "1995"], ["created_at", "2016-10-25 05:00:27.169843"], ["updated_at", "2016-10-25 05:00:27.169843"]]
+Processing by SpreadsheetsController#receiveAjaxSpreadsheet as JSON
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  Parameters: {"c_name"=>"Howdy"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 05:00:29 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (7.2ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (7.8ms)[0m  DELETE FROM "data";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (7.5ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (9.6ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (8.5ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (7.7ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (8.0ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (10.4ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (6.5ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 05:05:09 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.1ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (279.9ms)
+Completed 200 OK in 502ms (Views: 487.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 05:05:09 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.6ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.6ms)
+Started GET "/assets/application-a34e4e19b5c3a925da24d4d65a54f104a988451f9db0dd7f9e8434000803dddb.css" for 127.0.0.1 at 2016-10-25 05:05:09 +0000
+Started GET "/assets/application-439e1ee5e6a6575d75c0e59ac188a31756fd530457997b37b63e7086f9458d72.js" for 127.0.0.1 at 2016-10-25 05:05:09 +0000
+Started POST "/spreadsheets" for 127.0.0.1 at 2016-10-25 05:05:10 +0000
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x007ff8101984e8 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-9318-xgeae.csv>, @original_filename="cucumber_data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cucumber_data.csv\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save"}
+{"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x007ff8101984e8 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-9318-xgeae.csv>, @original_filename="cucumber_data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cucumber_data.csv\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save", "controller"=>"spreadsheets", "action"=>"create"}
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "spreadsheets" ("attachment", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attachment", "cucumber_data.csv"], ["name", "1995"], ["created_at", "2016-10-25 05:05:10.072535"], ["updated_at", "2016-10-25 05:05:10.072535"]]
+  Rendered spreadsheets/create.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (11.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/spreadsheets/receiveAjaxSpreadsheet?c_name=Howdy" for 127.0.0.1 at 2016-10-25 05:05:10 +0000
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "students" ("uin", "t_number", "name", "email", "classification", "first_tamu_term", "first_term_in_college", "prim_deg", "prim_deg_col", "prim_deg_cat", "prim_deg_maj_1", "prim_deg_maj_1_dep", "prim_deg_maj_1_con_1", "prim_deg_maj_1_con_2", "prim_deg_maj_1_con_3", "prim_deg_maj_2", "prim_deg_maj_2_dep", "prim_deg_maj_2_con_1", "prim_deg_maj_2_con_2", "prim_deg_maj_2_con_3", "prim_deg_min_1", "prim_deg_min_2", "sec_deg", "sec_deg_col", "sec_deg_cat", "sec_deg_maj_1", "sec_deg_maj_1_dep", "sec_deg_maj_1_con_1", "sec_deg_maj_1_con_2", "sec_deg_maj_1_con_3", "sec_deg_maj_2", "sec_deg_maj_2_dep", "sec_deg_maj_2_con_1", "sec_deg_maj_2_con_2", "sec_deg_maj_2_con_3", "sec_deg_min_1", "sec_deg_min_2", "deg_cand", "grad_term", "grad_status", "perm_st_1", "perm_city", "perm_state", "perm_zip", "perm_phone", "withdrawal_code", "term_attemp_hrs", "term_current_hrs", "term_earned_hrs", "term_passed_hrs", "term_gpa_hrs", "term_qual_pts", "term_gpa", "term_x_hrs", "term_i_hrs", "tamu_ov_attemp_hrs", "tamu_ov_earned_hrs", "tamu_ov_passed_hrs", "tamu_ov_gpa_hrs", "tamu_ov_qual_pts", "tamu_ov_gpa", "tamu_ov_variance", "term_variance", "tamu_honors_hrs", "ov_attemp_hrs", "ov_earned_hrs", "ov_passed_hrs", "trans_earned_hrs", "trans_passed_hrs", "tamu_grad_ov_gpa", "tamu_grad_deg_gpa", "tamu_grad_deg_plan", "law_attribute", "r_holds", "t_holds", "state_drops", "crs_w_q_grades", "hrs_w_q_grades", "crs_w_w_grades", "hrs_w_w_grades", "crs_w_i_grades", "hrs_w_i_grades", "crs_w_x_grades", "hrs_w_x_grades", "crs_w_fyge", "hrs_w_fyge", "regents_sch", "country_of_origin", "county_of_origin", "sex", "ethnicity", "first_generation", "residency", "date_of_birth", "visa", "citizen", "admit_type", "faid_offered", "faid_accepted", "high_school", "hs_class_size", "hs_class_rank", "hs_percentile", "sat_total", "sat_verbal_rdg", "sat_verbal_wtg", "sat_math", "gre_total", "gre_verbal", "gre_quantitative", "lsat_average_index", "lsat_average_score", "lsat_highest_score", "lsat_highest_index", "toefl_total", "study_abrd_exp_current", "study_abrd_exp_ever", "special_program_1", "special_program_2", "dorm", "dorm_room", "prev_inst_deg_level_1", "prev_institution_1", "prev_inst_deg_date_1", "prev_inst_deg_level_2", "prev_institution_2", "prev_inst_deg_date_2", "prev_inst_deg_level_3", "prev_institution_3", "prev_inst_deg_date_3", "prev_inst_deg_level_4", "prev_institution_4", "prev_inst_deg_date_4", "prev_inst_deg_level_5", "prev_institution_5", "prev_inst_deg_date_5", "advisor_name", "registered_term", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["uin", "UIN-1"], ["t_number", "t-number 1"], ["name", "Last 1, First 1"], ["email", "email 1"], ["classification", "U4"], ["first_tamu_term", "201131"], ["first_term_in_college", "201131"], ["prim_deg", "BS"], ["prim_deg_col", "EN"], ["prim_deg_cat", "Fall 2011 - College Station"], ["prim_deg_maj_1", "CECN"], ["prim_deg_maj_1_dep", "CSCE"], ["prim_deg_maj_1_con_1", " "], ["prim_deg_maj_1_con_2", " "], ["prim_deg_maj_1_con_3", " "], ["prim_deg_maj_2", " "], ["prim_deg_maj_2_dep", " "], ["prim_deg_maj_2_con_1", " "], ["prim_deg_maj_2_con_2", " "], ["prim_deg_maj_2_con_3", " "], ["prim_deg_min_1", "MATH"], ["prim_deg_min_2", " "], ["sec_deg", " "], ["sec_deg_col", " "], ["sec_deg_cat", " "], ["sec_deg_maj_1", " "], ["sec_deg_maj_1_dep", " "], ["sec_deg_maj_1_con_1", " "], ["sec_deg_maj_1_con_2", " "], ["sec_deg_maj_1_con_3", " "], ["sec_deg_maj_2", " "], ["sec_deg_maj_2_dep", " "], ["sec_deg_maj_2_con_1", " "], ["sec_deg_maj_2_con_2", " "], ["sec_deg_maj_2_con_3", " "], ["sec_deg_min_1", " "], ["sec_deg_min_2", " "], ["deg_cand", "N"], ["grad_term", " "], ["grad_status", " "], ["perm_st_1", "12000 Squirrel Tree Rd"], ["perm_city", "Willis"], ["perm_state", "TX"], ["perm_zip", "77318"], ["perm_phone", "9368901478"], ["withdrawal_code", " "], ["term_attemp_hrs", "15"], ["term_current_hrs", "15"], ["term_earned_hrs", " "], ["term_passed_hrs", " "], ["term_gpa_hrs", " "], ["term_qual_pts", " "], ["term_gpa", " "], ["term_x_hrs", "0"], ["term_i_hrs", "0"], ["tamu_ov_attemp_hrs", "122"], ["tamu_ov_earned_hrs", "112"], ["tamu_ov_passed_hrs", "116"], ["tamu_ov_gpa_hrs", "111"], ["tamu_ov_qual_pts", "360"], ["tamu_ov_gpa", "3.243"], ["tamu_ov_variance", "138"], ["term_variance", "  "], ["tamu_honors_hrs", "0"], ["ov_attemp_hrs", "122"], ["ov_earned_hrs", "120"], ["ov_passed_hrs", "124"], ["trans_earned_hrs", "8"], ["trans_passed_hrs", "8"], ["tamu_grad_ov_gpa", " "], ["tamu_grad_deg_gpa", " "], ["tamu_grad_deg_plan", "N"], ["law_attribute", " "], ["r_holds", "0"], ["t_holds", "0"], ["state_drops", "2"], ["crs_w_q_grades", "2"], ["hrs_w_q_grades", "6"], ["crs_w_w_grades", "0"], ["hrs_w_w_grades", "0"], ["crs_w_i_grades", "0"], ["hrs_w_i_grades", "0"], ["crs_w_x_grades", "0"], ["hrs_w_x_grades", "0"], ["crs_w_fyge", "1"], ["hrs_w_fyge", "4"], ["regents_sch", "N"], ["country_of_origin", " "], ["county_of_origin", "Montgomery"], ["sex", "M"], ["ethnicity", "W"], ["first_generation", "N"], ["residency", "R"], ["date_of_birth", "5-Dec-92"], ["visa", " "], ["citizen", "US"], ["admit_type", "FR"], ["faid_offered", "N"], ["faid_accepted", "N"], ["high_school", "Willis High School"], ["hs_class_size", "389"], ["hs_class_rank", "36"], ["hs_percentile", "91"], ["sat_total", "1250"], ["sat_verbal_rdg", "610"], ["sat_verbal_wtg", "510"], ["sat_math", "640"], ["gre_total", " "], ["gre_verbal", " "], ["gre_quantitative", " "], ["lsat_average_index", " "], ["lsat_average_score", " "], ["lsat_highest_score", " "], ["lsat_highest_index", " "], ["toefl_total", " "], ["study_abrd_exp_current", "N"], ["study_abrd_exp_ever", "N"], ["special_program_1", " "], ["special_program_2", " "], ["dorm", " "], ["dorm_room", " "], ["prev_inst_deg_level_1", "  "], ["prev_institution_1", " "], ["prev_inst_deg_date_1", " "], ["prev_inst_deg_level_2", " "], ["prev_institution_2", " "], ["prev_inst_deg_date_2", " "], ["prev_inst_deg_level_3", " "], ["prev_institution_3", " "], ["prev_inst_deg_date_3", " "], ["prev_inst_deg_level_4", " "], ["prev_institution_4", " "], ["prev_inst_deg_date_4", " "], ["prev_inst_deg_level_5", " "], ["prev_institution_5", " "], ["prev_inst_deg_date_5", " "], ["advisor_name", " "], ["registered_term", "201531"], ["year", "1995"], ["created_at", "2016-10-25 05:05:10.193717"], ["updated_at", "2016-10-25 05:05:10.193717"]]
+Processing by SpreadsheetsController#receiveAjaxSpreadsheet as JSON
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  Parameters: {"c_name"=>"Howdy"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (9.0ms)[0m  DELETE FROM "cats";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'cats';
+  [1m[36m (9.0ms)[0m  [1mDELETE FROM "data";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'data';[0m
+  [1m[35m (7.6ms)[0m  DELETE FROM "filters";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'filters';
+  [1m[36m (7.3ms)[0m  [1mDELETE FROM "headers";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'headers';[0m
+  [1m[35m (5.9ms)[0m  DELETE FROM "queries";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'queries';
+  [1m[36m (6.4ms)[0m  [1mDELETE FROM "spreadsheets";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (7.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'spreadsheets';[0m
+  [1m[35m (7.0ms)[0m  DELETE FROM "students";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (6.0ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:03:34 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.1ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (297.2ms)
+Completed 200 OK in 521ms (Views: 504.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:03:35 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.6ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.6ms)
+Started GET "/assets/application-a34e4e19b5c3a925da24d4d65a54f104a988451f9db0dd7f9e8434000803dddb.css" for 127.0.0.1 at 2016-10-25 06:03:35 +0000
+Started GET "/assets/application-439e1ee5e6a6575d75c0e59ac188a31756fd530457997b37b63e7086f9458d72.js" for 127.0.0.1 at 2016-10-25 06:03:35 +0000
+Started POST "/spreadsheets" for 127.0.0.1 at 2016-10-25 06:03:36 +0000
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x000000072ef110 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-10384-xsm47z.csv>, @original_filename="cucumber_data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cucumber_data.csv\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save"}
+{"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x000000072ef110 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-10384-xsm47z.csv>, @original_filename="cucumber_data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cucumber_data.csv\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save", "controller"=>"spreadsheets", "action"=>"create"}
+  Rendered spreadsheets/create.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "spreadsheets" ("attachment", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attachment", "cucumber_data.csv"], ["name", "1995"], ["created_at", "2016-10-25 06:03:36.121213"], ["updated_at", "2016-10-25 06:03:36.121213"]]
+  [1m[35m (10.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "students" ("uin", "t_number", "name", "email", "classification", "first_tamu_term", "first_term_in_college", "prim_deg", "prim_deg_col", "prim_deg_cat", "prim_deg_maj_1", "prim_deg_maj_1_dep", "prim_deg_maj_1_con_1", "prim_deg_maj_1_con_2", "prim_deg_maj_1_con_3", "prim_deg_maj_2", "prim_deg_maj_2_dep", "prim_deg_maj_2_con_1", "prim_deg_maj_2_con_2", "prim_deg_maj_2_con_3", "prim_deg_min_1", "prim_deg_min_2", "sec_deg", "sec_deg_col", "sec_deg_cat", "sec_deg_maj_1", "sec_deg_maj_1_dep", "sec_deg_maj_1_con_1", "sec_deg_maj_1_con_2", "sec_deg_maj_1_con_3", "sec_deg_maj_2", "sec_deg_maj_2_dep", "sec_deg_maj_2_con_1", "sec_deg_maj_2_con_2", "sec_deg_maj_2_con_3", "sec_deg_min_1", "sec_deg_min_2", "deg_cand", "grad_term", "grad_status", "perm_st_1", "perm_city", "perm_state", "perm_zip", "perm_phone", "withdrawal_code", "term_attemp_hrs", "term_current_hrs", "term_earned_hrs", "term_passed_hrs", "term_gpa_hrs", "term_qual_pts", "term_gpa", "term_x_hrs", "term_i_hrs", "tamu_ov_attemp_hrs", "tamu_ov_earned_hrs", "tamu_ov_passed_hrs", "tamu_ov_gpa_hrs", "tamu_ov_qual_pts", "tamu_ov_gpa", "tamu_ov_variance", "term_variance", "tamu_honors_hrs", "ov_attemp_hrs", "ov_earned_hrs", "ov_passed_hrs", "trans_earned_hrs", "trans_passed_hrs", "tamu_grad_ov_gpa", "tamu_grad_deg_gpa", "tamu_grad_deg_plan", "law_attribute", "r_holds", "t_holds", "state_drops", "crs_w_q_grades", "hrs_w_q_grades", "crs_w_w_grades", "hrs_w_w_grades", "crs_w_i_grades", "hrs_w_i_grades", "crs_w_x_grades", "hrs_w_x_grades", "crs_w_fyge", "hrs_w_fyge", "regents_sch", "country_of_origin", "county_of_origin", "sex", "ethnicity", "first_generation", "residency", "date_of_birth", "visa", "citizen", "admit_type", "faid_offered", "faid_accepted", "high_school", "hs_class_size", "hs_class_rank", "hs_percentile", "sat_total", "sat_verbal_rdg", "sat_verbal_wtg", "sat_math", "gre_total", "gre_verbal", "gre_quantitative", "lsat_average_index", "lsat_average_score", "lsat_highest_score", "lsat_highest_index", "toefl_total", "study_abrd_exp_current", "study_abrd_exp_ever", "special_program_1", "special_program_2", "dorm", "dorm_room", "prev_inst_deg_level_1", "prev_institution_1", "prev_inst_deg_date_1", "prev_inst_deg_level_2", "prev_institution_2", "prev_inst_deg_date_2", "prev_inst_deg_level_3", "prev_institution_3", "prev_inst_deg_date_3", "prev_inst_deg_level_4", "prev_institution_4", "prev_inst_deg_date_4", "prev_inst_deg_level_5", "prev_institution_5", "prev_inst_deg_date_5", "advisor_name", "registered_term", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["uin", "UIN-1"], ["t_number", "t-number 1"], ["name", "Last 1, First 1"], ["email", "email 1"], ["classification", "U4"], ["first_tamu_term", "201131"], ["first_term_in_college", "201131"], ["prim_deg", "BS"], ["prim_deg_col", "EN"], ["prim_deg_cat", "Fall 2011 - College Station"], ["prim_deg_maj_1", "CECN"], ["prim_deg_maj_1_dep", "CSCE"], ["prim_deg_maj_1_con_1", " "], ["prim_deg_maj_1_con_2", " "], ["prim_deg_maj_1_con_3", " "], ["prim_deg_maj_2", " "], ["prim_deg_maj_2_dep", " "], ["prim_deg_maj_2_con_1", " "], ["prim_deg_maj_2_con_2", " "], ["prim_deg_maj_2_con_3", " "], ["prim_deg_min_1", "MATH"], ["prim_deg_min_2", " "], ["sec_deg", " "], ["sec_deg_col", " "], ["sec_deg_cat", " "], ["sec_deg_maj_1", " "], ["sec_deg_maj_1_dep", " "], ["sec_deg_maj_1_con_1", " "], ["sec_deg_maj_1_con_2", " "], ["sec_deg_maj_1_con_3", " "], ["sec_deg_maj_2", " "], ["sec_deg_maj_2_dep", " "], ["sec_deg_maj_2_con_1", " "], ["sec_deg_maj_2_con_2", " "], ["sec_deg_maj_2_con_3", " "], ["sec_deg_min_1", " "], ["sec_deg_min_2", " "], ["deg_cand", "N"], ["grad_term", " "], ["grad_status", " "], ["perm_st_1", "12000 Squirrel Tree Rd"], ["perm_city", "Willis"], ["perm_state", "TX"], ["perm_zip", "77318"], ["perm_phone", "9368901478"], ["withdrawal_code", " "], ["term_attemp_hrs", "15"], ["term_current_hrs", "15"], ["term_earned_hrs", " "], ["term_passed_hrs", " "], ["term_gpa_hrs", " "], ["term_qual_pts", " "], ["term_gpa", " "], ["term_x_hrs", "0"], ["term_i_hrs", "0"], ["tamu_ov_attemp_hrs", "122"], ["tamu_ov_earned_hrs", "112"], ["tamu_ov_passed_hrs", "116"], ["tamu_ov_gpa_hrs", "111"], ["tamu_ov_qual_pts", "360"], ["tamu_ov_gpa", "3.243"], ["tamu_ov_variance", "138"], ["term_variance", "  "], ["tamu_honors_hrs", "0"], ["ov_attemp_hrs", "122"], ["ov_earned_hrs", "120"], ["ov_passed_hrs", "124"], ["trans_earned_hrs", "8"], ["trans_passed_hrs", "8"], ["tamu_grad_ov_gpa", " "], ["tamu_grad_deg_gpa", " "], ["tamu_grad_deg_plan", "N"], ["law_attribute", " "], ["r_holds", "0"], ["t_holds", "0"], ["state_drops", "2"], ["crs_w_q_grades", "2"], ["hrs_w_q_grades", "6"], ["crs_w_w_grades", "0"], ["hrs_w_w_grades", "0"], ["crs_w_i_grades", "0"], ["hrs_w_i_grades", "0"], ["crs_w_x_grades", "0"], ["hrs_w_x_grades", "0"], ["crs_w_fyge", "1"], ["hrs_w_fyge", "4"], ["regents_sch", "N"], ["country_of_origin", " "], ["county_of_origin", "Montgomery"], ["sex", "M"], ["ethnicity", "W"], ["first_generation", "N"], ["residency", "R"], ["date_of_birth", "5-Dec-92"], ["visa", " "], ["citizen", "US"], ["admit_type", "FR"], ["faid_offered", "N"], ["faid_accepted", "N"], ["high_school", "Willis High School"], ["hs_class_size", "389"], ["hs_class_rank", "36"], ["hs_percentile", "91"], ["sat_total", "1250"], ["sat_verbal_rdg", "610"], ["sat_verbal_wtg", "510"], ["sat_math", "640"], ["gre_total", " "], ["gre_verbal", " "], ["gre_quantitative", " "], ["lsat_average_index", " "], ["lsat_average_score", " "], ["lsat_highest_score", " "], ["lsat_highest_index", " "], ["toefl_total", " "], ["study_abrd_exp_current", "N"], ["study_abrd_exp_ever", "N"], ["special_program_1", " "], ["special_program_2", " "], ["dorm", " "], ["dorm_room", " "], ["prev_inst_deg_level_1", "  "], ["prev_institution_1", " "], ["prev_inst_deg_date_1", " "], ["prev_inst_deg_level_2", " "], ["prev_institution_2", " "], ["prev_inst_deg_date_2", " "], ["prev_inst_deg_level_3", " "], ["prev_institution_3", " "], ["prev_inst_deg_date_3", " "], ["prev_inst_deg_level_4", " "], ["prev_institution_4", " "], ["prev_inst_deg_date_4", " "], ["prev_inst_deg_level_5", " "], ["prev_institution_5", " "], ["prev_inst_deg_date_5", " "], ["advisor_name", " "], ["registered_term", "201531"], ["year", "1995"], ["created_at", "2016-10-25 06:03:36.240912"], ["updated_at", "2016-10-25 06:03:36.240912"]]
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+Started GET "/spreadsheets/receiveAjaxSpreadsheet?c_name=Howdy" for 127.0.0.1 at 2016-10-25 06:03:36 +0000
+Processing by SpreadsheetsController#receiveAjaxSpreadsheet as JSON
+  Parameters: {"c_name"=>"Howdy"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (9.2ms)[0m  DELETE FROM "cats";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'cats';
+  [1m[36m (7.8ms)[0m  [1mDELETE FROM "data";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'data';[0m
+  [1m[35m (7.1ms)[0m  DELETE FROM "filters";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'filters';
+  [1m[36m (6.5ms)[0m  [1mDELETE FROM "headers";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'headers';[0m
+  [1m[35m (6.5ms)[0m  DELETE FROM "queries";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'queries';
+  [1m[36m (7.2ms)[0m  [1mDELETE FROM "spreadsheets";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (7.6ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'spreadsheets';[0m
+  [1m[35m (6.3ms)[0m  DELETE FROM "students";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (6.4ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:04:14 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.1ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (265.1ms)
+Completed 200 OK in 463ms (Views: 446.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:04:15 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.6ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.6ms)
+Started GET "/assets/application-a34e4e19b5c3a925da24d4d65a54f104a988451f9db0dd7f9e8434000803dddb.css" for 127.0.0.1 at 2016-10-25 06:04:15 +0000
+Started GET "/assets/application-439e1ee5e6a6575d75c0e59ac188a31756fd530457997b37b63e7086f9458d72.js" for 127.0.0.1 at 2016-10-25 06:04:15 +0000
+Started POST "/spreadsheets" for 127.0.0.1 at 2016-10-25 06:04:15 +0000
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fa36c180ad0 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-10568-x3b1q3.csv>, @original_filename="cucumber_data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cucumber_data.csv\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save"}
+{"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fa36c180ad0 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-10568-x3b1q3.csv>, @original_filename="cucumber_data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cucumber_data.csv\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save", "controller"=>"spreadsheets", "action"=>"create"}
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "spreadsheets" ("attachment", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attachment", "cucumber_data.csv"], ["name", "1995"], ["created_at", "2016-10-25 06:04:15.915736"], ["updated_at", "2016-10-25 06:04:15.915736"]]
+  Rendered spreadsheets/create.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 14ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "students" ("uin", "t_number", "name", "email", "classification", "first_tamu_term", "first_term_in_college", "prim_deg", "prim_deg_col", "prim_deg_cat", "prim_deg_maj_1", "prim_deg_maj_1_dep", "prim_deg_maj_1_con_1", "prim_deg_maj_1_con_2", "prim_deg_maj_1_con_3", "prim_deg_maj_2", "prim_deg_maj_2_dep", "prim_deg_maj_2_con_1", "prim_deg_maj_2_con_2", "prim_deg_maj_2_con_3", "prim_deg_min_1", "prim_deg_min_2", "sec_deg", "sec_deg_col", "sec_deg_cat", "sec_deg_maj_1", "sec_deg_maj_1_dep", "sec_deg_maj_1_con_1", "sec_deg_maj_1_con_2", "sec_deg_maj_1_con_3", "sec_deg_maj_2", "sec_deg_maj_2_dep", "sec_deg_maj_2_con_1", "sec_deg_maj_2_con_2", "sec_deg_maj_2_con_3", "sec_deg_min_1", "sec_deg_min_2", "deg_cand", "grad_term", "grad_status", "perm_st_1", "perm_city", "perm_state", "perm_zip", "perm_phone", "withdrawal_code", "term_attemp_hrs", "term_current_hrs", "term_earned_hrs", "term_passed_hrs", "term_gpa_hrs", "term_qual_pts", "term_gpa", "term_x_hrs", "term_i_hrs", "tamu_ov_attemp_hrs", "tamu_ov_earned_hrs", "tamu_ov_passed_hrs", "tamu_ov_gpa_hrs", "tamu_ov_qual_pts", "tamu_ov_gpa", "tamu_ov_variance", "term_variance", "tamu_honors_hrs", "ov_attemp_hrs", "ov_earned_hrs", "ov_passed_hrs", "trans_earned_hrs", "trans_passed_hrs", "tamu_grad_ov_gpa", "tamu_grad_deg_gpa", "tamu_grad_deg_plan", "law_attribute", "r_holds", "t_holds", "state_drops", "crs_w_q_grades", "hrs_w_q_grades", "crs_w_w_grades", "hrs_w_w_grades", "crs_w_i_grades", "hrs_w_i_grades", "crs_w_x_grades", "hrs_w_x_grades", "crs_w_fyge", "hrs_w_fyge", "regents_sch", "country_of_origin", "county_of_origin", "sex", "ethnicity", "first_generation", "residency", "date_of_birth", "visa", "citizen", "admit_type", "faid_offered", "faid_accepted", "high_school", "hs_class_size", "hs_class_rank", "hs_percentile", "sat_total", "sat_verbal_rdg", "sat_verbal_wtg", "sat_math", "gre_total", "gre_verbal", "gre_quantitative", "lsat_average_index", "lsat_average_score", "lsat_highest_score", "lsat_highest_index", "toefl_total", "study_abrd_exp_current", "study_abrd_exp_ever", "special_program_1", "special_program_2", "dorm", "dorm_room", "prev_inst_deg_level_1", "prev_institution_1", "prev_inst_deg_date_1", "prev_inst_deg_level_2", "prev_institution_2", "prev_inst_deg_date_2", "prev_inst_deg_level_3", "prev_institution_3", "prev_inst_deg_date_3", "prev_inst_deg_level_4", "prev_institution_4", "prev_inst_deg_date_4", "prev_inst_deg_level_5", "prev_institution_5", "prev_inst_deg_date_5", "advisor_name", "registered_term", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["uin", "UIN-1"], ["t_number", "t-number 1"], ["name", "Last 1, First 1"], ["email", "email 1"], ["classification", "U4"], ["first_tamu_term", "201131"], ["first_term_in_college", "201131"], ["prim_deg", "BS"], ["prim_deg_col", "EN"], ["prim_deg_cat", "Fall 2011 - College Station"], ["prim_deg_maj_1", "CECN"], ["prim_deg_maj_1_dep", "CSCE"], ["prim_deg_maj_1_con_1", " "], ["prim_deg_maj_1_con_2", " "], ["prim_deg_maj_1_con_3", " "], ["prim_deg_maj_2", " "], ["prim_deg_maj_2_dep", " "], ["prim_deg_maj_2_con_1", " "], ["prim_deg_maj_2_con_2", " "], ["prim_deg_maj_2_con_3", " "], ["prim_deg_min_1", "MATH"], ["prim_deg_min_2", " "], ["sec_deg", " "], ["sec_deg_col", " "], ["sec_deg_cat", " "], ["sec_deg_maj_1", " "], ["sec_deg_maj_1_dep", " "], ["sec_deg_maj_1_con_1", " "], ["sec_deg_maj_1_con_2", " "], ["sec_deg_maj_1_con_3", " "], ["sec_deg_maj_2", " "], ["sec_deg_maj_2_dep", " "], ["sec_deg_maj_2_con_1", " "], ["sec_deg_maj_2_con_2", " "], ["sec_deg_maj_2_con_3", " "], ["sec_deg_min_1", " "], ["sec_deg_min_2", " "], ["deg_cand", "N"], ["grad_term", " "], ["grad_status", " "], ["perm_st_1", "12000 Squirrel Tree Rd"], ["perm_city", "Willis"], ["perm_state", "TX"], ["perm_zip", "77318"], ["perm_phone", "9368901478"], ["withdrawal_code", " "], ["term_attemp_hrs", "15"], ["term_current_hrs", "15"], ["term_earned_hrs", " "], ["term_passed_hrs", " "], ["term_gpa_hrs", " "], ["term_qual_pts", " "], ["term_gpa", " "], ["term_x_hrs", "0"], ["term_i_hrs", "0"], ["tamu_ov_attemp_hrs", "122"], ["tamu_ov_earned_hrs", "112"], ["tamu_ov_passed_hrs", "116"], ["tamu_ov_gpa_hrs", "111"], ["tamu_ov_qual_pts", "360"], ["tamu_ov_gpa", "3.243"], ["tamu_ov_variance", "138"], ["term_variance", "  "], ["tamu_honors_hrs", "0"], ["ov_attemp_hrs", "122"], ["ov_earned_hrs", "120"], ["ov_passed_hrs", "124"], ["trans_earned_hrs", "8"], ["trans_passed_hrs", "8"], ["tamu_grad_ov_gpa", " "], ["tamu_grad_deg_gpa", " "], ["tamu_grad_deg_plan", "N"], ["law_attribute", " "], ["r_holds", "0"], ["t_holds", "0"], ["state_drops", "2"], ["crs_w_q_grades", "2"], ["hrs_w_q_grades", "6"], ["crs_w_w_grades", "0"], ["hrs_w_w_grades", "0"], ["crs_w_i_grades", "0"], ["hrs_w_i_grades", "0"], ["crs_w_x_grades", "0"], ["hrs_w_x_grades", "0"], ["crs_w_fyge", "1"], ["hrs_w_fyge", "4"], ["regents_sch", "N"], ["country_of_origin", " "], ["county_of_origin", "Montgomery"], ["sex", "M"], ["ethnicity", "W"], ["first_generation", "N"], ["residency", "R"], ["date_of_birth", "5-Dec-92"], ["visa", " "], ["citizen", "US"], ["admit_type", "FR"], ["faid_offered", "N"], ["faid_accepted", "N"], ["high_school", "Willis High School"], ["hs_class_size", "389"], ["hs_class_rank", "36"], ["hs_percentile", "91"], ["sat_total", "1250"], ["sat_verbal_rdg", "610"], ["sat_verbal_wtg", "510"], ["sat_math", "640"], ["gre_total", " "], ["gre_verbal", " "], ["gre_quantitative", " "], ["lsat_average_index", " "], ["lsat_average_score", " "], ["lsat_highest_score", " "], ["lsat_highest_index", " "], ["toefl_total", " "], ["study_abrd_exp_current", "N"], ["study_abrd_exp_ever", "N"], ["special_program_1", " "], ["special_program_2", " "], ["dorm", " "], ["dorm_room", " "], ["prev_inst_deg_level_1", "  "], ["prev_institution_1", " "], ["prev_inst_deg_date_1", " "], ["prev_inst_deg_level_2", " "], ["prev_institution_2", " "], ["prev_inst_deg_date_2", " "], ["prev_inst_deg_level_3", " "], ["prev_institution_3", " "], ["prev_inst_deg_date_3", " "], ["prev_inst_deg_level_4", " "], ["prev_institution_4", " "], ["prev_inst_deg_date_4", " "], ["prev_inst_deg_level_5", " "], ["prev_institution_5", " "], ["prev_inst_deg_date_5", " "], ["advisor_name", " "], ["registered_term", "201531"], ["year", "1995"], ["created_at", "2016-10-25 06:04:16.035496"], ["updated_at", "2016-10-25 06:04:16.035496"]]
+Started GET "/spreadsheets/receiveAjaxSpreadsheet?c_name=Howdy" for 127.0.0.1 at 2016-10-25 06:04:16 +0000
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+Processing by SpreadsheetsController#receiveAjaxSpreadsheet as JSON
+  Parameters: {"c_name"=>"Howdy"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:04:18 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (9.6ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (7.3ms)[0m  DELETE FROM "data";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (6.8ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (7.5ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (7.3ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (7.5ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (7.1ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (7.3ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (7.6ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:07:31 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.1ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (263.5ms)
+Completed 200 OK in 467ms (Views: 448.7ms | ActiveRecord: 1.0ms)
+Started GET "/assets/application-a34e4e19b5c3a925da24d4d65a54f104a988451f9db0dd7f9e8434000803dddb.css" for 127.0.0.1 at 2016-10-25 06:07:32 +0000
+Started GET "/assets/application-439e1ee5e6a6575d75c0e59ac188a31756fd530457997b37b63e7086f9458d72.js" for 127.0.0.1 at 2016-10-25 06:07:32 +0000
+Started POST "/spreadsheets" for 127.0.0.1 at 2016-10-25 06:07:32 +0000
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x000000065f9190 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-10667-1gx3rvt.non_csv_type>, @original_filename="wrong_input_file.non_csv_type", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"wrong_input_file.non_csv_type\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save"}
+{"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x000000065f9190 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-10667-1gx3rvt.non_csv_type>, @original_filename="wrong_input_file.non_csv_type", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"wrong_input_file.non_csv_type\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save", "controller"=>"spreadsheets", "action"=>"create"}
+  Rendered spreadsheets/create.html.haml within layouts/application (6.8ms)
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+Completed 200 OK in 21ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "spreadsheets" ("attachment", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["attachment", "wrong_input_file.non_csv_type"], ["name", "1995"], ["created_at", "2016-10-25 06:07:32.340266"], ["updated_at", "2016-10-25 06:07:32.340266"]]
+  [1m[36m (10.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Started GET "/spreadsheets/receiveAjaxSpreadsheet?c_name=Howdy" for 127.0.0.1 at 2016-10-25 06:07:32 +0000
+Processing by SpreadsheetsController#receiveAjaxSpreadsheet as JSON
+  Parameters: {"c_name"=>"Howdy"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:07:34 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (11.4ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (7.2ms)[0m  DELETE FROM "data";
+  [1m[36m (0.3ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (9.3ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (7.4ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (8.1ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (11.9ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (6.9ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (7.5ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.6ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:07:34 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+Started POST "/spreadsheets" for 127.0.0.1 at 2016-10-25 06:07:34 +0000
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f83619e0188 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-10667-1oiw2l.csv>, @original_filename="cucumber_data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cucumber_data.csv\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save"}
+{"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f83619e0188 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-10667-1oiw2l.csv>, @original_filename="cucumber_data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cucumber_data.csv\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save", "controller"=>"spreadsheets", "action"=>"create"}
+  Rendered spreadsheets/create.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "spreadsheets" ("attachment", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["attachment", "cucumber_data.csv"], ["name", "1995"], ["created_at", "2016-10-25 06:07:34.711394"], ["updated_at", "2016-10-25 06:07:34.711394"]]
+  [1m[36m (9.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/spreadsheets/receiveAjaxSpreadsheet?c_name=Howdy" for 127.0.0.1 at 2016-10-25 06:07:34 +0000
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "students" ("uin", "t_number", "name", "email", "classification", "first_tamu_term", "first_term_in_college", "prim_deg", "prim_deg_col", "prim_deg_cat", "prim_deg_maj_1", "prim_deg_maj_1_dep", "prim_deg_maj_1_con_1", "prim_deg_maj_1_con_2", "prim_deg_maj_1_con_3", "prim_deg_maj_2", "prim_deg_maj_2_dep", "prim_deg_maj_2_con_1", "prim_deg_maj_2_con_2", "prim_deg_maj_2_con_3", "prim_deg_min_1", "prim_deg_min_2", "sec_deg", "sec_deg_col", "sec_deg_cat", "sec_deg_maj_1", "sec_deg_maj_1_dep", "sec_deg_maj_1_con_1", "sec_deg_maj_1_con_2", "sec_deg_maj_1_con_3", "sec_deg_maj_2", "sec_deg_maj_2_dep", "sec_deg_maj_2_con_1", "sec_deg_maj_2_con_2", "sec_deg_maj_2_con_3", "sec_deg_min_1", "sec_deg_min_2", "deg_cand", "grad_term", "grad_status", "perm_st_1", "perm_city", "perm_state", "perm_zip", "perm_phone", "withdrawal_code", "term_attemp_hrs", "term_current_hrs", "term_earned_hrs", "term_passed_hrs", "term_gpa_hrs", "term_qual_pts", "term_gpa", "term_x_hrs", "term_i_hrs", "tamu_ov_attemp_hrs", "tamu_ov_earned_hrs", "tamu_ov_passed_hrs", "tamu_ov_gpa_hrs", "tamu_ov_qual_pts", "tamu_ov_gpa", "tamu_ov_variance", "term_variance", "tamu_honors_hrs", "ov_attemp_hrs", "ov_earned_hrs", "ov_passed_hrs", "trans_earned_hrs", "trans_passed_hrs", "tamu_grad_ov_gpa", "tamu_grad_deg_gpa", "tamu_grad_deg_plan", "law_attribute", "r_holds", "t_holds", "state_drops", "crs_w_q_grades", "hrs_w_q_grades", "crs_w_w_grades", "hrs_w_w_grades", "crs_w_i_grades", "hrs_w_i_grades", "crs_w_x_grades", "hrs_w_x_grades", "crs_w_fyge", "hrs_w_fyge", "regents_sch", "country_of_origin", "county_of_origin", "sex", "ethnicity", "first_generation", "residency", "date_of_birth", "visa", "citizen", "admit_type", "faid_offered", "faid_accepted", "high_school", "hs_class_size", "hs_class_rank", "hs_percentile", "sat_total", "sat_verbal_rdg", "sat_verbal_wtg", "sat_math", "gre_total", "gre_verbal", "gre_quantitative", "lsat_average_index", "lsat_average_score", "lsat_highest_score", "lsat_highest_index", "toefl_total", "study_abrd_exp_current", "study_abrd_exp_ever", "special_program_1", "special_program_2", "dorm", "dorm_room", "prev_inst_deg_level_1", "prev_institution_1", "prev_inst_deg_date_1", "prev_inst_deg_level_2", "prev_institution_2", "prev_inst_deg_date_2", "prev_inst_deg_level_3", "prev_institution_3", "prev_inst_deg_date_3", "prev_inst_deg_level_4", "prev_institution_4", "prev_inst_deg_date_4", "prev_inst_deg_level_5", "prev_institution_5", "prev_inst_deg_date_5", "advisor_name", "registered_term", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uin", "UIN-1"], ["t_number", "t-number 1"], ["name", "Last 1, First 1"], ["email", "email 1"], ["classification", "U4"], ["first_tamu_term", "201131"], ["first_term_in_college", "201131"], ["prim_deg", "BS"], ["prim_deg_col", "EN"], ["prim_deg_cat", "Fall 2011 - College Station"], ["prim_deg_maj_1", "CECN"], ["prim_deg_maj_1_dep", "CSCE"], ["prim_deg_maj_1_con_1", " "], ["prim_deg_maj_1_con_2", " "], ["prim_deg_maj_1_con_3", " "], ["prim_deg_maj_2", " "], ["prim_deg_maj_2_dep", " "], ["prim_deg_maj_2_con_1", " "], ["prim_deg_maj_2_con_2", " "], ["prim_deg_maj_2_con_3", " "], ["prim_deg_min_1", "MATH"], ["prim_deg_min_2", " "], ["sec_deg", " "], ["sec_deg_col", " "], ["sec_deg_cat", " "], ["sec_deg_maj_1", " "], ["sec_deg_maj_1_dep", " "], ["sec_deg_maj_1_con_1", " "], ["sec_deg_maj_1_con_2", " "], ["sec_deg_maj_1_con_3", " "], ["sec_deg_maj_2", " "], ["sec_deg_maj_2_dep", " "], ["sec_deg_maj_2_con_1", " "], ["sec_deg_maj_2_con_2", " "], ["sec_deg_maj_2_con_3", " "], ["sec_deg_min_1", " "], ["sec_deg_min_2", " "], ["deg_cand", "N"], ["grad_term", " "], ["grad_status", " "], ["perm_st_1", "12000 Squirrel Tree Rd"], ["perm_city", "Willis"], ["perm_state", "TX"], ["perm_zip", "77318"], ["perm_phone", "9368901478"], ["withdrawal_code", " "], ["term_attemp_hrs", "15"], ["term_current_hrs", "15"], ["term_earned_hrs", " "], ["term_passed_hrs", " "], ["term_gpa_hrs", " "], ["term_qual_pts", " "], ["term_gpa", " "], ["term_x_hrs", "0"], ["term_i_hrs", "0"], ["tamu_ov_attemp_hrs", "122"], ["tamu_ov_earned_hrs", "112"], ["tamu_ov_passed_hrs", "116"], ["tamu_ov_gpa_hrs", "111"], ["tamu_ov_qual_pts", "360"], ["tamu_ov_gpa", "3.243"], ["tamu_ov_variance", "138"], ["term_variance", "  "], ["tamu_honors_hrs", "0"], ["ov_attemp_hrs", "122"], ["ov_earned_hrs", "120"], ["ov_passed_hrs", "124"], ["trans_earned_hrs", "8"], ["trans_passed_hrs", "8"], ["tamu_grad_ov_gpa", " "], ["tamu_grad_deg_gpa", " "], ["tamu_grad_deg_plan", "N"], ["law_attribute", " "], ["r_holds", "0"], ["t_holds", "0"], ["state_drops", "2"], ["crs_w_q_grades", "2"], ["hrs_w_q_grades", "6"], ["crs_w_w_grades", "0"], ["hrs_w_w_grades", "0"], ["crs_w_i_grades", "0"], ["hrs_w_i_grades", "0"], ["crs_w_x_grades", "0"], ["hrs_w_x_grades", "0"], ["crs_w_fyge", "1"], ["hrs_w_fyge", "4"], ["regents_sch", "N"], ["country_of_origin", " "], ["county_of_origin", "Montgomery"], ["sex", "M"], ["ethnicity", "W"], ["first_generation", "N"], ["residency", "R"], ["date_of_birth", "5-Dec-92"], ["visa", " "], ["citizen", "US"], ["admit_type", "FR"], ["faid_offered", "N"], ["faid_accepted", "N"], ["high_school", "Willis High School"], ["hs_class_size", "389"], ["hs_class_rank", "36"], ["hs_percentile", "91"], ["sat_total", "1250"], ["sat_verbal_rdg", "610"], ["sat_verbal_wtg", "510"], ["sat_math", "640"], ["gre_total", " "], ["gre_verbal", " "], ["gre_quantitative", " "], ["lsat_average_index", " "], ["lsat_average_score", " "], ["lsat_highest_score", " "], ["lsat_highest_index", " "], ["toefl_total", " "], ["study_abrd_exp_current", "N"], ["study_abrd_exp_ever", "N"], ["special_program_1", " "], ["special_program_2", " "], ["dorm", " "], ["dorm_room", " "], ["prev_inst_deg_level_1", "  "], ["prev_institution_1", " "], ["prev_inst_deg_date_1", " "], ["prev_inst_deg_level_2", " "], ["prev_institution_2", " "], ["prev_inst_deg_date_2", " "], ["prev_inst_deg_level_3", " "], ["prev_institution_3", " "], ["prev_inst_deg_date_3", " "], ["prev_inst_deg_level_4", " "], ["prev_institution_4", " "], ["prev_inst_deg_date_4", " "], ["prev_inst_deg_level_5", " "], ["prev_institution_5", " "], ["prev_inst_deg_date_5", " "], ["advisor_name", " "], ["registered_term", "201531"], ["year", "1995"], ["created_at", "2016-10-25 06:07:34.831716"], ["updated_at", "2016-10-25 06:07:34.831716"]]
+Processing by SpreadsheetsController#receiveAjaxSpreadsheet as JSON
+  [1m[35m (9.4ms)[0m  commit transaction
+  Parameters: {"c_name"=>"Howdy"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:07:36 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (9.7ms)[0m  DELETE FROM "cats";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'cats';
+  [1m[36m (7.5ms)[0m  [1mDELETE FROM "data";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'data';[0m
+  [1m[35m (7.3ms)[0m  DELETE FROM "filters";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'filters';
+  [1m[36m (8.2ms)[0m  [1mDELETE FROM "headers";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'headers';[0m
+  [1m[35m (7.6ms)[0m  DELETE FROM "queries";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'queries';
+  [1m[36m (6.6ms)[0m  [1mDELETE FROM "spreadsheets";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (7.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'spreadsheets';[0m
+  [1m[35m (6.3ms)[0m  DELETE FROM "students";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (6.8ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:09:12 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (282.1ms)
+Completed 200 OK in 498ms (Views: 481.0ms | ActiveRecord: 1.0ms)
+Started GET "/assets/application-a34e4e19b5c3a925da24d4d65a54f104a988451f9db0dd7f9e8434000803dddb.css" for 127.0.0.1 at 2016-10-25 06:09:12 +0000
+Started GET "/assets/application-439e1ee5e6a6575d75c0e59ac188a31756fd530457997b37b63e7086f9458d72.js" for 127.0.0.1 at 2016-10-25 06:09:12 +0000
+Started POST "/spreadsheets" for 127.0.0.1 at 2016-10-25 06:09:13 +0000
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00000006d13778 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-10795-19d092.non_csv_type>, @original_filename="wrong_input_file.non_csv_type", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"wrong_input_file.non_csv_type\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save"}
+{"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00000006d13778 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-10795-19d092.non_csv_type>, @original_filename="wrong_input_file.non_csv_type", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"wrong_input_file.non_csv_type\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save", "controller"=>"spreadsheets", "action"=>"create"}
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "spreadsheets" ("attachment", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["attachment", "wrong_input_file.non_csv_type"], ["name", "1995"], ["created_at", "2016-10-25 06:09:13.074223"], ["updated_at", "2016-10-25 06:09:13.074223"]]
+  Rendered spreadsheets/create.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 26ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (11.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Started GET "/spreadsheets/receiveAjaxSpreadsheet?c_name=Howdy" for 127.0.0.1 at 2016-10-25 06:09:13 +0000
+Processing by SpreadsheetsController#receiveAjaxSpreadsheet as JSON
+  Parameters: {"c_name"=>"Howdy"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:09:15 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (9.7ms)[0m  [1mDELETE FROM "cats";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'cats';[0m
+  [1m[35m (7.4ms)[0m  DELETE FROM "data";
+  [1m[36m (0.6ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'data';
+  [1m[36m (7.1ms)[0m  [1mDELETE FROM "filters";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'filters';[0m
+  [1m[35m (7.4ms)[0m  DELETE FROM "headers";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'headers';
+  [1m[36m (7.7ms)[0m  [1mDELETE FROM "queries";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'queries';[0m
+  [1m[35m (6.9ms)[0m  DELETE FROM "spreadsheets";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (7.7ms)[0m  DELETE FROM sqlite_sequence where name = 'spreadsheets';
+  [1m[36m (7.2ms)[0m  [1mDELETE FROM "students";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'students';[0m
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:09:15 +0000
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+Started POST "/spreadsheets" for 127.0.0.1 at 2016-10-25 06:09:15 +0000
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fb9119c8688 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-10795-1445mhs.csv>, @original_filename="cucumber_data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cucumber_data.csv\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save"}
+{"utf8"=>"✓", "year"=>"1995", "spreadsheet"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fb9119c8688 @tempfile=#<Tempfile:/tmp/RackMultipart20161025-10795-1445mhs.csv>, @original_filename="cucumber_data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cucumber_data.csv\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save", "controller"=>"spreadsheets", "action"=>"create"}
+  Rendered spreadsheets/create.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "spreadsheets" ("attachment", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["attachment", "cucumber_data.csv"], ["name", "1995"], ["created_at", "2016-10-25 06:09:15.431538"], ["updated_at", "2016-10-25 06:09:15.431538"]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/spreadsheets/receiveAjaxSpreadsheet?c_name=Howdy" for 127.0.0.1 at 2016-10-25 06:09:15 +0000
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("uin", "t_number", "name", "email", "classification", "first_tamu_term", "first_term_in_college", "prim_deg", "prim_deg_col", "prim_deg_cat", "prim_deg_maj_1", "prim_deg_maj_1_dep", "prim_deg_maj_1_con_1", "prim_deg_maj_1_con_2", "prim_deg_maj_1_con_3", "prim_deg_maj_2", "prim_deg_maj_2_dep", "prim_deg_maj_2_con_1", "prim_deg_maj_2_con_2", "prim_deg_maj_2_con_3", "prim_deg_min_1", "prim_deg_min_2", "sec_deg", "sec_deg_col", "sec_deg_cat", "sec_deg_maj_1", "sec_deg_maj_1_dep", "sec_deg_maj_1_con_1", "sec_deg_maj_1_con_2", "sec_deg_maj_1_con_3", "sec_deg_maj_2", "sec_deg_maj_2_dep", "sec_deg_maj_2_con_1", "sec_deg_maj_2_con_2", "sec_deg_maj_2_con_3", "sec_deg_min_1", "sec_deg_min_2", "deg_cand", "grad_term", "grad_status", "perm_st_1", "perm_city", "perm_state", "perm_zip", "perm_phone", "withdrawal_code", "term_attemp_hrs", "term_current_hrs", "term_earned_hrs", "term_passed_hrs", "term_gpa_hrs", "term_qual_pts", "term_gpa", "term_x_hrs", "term_i_hrs", "tamu_ov_attemp_hrs", "tamu_ov_earned_hrs", "tamu_ov_passed_hrs", "tamu_ov_gpa_hrs", "tamu_ov_qual_pts", "tamu_ov_gpa", "tamu_ov_variance", "term_variance", "tamu_honors_hrs", "ov_attemp_hrs", "ov_earned_hrs", "ov_passed_hrs", "trans_earned_hrs", "trans_passed_hrs", "tamu_grad_ov_gpa", "tamu_grad_deg_gpa", "tamu_grad_deg_plan", "law_attribute", "r_holds", "t_holds", "state_drops", "crs_w_q_grades", "hrs_w_q_grades", "crs_w_w_grades", "hrs_w_w_grades", "crs_w_i_grades", "hrs_w_i_grades", "crs_w_x_grades", "hrs_w_x_grades", "crs_w_fyge", "hrs_w_fyge", "regents_sch", "country_of_origin", "county_of_origin", "sex", "ethnicity", "first_generation", "residency", "date_of_birth", "visa", "citizen", "admit_type", "faid_offered", "faid_accepted", "high_school", "hs_class_size", "hs_class_rank", "hs_percentile", "sat_total", "sat_verbal_rdg", "sat_verbal_wtg", "sat_math", "gre_total", "gre_verbal", "gre_quantitative", "lsat_average_index", "lsat_average_score", "lsat_highest_score", "lsat_highest_index", "toefl_total", "study_abrd_exp_current", "study_abrd_exp_ever", "special_program_1", "special_program_2", "dorm", "dorm_room", "prev_inst_deg_level_1", "prev_institution_1", "prev_inst_deg_date_1", "prev_inst_deg_level_2", "prev_institution_2", "prev_inst_deg_date_2", "prev_inst_deg_level_3", "prev_institution_3", "prev_inst_deg_date_3", "prev_inst_deg_level_4", "prev_institution_4", "prev_inst_deg_date_4", "prev_inst_deg_level_5", "prev_institution_5", "prev_inst_deg_date_5", "advisor_name", "registered_term", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["uin", "UIN-1"], ["t_number", "t-number 1"], ["name", "Last 1, First 1"], ["email", "email 1"], ["classification", "U4"], ["first_tamu_term", "201131"], ["first_term_in_college", "201131"], ["prim_deg", "BS"], ["prim_deg_col", "EN"], ["prim_deg_cat", "Fall 2011 - College Station"], ["prim_deg_maj_1", "CECN"], ["prim_deg_maj_1_dep", "CSCE"], ["prim_deg_maj_1_con_1", " "], ["prim_deg_maj_1_con_2", " "], ["prim_deg_maj_1_con_3", " "], ["prim_deg_maj_2", " "], ["prim_deg_maj_2_dep", " "], ["prim_deg_maj_2_con_1", " "], ["prim_deg_maj_2_con_2", " "], ["prim_deg_maj_2_con_3", " "], ["prim_deg_min_1", "MATH"], ["prim_deg_min_2", " "], ["sec_deg", " "], ["sec_deg_col", " "], ["sec_deg_cat", " "], ["sec_deg_maj_1", " "], ["sec_deg_maj_1_dep", " "], ["sec_deg_maj_1_con_1", " "], ["sec_deg_maj_1_con_2", " "], ["sec_deg_maj_1_con_3", " "], ["sec_deg_maj_2", " "], ["sec_deg_maj_2_dep", " "], ["sec_deg_maj_2_con_1", " "], ["sec_deg_maj_2_con_2", " "], ["sec_deg_maj_2_con_3", " "], ["sec_deg_min_1", " "], ["sec_deg_min_2", " "], ["deg_cand", "N"], ["grad_term", " "], ["grad_status", " "], ["perm_st_1", "12000 Squirrel Tree Rd"], ["perm_city", "Willis"], ["perm_state", "TX"], ["perm_zip", "77318"], ["perm_phone", "9368901478"], ["withdrawal_code", " "], ["term_attemp_hrs", "15"], ["term_current_hrs", "15"], ["term_earned_hrs", " "], ["term_passed_hrs", " "], ["term_gpa_hrs", " "], ["term_qual_pts", " "], ["term_gpa", " "], ["term_x_hrs", "0"], ["term_i_hrs", "0"], ["tamu_ov_attemp_hrs", "122"], ["tamu_ov_earned_hrs", "112"], ["tamu_ov_passed_hrs", "116"], ["tamu_ov_gpa_hrs", "111"], ["tamu_ov_qual_pts", "360"], ["tamu_ov_gpa", "3.243"], ["tamu_ov_variance", "138"], ["term_variance", "  "], ["tamu_honors_hrs", "0"], ["ov_attemp_hrs", "122"], ["ov_earned_hrs", "120"], ["ov_passed_hrs", "124"], ["trans_earned_hrs", "8"], ["trans_passed_hrs", "8"], ["tamu_grad_ov_gpa", " "], ["tamu_grad_deg_gpa", " "], ["tamu_grad_deg_plan", "N"], ["law_attribute", " "], ["r_holds", "0"], ["t_holds", "0"], ["state_drops", "2"], ["crs_w_q_grades", "2"], ["hrs_w_q_grades", "6"], ["crs_w_w_grades", "0"], ["hrs_w_w_grades", "0"], ["crs_w_i_grades", "0"], ["hrs_w_i_grades", "0"], ["crs_w_x_grades", "0"], ["hrs_w_x_grades", "0"], ["crs_w_fyge", "1"], ["hrs_w_fyge", "4"], ["regents_sch", "N"], ["country_of_origin", " "], ["county_of_origin", "Montgomery"], ["sex", "M"], ["ethnicity", "W"], ["first_generation", "N"], ["residency", "R"], ["date_of_birth", "5-Dec-92"], ["visa", " "], ["citizen", "US"], ["admit_type", "FR"], ["faid_offered", "N"], ["faid_accepted", "N"], ["high_school", "Willis High School"], ["hs_class_size", "389"], ["hs_class_rank", "36"], ["hs_percentile", "91"], ["sat_total", "1250"], ["sat_verbal_rdg", "610"], ["sat_verbal_wtg", "510"], ["sat_math", "640"], ["gre_total", " "], ["gre_verbal", " "], ["gre_quantitative", " "], ["lsat_average_index", " "], ["lsat_average_score", " "], ["lsat_highest_score", " "], ["lsat_highest_index", " "], ["toefl_total", " "], ["study_abrd_exp_current", "N"], ["study_abrd_exp_ever", "N"], ["special_program_1", " "], ["special_program_2", " "], ["dorm", " "], ["dorm_room", " "], ["prev_inst_deg_level_1", "  "], ["prev_institution_1", " "], ["prev_inst_deg_date_1", " "], ["prev_inst_deg_level_2", " "], ["prev_institution_2", " "], ["prev_inst_deg_date_2", " "], ["prev_inst_deg_level_3", " "], ["prev_institution_3", " "], ["prev_inst_deg_date_3", " "], ["prev_inst_deg_level_4", " "], ["prev_institution_4", " "], ["prev_inst_deg_date_4", " "], ["prev_inst_deg_level_5", " "], ["prev_institution_5", " "], ["prev_inst_deg_date_5", " "], ["advisor_name", " "], ["registered_term", "201531"], ["year", "1995"], ["created_at", "2016-10-25 06:09:15.559463"], ["updated_at", "2016-10-25 06:09:15.559463"]]
+Processing by SpreadsheetsController#receiveAjaxSpreadsheet as JSON
+  [1m[35m (9.9ms)[0m  commit transaction
+  Parameters: {"c_name"=>"Howdy"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+Started GET "/site/index" for 127.0.0.1 at 2016-10-25 06:09:17 +0000
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (10.5ms)[0m  DELETE FROM "cats";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'cats';
+  [1m[36m (7.3ms)[0m  [1mDELETE FROM "data";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'data';[0m
+  [1m[35m (6.8ms)[0m  DELETE FROM "filters";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'filters';
+  [1m[36m (8.3ms)[0m  [1mDELETE FROM "headers";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'headers';[0m
+  [1m[35m (7.9ms)[0m  DELETE FROM "queries";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'queries';
+  [1m[36m (7.5ms)[0m  [1mDELETE FROM "spreadsheets";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (7.5ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'spreadsheets';[0m
+  [1m[35m (7.8ms)[0m  DELETE FROM "students";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (6.6ms)[0m  DELETE FROM sqlite_sequence where name = 'students';
