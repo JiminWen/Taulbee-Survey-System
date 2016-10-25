@@ -7,6 +7,10 @@
 require 'cucumber/rails'
 require 'headless'
 
+# Add simplecov for testing
+require 'simplecov'
+SimpleCov.start
+
 headless = Headless.new
 headless.start
 
