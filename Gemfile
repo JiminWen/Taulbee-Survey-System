@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Simlcov for testing. Added manually by Yuchneg
+gem 'simplecov', :require => false, :group => :test
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use SCSS for stylesheets
