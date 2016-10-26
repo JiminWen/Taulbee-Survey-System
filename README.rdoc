@@ -1,11 +1,14 @@
 To run this project on cloud 9, serveral set up procedure is needed after clone it from this repo.
-1. Run following: gem update rails
+1. Run following: 
+                  gem update rails
                   bundle update
-2. Run following: sudo apt-get update
+2. Run following: 
+                  sudo apt-get update
                   sudo apt-get install mesa-common-dev
                   sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev
                   sudo apt-get install libqt4-dev libqtwebkit-dev build-essential
-3. Run: bundle install
+3. Run: 
+        bundle install
         sudo apt-get install libqtwebkit-dev gstreamer1.0-plugins-base gstreamer1.0-tools gstreamer1.0-x
         sudo apt-get install xvfb
         rake db:migrate
