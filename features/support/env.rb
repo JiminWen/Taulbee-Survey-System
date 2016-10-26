@@ -5,8 +5,6 @@
 # files.
 
 require 'cucumber/rails'
-<<<<<<< HEAD
-=======
 require 'headless'
 
 # Add simplecov for testing
@@ -17,7 +15,6 @@ headless = Headless.new
 headless.start
 
 Capybara.javascript_driver = :webkit
->>>>>>> 5edff298d71b77b2838ac85496820d8cbccba308
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
