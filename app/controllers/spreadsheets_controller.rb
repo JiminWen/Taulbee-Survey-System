@@ -42,7 +42,7 @@ class SpreadsheetsController < ApplicationController
         
     end
     #do the database population in separate thread
-    #Thread.new do
+    Thread.new do
     
       saved = @spreadsheet.saveAndMove
         
@@ -69,7 +69,7 @@ class SpreadsheetsController < ApplicationController
           
       @@val = true
 
-    #end
+    end
   
     data = {:value => "Howdy"} #likely was just used for testing
 

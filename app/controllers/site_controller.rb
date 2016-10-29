@@ -128,13 +128,12 @@ class SiteController < ApplicationController
 
   if params["commit"] == "generate"
       year=params[:cur_year]
-     # @students=Student.where("year = #{year}")
-    #  raise @students.count.inspect
+    
       last_year=year.to_i-1 
       last_year=last_year.to_s
     
-      #raise Student.where("prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'").count.inspect
     
+      
       c_attribute=[" ","CS","CE"]
       r_attribute=["Number of PHD students from outside the North America?","Prior Year"]
       c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
