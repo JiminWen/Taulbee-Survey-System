@@ -4,7 +4,7 @@ class CreateStudents < ActiveRecord::Migration
       t.string :year
       t.string :uin
       t.string :t_number
-      t.string :directory_holds
+      #t.string :directory_holds
       t.string :name
       t.string :email
       t.string :classification

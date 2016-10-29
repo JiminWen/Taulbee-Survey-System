@@ -19,4 +19,24 @@ class Student < ActiveRecord::Base
             end
         end
     end
+    def self.csv_table(all_products,c_filter,r_filter,c_attri,r_attri)
+        CSV.generate do |csv|
+            
+            csv<<c_attri
+            i=0
+            r_filter.each do |r|
+                temp=[]
+                temp<<r_attri[i]
+               # raise r_attri[i].inspect
+                i=i+1
+                c_filter.each do |c|    
+            
+                    temp<<Student.where(c).where(r).count.to_s
+                    
+                    
+                end
+                csv<<temp
+            end
+        end    
+    end
 end

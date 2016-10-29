@@ -44,9 +44,7 @@
         
     -# used to upload a new file
     = form_for @spreadsheet, :remote => true, authenticity_token:true, :id => "submitForm", html: { multipart: true } do |f|
-      %br/
-      %label UPLOAD
-      %br/
+
       = f.label :year
       %select#queryList{:name => "year"}
         - (1995..2055).each do |i|

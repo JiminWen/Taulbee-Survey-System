@@ -25,6 +25,7 @@ class SiteController < ApplicationController
     #stores the selected year
     if(params["yearSelected"])
       session["yearSelected"] = params["yearSelected"]
+      @year=params["yearSelected"]
     end
     
     #if year wasn't stored, it should be a new selected year, store it
@@ -123,6 +124,27 @@ class SiteController < ApplicationController
   
   #page that shows the results
   def studentOutput
+  
+
+  if params["commit"] == "generate"
+      year=params[:cur_year]
+     # @students=Student.where("year = #{year}")
+    #  raise @students.count.inspect
+      last_year=year.to_i-1 
+      last_year=last_year.to_s
+    
+      #raise Student.where("prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'").count.inspect
+    
+      c_attribute=[" ","CS","CE"]
+      r_attribute=["Number of PHD students from outside the North America?","Prior Year"]
+      c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
+      r_filter=["year = #{year} AND country_of_origin!= ' ' AND country_of_origin!= 'United States'", "year = #{last_year} AND country_of_origin!= ' ' AND country_of_origin!='United States'"]
+      #raise Student.where(c_filter[0]).where(r_filter[0]).inspect
+      respond_to do |format|
+        format.html
+        format.csv { send_data Student.csv_table(@students, c_filter,r_filter,c_attribute,r_attribute) }
+      end
+  else  
     if params["commit"] == "Save"
       saveQuery(params)
     else
@@ -142,6 +164,7 @@ class SiteController < ApplicationController
       
       #determine if the user wants the count
       @count = @attributes.any? { |hash| hash[1].include?("count") }
+      #raise filters.inspect
   
       #if no filters selected, display all data for that year
       if filters.length == 0
@@ -150,6 +173,7 @@ class SiteController < ApplicationController
         end
       else
         #create query string from selected values
+        
         queryString = ""
         i = 0
         filters.each do |filter|
@@ -167,16 +191,16 @@ class SiteController < ApplicationController
           queryString = queryString + " AND year = \'" + session["yearSelected"] + "\'"
         end
       end
+     # raise queryString.inspect
+     # raise @attributes.values.inspect
       
-      
-
       @students = Student.where(queryString)
       respond_to do |format|
         format.html
         format.csv { send_data Student.to_csv(@students, @attributes.values) }
       end
     end
-    
+  end  
   end
   
   #unused
