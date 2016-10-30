@@ -30,7 +30,15 @@
         %img{:height => "30", :src => "/images/homepageicon.jpg", :width => "30"}/
       %a{:id => "Back", :href => site_studentFilterSelection_path}
         %img{:height => "30", :src => "/images/previous-icon.png", :width => "30"}/
+  
     
+    -#table used to display all results
+
+    
+    -#%img{:align => "center", :height => "250", :src => "/images/table.png", :width => "600"}/
+    
+    
+  
 %p
   Download:
   \#{link_to "CSV.csv", download_path(params.merge(format: 'csv'))}
