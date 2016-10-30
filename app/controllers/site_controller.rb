@@ -122,13 +122,18 @@ class SiteController < ApplicationController
     return @query
   end
   
-  # generate form 2.4
-  def form2_4(year)
+  #page that shows the results
+  def studentOutput
+  
+
+  if params["commit"] == "generate"
+      year=params[:cur_year]
+    
       last_year=year.to_i-1 
       last_year=last_year.to_s
-     # raise params.inspect
-     
-      pre_filter=("prim_deg='PHD'")
+    
+     # raise Student.where("id=1").inspect
+      pre_filte=("prim_deg='PHD'")
       c_attribute=[" ","CS","CE"]
       r_attribute=["Number of PHD students from outside the North America?","Prior Year"]
       c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
@@ -136,52 +141,8 @@ class SiteController < ApplicationController
       #raise Student.where(c_filter[0]).where(r_filter[0]).inspect
       respond_to do |format|
         format.html 
-        format.csv { send_data Student.csv_table(pre_filter, c_filter,r_filter,c_attribute,r_attribute) }
+        format.csv { send_data Student.csv_table(degree_filter, c_filter,r_filter,c_attribute,r_attribute) }
       end
-  end
-  #form2_3
-  def form(year)
-     last_year=year.to_i-1 
-     last_year=last_year.to_s
-     # raise params.inspect
-     
-     pre_filter=("prim_deg='PHD'")
-     c_attribute=[" ","CS","CE"]
-     r_attribute=["Number of PHD students from outside the North America?","Prior Year"]
-     c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
-     r_filter=["year = #{year} AND country_of_origin!= ' ' AND country_of_origin!= 'United States'", "year = #{last_year} AND country_of_origin!= ' ' AND country_of_origin!='United States'"]
-      #raise Student.where(c_filter[0]).where(r_filter[0]).inspect
-     respond_to do |format|
-        format.html 
-        format.csv { send_data Student.csv_table(pre_filter, c_filter,r_filter,c_attribute,r_attribute)}
-     end
-  
-  end
-  #page that shows the results
-  def studentOutput
-  
-
-  if params["commit"] == "generate"
-      year=params[:cur_year]
-      form2_4(year)
-      
-      
-   #   last_year=year.to_i-1 
-   #   last_year=last_year.to_s
-   #   raise params.inspect
-     # generate form 2.4
-  #    pre_filter=("prim_deg='PHD'")
-   #   c_attribute=[" ","CS","CE"]
-   #   r_attribute=["Number of PHD students from outside the North America?","Prior Year"]
-   #   c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
-   #   r_filter=["year = #{year} AND country_of_origin!= ' ' AND country_of_origin!= 'United States'", "year = #{last_year} AND country_of_origin!= ' ' AND country_of_origin!='United States'"]
-      #raise Student.where(c_filter[0]).where(r_filter[0]).inspect
-   #   respond_to do |format|
-   #     format.html 
-   #     format.csv { send_data Student.csv_table(pre_filter, c_filter,r_filter,c_attribute,r_attribute) }
-   #   end
-      
-      
       
   else  
     if params["commit"] == "Save"

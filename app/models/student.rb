@@ -21,7 +21,7 @@ class Student < ActiveRecord::Base
     end
     def self.csv_table(pre_filter,c_filter,r_filter,c_attri,r_attri)
         CSV.generate do |csv|
-            raise params.inspect
+         #   raise params.inspect
             csv<<c_attri
             i=0
             r_filter.each do |r|
