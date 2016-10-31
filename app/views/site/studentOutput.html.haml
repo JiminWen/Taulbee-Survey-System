@@ -41,7 +41,7 @@
   
 %p
   Download:
-  \#{link_to "CSV.csv", download_path(params.merge(format: 'csv'))}
+  \#{link_to "form2_4.csv", form2_4_path(format: 'csv',:year=>@year)}
   %br
   %br
   =link_to "Repeat Query", site_studentFilterSelection_path(:repeat => 1)
