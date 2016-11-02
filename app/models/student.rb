@@ -39,5 +39,16 @@ class Student < ActiveRecord::Base
                 csv<<temp
             end
         end    
+        
     end
+    
+    def self.altercsv (array)
+    CSV.generate do |csv|
+    array.each do |t|
+        csv<<t
+    
+    end
+    end
+    end
+    
 end

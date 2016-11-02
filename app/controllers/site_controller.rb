@@ -126,20 +126,40 @@ class SiteController < ApplicationController
       year=params[:year]
       last_year=year.to_i-1 
       last_year=last_year.to_s
-      h=(year+"11").to_s
+      h1=(year+"11").to_s
+      h2=(year+"21").to_s
+      h3=(year+"31").to_s
+      l1=(last_year+"11").to_s
+      l2=(last_year+"21").to_s
+      l3=(last_year+"31").to_s
       @students=Student.all
+     # raise @students.inspect
       @students=@students.where("prim_deg!='PHD' AND prim_deg!='BS'")
-      @students=@students.where("first_tamu_term=#{h}")
-      raise @students.inspect      
+     # @students=@students.where("first_tamu_term LIKE ?","%#{h1}%")
+      #raise @students.inspect      
       c_attribute=[" ","CS","CE"]
       r_attribute=["Number of newly-admitted master students from outside the North America?","Prior Year"]
       c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
       r_filter=["year = #{year} AND country_of_origin!= ' ' AND country_of_origin!= 'United States'", "year = #{last_year} AND country_of_origin!= ' ' AND country_of_origin!='United States'"]
-      #raise Student.where(c_filter[0]).where(r_filter[0]).inspect
+      
+      array=[]
+      array<<c_attribute
+      temp=[]
+      temp<<r_attribute[0]
+      temp<<@students.where(c_filter[0]).where("first_tamu_term=#{h1} OR first_tamu_term=#{h2} OR first_tamu_term=#{h3}").where(r_filter[0]).count.to_s
+      temp<<@students.where(c_filter[1]).where("first_tamu_term=#{h1} OR first_tamu_term=#{h2} OR first_tamu_term=#{h3}").where(r_filter[0]).count.to_s
+      array<<temp
+      temp=[]
+      temp<<r_attribute[1]
+      temp<<@students.where(c_filter[0]).where("first_tamu_term=#{l1} OR first_tamu_term=#{l2} OR first_tamu_term=#{l3}").where(r_filter[1]).count.to_s
+      temp<<@students.where(c_filter[1]).where("first_tamu_term=#{l1} OR first_tamu_term=#{l2} OR first_tamu_term=#{l3}").where(r_filter[1]).count.to_s
+      array<<temp
+      #raise array.inspect
+      
       respond_to do |format|
-      #  format.html 
-        format.csv { send_data Student.csv_table(@students, c_filter,r_filter,c_attribute,r_attribute) }
-       # send_data Student.csv_table(pre_filter, c_filter,r_filter,c_attribute,r_attribute)
+      
+        format.csv { send_data Student.altercsv(array) }
+       
       end
   end
   
@@ -155,11 +175,9 @@ class SiteController < ApplicationController
       r_attribute=["Number of PHD students from outside the North America?","Prior Year"]
       c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
       r_filter=["year = #{year} AND country_of_origin!= ' ' AND country_of_origin!= 'United States'", "year = #{last_year} AND country_of_origin!= ' ' AND country_of_origin!='United States'"]
-      #raise Student.where(c_filter[0]).where(r_filter[0]).inspect
+      
       respond_to do |format|
-      #  format.html 
         format.csv { send_data Student.csv_table(@students, c_filter,r_filter,c_attribute,r_attribute) }
-       # send_data Student.csv_table(pre_filter, c_filter,r_filter,c_attribute,r_attribute)
       end
   end
   #page that shows the results
