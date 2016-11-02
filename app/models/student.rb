@@ -19,7 +19,8 @@ class Student < ActiveRecord::Base
             end
         end
     end
-    def self.csv_table(pre_filter,c_filter,r_filter,c_attri,r_attri)
+    
+    def self.csv_table(product,c_filter,r_filter,c_attri,r_attri)
         CSV.generate do |csv|
          #   raise params.inspect
             csv<<c_attri
@@ -31,7 +32,7 @@ class Student < ActiveRecord::Base
                 i=i+1
                 c_filter.each do |c|    
             
-                    temp<<Student.where(pre_filter).where(c).where(r).count.to_s
+                    temp<<product.where(c).where(r).count.to_s
                     
                     
                 end
