@@ -163,7 +163,7 @@ class SiteController < ApplicationController
       end
   end
   
-  def form2_4
+  def formF_4
       year=params[:year]
       last_year=year.to_i-1 
       last_year=last_year.to_s
