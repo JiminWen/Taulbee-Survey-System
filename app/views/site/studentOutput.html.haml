@@ -38,16 +38,54 @@
     -#%img{:align => "center", :height => "250", :src => "/images/table.png", :width => "600"}/
     
     
-  
 %p
-  Download:
+  Results to Download
   %hr
+  %label PhD Enrollment
+  %br
+  %label Computer Science only
+  //#{link_to "formE_1.csv", formE_1_path(format: 'csv',:year=>@year)}
+  %br
+  %label Computer Enineering only
+  //#{link_to "formE_2.csv", formE_2_path(format: 'csv',:year=>@year)}
+  %hr
+  
+  %label other PhD Questions
+  %br
+  %label Newly-admitted PhD students enroll this fall
+  //#{link_to "formF_1.csv", formE_1_path(format: 'csv',:year=>@year)}
+  %br
+  %label Number of PhD students from outside North America
+  #{link_to "formF_4.csv", formF_4_path(format: 'csv',:year=>@year)}
+  %hr
+  
+  %label Masters Enrollment
+  %br
+  %label Computer Science only
+  #{link_to "formI_1.csv", formI_1_path(format: 'csv',:year=>@year)}
+  %br
+  %label Computer Enineering only
+  #{link_to "formI_2.csv", formI_2_path(format: 'csv',:year=>@year)}
+  %hr
+  
+  %label other Masters Questions
+  %br
+  %label Newly-admitted Masters students enroll this fall
+  //#{link_to "formJ_1.csv", formJ_1_path(format: 'csv',:year=>@year)}
+  %br
+  %label Number of Masters students from outside North America
   #{link_to "formJ_2.csv", formJ_2_path(format: 'csv',:year=>@year)}
-  \#{link_to "formF_4.csv", formF_4_path(format: 'csv',:year=>@year)}
-  \#{link_to "formI_1.csv", formI_1_path(format: 'csv',:year=>@year)}
-  \#{link_to "formI_2.csv", formI_2_path(format: 'csv',:year=>@year)}
-  \#{link_to "formM_1.csv", formM_1_path(format: 'csv',:year=>@year)}
-  \#{link_to "formM_2.csv", formM_2_path(format: 'csv',:year=>@year)}
+  %hr
+  
+  %label Bachelors Enrollment
+  %br
+  %label Computer Science only
+  #{link_to "formM_1.csv", formM_1_path(format: 'csv',:year=>@year)}
+  %br
+  %label Computer Enineering only
+  #{link_to "formM_2.csv", formM_2_path(format: 'csv',:year=>@year)}
+  %hr
+  
   
   %br
   %br
