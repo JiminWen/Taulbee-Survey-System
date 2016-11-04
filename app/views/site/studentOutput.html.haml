@@ -30,34 +30,64 @@
         %img{:height => "30", :src => "/images/homepageicon.jpg", :width => "30"}/
       %a{:id => "Back", :href => site_studentFilterSelection_path}
         %img{:height => "30", :src => "/images/previous-icon.png", :width => "30"}/
-    %hr/
+  
     
     -#table used to display all results
-    %h2 Result
-    - if @count
-      %h3 Count = #{@students.length}
-    %table#students
-      %thead
-        %tr
-        - @attributes.each do |attribute|
-          - if attribute[1] != "count"
-            %th{:align => "left"}= attribute[1]
-      %tbody
-        - if @students != nil
-          - @students.each do |student|
-            %tr
-              - @attributes.each do |attribute|
-                - if attribute[1] != "count"
-                  %td= student.send(attribute[1])
+
     
     -#%img{:align => "center", :height => "250", :src => "/images/table.png", :width => "600"}/
     
     
-    
-    %hr/
+  
 %p
-  Download:
-  \#{link_to "CSV.csv", download_path(params.merge(format: 'csv'))}
+  Results to Download
+  %hr
+  %label PhD Enrollment
+  %br
+  %label Computer Science only
+  //#{link_to "formE_1.csv", formE_1_path(format: 'csv',:year=>@year)}
+  %br
+  %label Computer Enineering only
+  //#{link_to "formE_2.csv", formE_2_path(format: 'csv',:year=>@year)}
+  %hr
+  
+  %label other PhD Questions
+  %br
+  %label Newly-admitted PhD students enroll this fall
+  //#{link_to "formF_1.csv", formE_1_path(format: 'csv',:year=>@year)}
+  %br
+  %label Number of PhD students from outside North America
+  #{link_to "form2_4.csv", form2_4_path(format: 'csv',:year=>@year)}
+  %hr
+  
+  %label Masters Enrollment
+  %br
+  %label Computer Science only
+  //#{link_to "formI_1.csv", formI_1_path(format: 'csv',:year=>@year)}
+  %br
+  %label Computer Enineering only
+  //#{link_to "formI_2.csv", formI_2_path(format: 'csv',:year=>@year)}
+  %hr
+  
+  %label other Masters Questions
+  %br
+  %label Newly-admitted Masters students enroll this fall
+  //#{link_to "formJ_1.csv", formJ_1_path(format: 'csv',:year=>@year)}
+  %br
+  %label Number of Masters students from outside North America
+  #{link_to "formJ_2.csv", formJ_2_path(format: 'csv',:year=>@year)}
+  %hr
+  
+  %label Bachelors Enrollment
+  %br
+  %label Computer Science only
+  //#{link_to "formM_1.csv", formM_1_path(format: 'csv',:year=>@year)}
+  %br
+  %label Computer Enineering only
+  //#{link_to "formM_2.csv", formM_2_path(format: 'csv',:year=>@year)}
+  %hr
+  
+  
   %br
   %br
   =link_to "Repeat Query", site_studentFilterSelection_path(:repeat => 1)

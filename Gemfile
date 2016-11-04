@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Simlcov for testing. Added manually by Yuchneg
+gem 'simplecov', :require => false, :group => :test
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use SCSS for stylesheets
@@ -58,6 +60,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara-webkit', '~> 1.11', '>= 1.11.1'
   gem 'headless'
+  gem 'launchy'
 end
 
 group :test do
@@ -73,5 +76,4 @@ group :production do
   gem 'rails_12factor'
 end
 
-
- 
+# add to end of Gemfile

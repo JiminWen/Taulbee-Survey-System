@@ -1,28 +1,15 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+To run this project on cloud 9, serveral set up procedure is needed after clone it from this repo.
+1. Run following: 
+                  gem update rails
+                  bundle update
+2. Run following: 
+                  sudo apt-get update
+                  sudo apt-get install mesa-common-dev
+                  sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev
+                  sudo apt-get install libqt4-dev libqtwebkit-dev build-essential
+3. Run: 
+        bundle install
+        sudo apt-get install libqtwebkit-dev gstreamer1.0-plugins-base gstreamer1.0-tools gstreamer1.0-x
+        sudo apt-get install xvfb
+        rake db:migrate
+        rake db:test:prepare

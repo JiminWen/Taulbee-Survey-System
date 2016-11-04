@@ -24,8 +24,17 @@
       %a{:id => "Back", :href => site_index_path}
         %img{:height => "30", :src => "/images/previous-icon.png", :width => "30"}/
         
+    %form#generate{ :action => "/site/studentOutput", :method => "post"}
+      %br
+      %label Get a standard output
+      %input{:name => "commit",:type => "submit", :value => "generate"}
+      %input{:id => "tags_list", :name => "cur_year", :type => "hidden",:value => @year}
+      %input{:name => "authenticity_token", :type => "hidden", :value => "R6tWZgNywVkSWBBcFzhGpcvVQOpv9bTWfT/s5oH2OrLgEhEqzl2EhcnfAwHu/V/ETSdEUKUjGO4BNBKRBJbA4w=="}
     -#form that allows the user to select which saved Query they want to load
+    
     %form{:action => site_studentFilterSelection_path}
+      //%label Get a standard output
+      //%button
       %br
       %label Choose among saved queries
       %select#queryList{:name => "queryLoad" }

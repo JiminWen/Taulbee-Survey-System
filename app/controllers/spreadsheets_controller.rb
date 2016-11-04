@@ -30,13 +30,13 @@ class SpreadsheetsController < ApplicationController
   #used to upload a csv file
   def create
     Rails.logger.debug params.inspect
-  #  raise params.inspect
+    #raise params.inspect
     @@val = false #set false for file not finished parsing 
     params_to_pass = spreadsheet_params
     params_to_pass["name"] = params["year"]
-    #filename=
+    
     @spreadsheet = Spreadsheet.new(params_to_pass)
-    f=params["spreadsheet"]["attachment"].original_filename.inspect
+    f=params["spreadsheet"]["attachment"].original_filename
     @message=valid_extension?(f)
     if @message==false
         
@@ -55,10 +55,11 @@ class SpreadsheetsController < ApplicationController
       headerFields = headerFields.map { |header| 
         CreateHeaderString(header).to_sym 
       } 
-        
+      #raise headerFields.inspect  
       iteration = 0 
       csv_data.each do |data| 
        if iteration > 0   
+        # raise data.inspect
          createStudent(headerFields, data, params["year"]) 
        end 
        iteration = iteration + 1 
@@ -81,15 +82,17 @@ class SpreadsheetsController < ApplicationController
   
   def valid_extension?(filename)
     ext = File.extname(filename)
-    #raise ext.inspect
-    return ext==".csv\""
+   # raise ext.inspect
+    return ext==".csv"
   end
   
   #called to create the entry per student
   def createStudent(headerFields, student, year)
     studentData = Hash[headerFields.zip student]
+    #raise studentData.inspect
     studentData[:year] = year
     Student.create(studentData)
+   # raise Student.where("id=1S")
   end
   
   #unused
@@ -125,6 +128,7 @@ class SpreadsheetsController < ApplicationController
       if headerString == "class"
         headerString = "classification"
       end
+     # raise headerString.inspect
       return headerString
   end
 
