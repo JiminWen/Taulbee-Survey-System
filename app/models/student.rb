@@ -28,7 +28,7 @@ class Student < ActiveRecord::Base
             r_filter.each do |r|
                 temp=[]
                 temp<<r_attri[i]
-               # raise r_attri[i].inspect
+              
                 i=i+1
                 c_filter.each do |c|    
             
