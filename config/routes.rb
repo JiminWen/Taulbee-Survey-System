@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get 'CSV.csv', to: 'site#studentOutput', as: :download
   get 'formF_4.csv', to: 'site#formF_4', as: :formF_4
   get 'formJ_2.csv', to: 'site#formJ_2', as: :formJ_2
+  get 'formI_1.csv', to: 'site#fromI_1', as: :formI_1
   # You can have the root of your site routed with "root"
   #root 'movies#index'
   get 'site/index'

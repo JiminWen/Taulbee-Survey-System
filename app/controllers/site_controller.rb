@@ -122,39 +122,47 @@ class SiteController < ApplicationController
     return @query
   end
   
-  def formJ_2
+  def fromI_1
       year=params[:year]
       last_year=year.to_i-1 
       last_year=last_year.to_s
-      h1=(year+"11").to_s
-      h2=(year+"21").to_s
-      h3=(year+"31").to_s
-      l1=(last_year+"11").to_s
-      l2=(last_year+"21").to_s
-      l3=(last_year+"31").to_s
       @students=Student.all
-     # raise @students.inspect
-      @students=@students.where("prim_deg!='PHD' AND prim_deg!='BS'")
-     # @students=@students.where("first_tamu_term LIKE ?","%#{h1}%")
-      #raise @students.inspect      
+      raise @students.inspect
+      @students=@students.where("prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC'").where("prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN'")
+      c_attribute=[" ","Male","Female","Not Avaliable","Total","Prior Year"]
+      r_attribute=["Residents (a.-h.)","a. American Indian or Alaska Native, not Hispanic", "b. Asain, not Hispanic","c. Black or African-American, not Hispanic","d. Native Hawallian or Other Pacific Islander, not Hispanic","e. White, not Hispanic"]
+      r_attribute<<["f. More than one race, not Hispanic","g. Hispanic or Latino, any race", "h. Race/Ethnicity Unknown","i. Nonresident Alien","j. Not available","k. Total","Prior Year"]
+      c_filter=["sex='M'","sex='F'","sex=' '"]
+      r_filter=["year = #{year} AND country_of_origin!= ' ' AND country_of_origin!= 'United States'", "year = #{last_year} AND country_of_origin!= ' ' AND country_of_origin!='United States'"]  
+      
+  end
+  
+  def formJ_2
+      year=params[:year]
+      next_year=year.to_i+1 
+      next_year=next_year.to_s
+     #raise year.inspect
+      h1="Summer #{year} - College Station"
+      h2="Fall #{year} - College Station"
+      h3="Spring #{next_year} - College Station"
+      @students=Student.all
+      @students=@students.where("prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN'").where("year=#{year}")
+      #raise Student.where("prim_deg_cat='Fall 2015 - College Station'").inspect
+     # raise h2.inspect
+      #raise Student.where("prim_deg_cat=? OR prim_deg_cat=? OR prim_deg_cat=?",h1,h2,h3).inspect
       c_attribute=[" ","CS","CE"]
       r_attribute=["Number of newly-admitted master students from outside the North America?","Prior Year"]
       c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
-      r_filter=["year = #{year} AND country_of_origin!= ' ' AND country_of_origin!= 'United States'", "year = #{last_year} AND country_of_origin!= ' ' AND country_of_origin!='United States'"]
+      r_filter=["country_of_origin!= ' ' AND country_of_origin!= 'United States'"]
       
       array=[]
       array<<c_attribute
       temp=[]
       temp<<r_attribute[0]
-      temp<<@students.where(c_filter[0]).where("first_tamu_term=#{h1} OR first_tamu_term=#{h2} OR first_tamu_term=#{h3}").where(r_filter[0]).count.to_s
-      temp<<@students.where(c_filter[1]).where("first_tamu_term=#{h1} OR first_tamu_term=#{h2} OR first_tamu_term=#{h3}").where(r_filter[0]).count.to_s
+      temp<<@students.where(c_filter[0]).where("prim_deg_cat=? OR prim_deg_cat=? OR prim_deg_cat=?",h1,h2,h3).where(r_filter[0]).count.to_s
+      temp<<@students.where(c_filter[1]).where("prim_deg_cat=? OR prim_deg_cat=? OR prim_deg_cat=?",h1,h2,h3).where(r_filter[0]).count.to_s
       array<<temp
-      temp=[]
-      temp<<r_attribute[1]
-      temp<<@students.where(c_filter[0]).where("first_tamu_term=#{l1} OR first_tamu_term=#{l2} OR first_tamu_term=#{l3}").where(r_filter[1]).count.to_s
-      temp<<@students.where(c_filter[1]).where("first_tamu_term=#{l1} OR first_tamu_term=#{l2} OR first_tamu_term=#{l3}").where(r_filter[1]).count.to_s
-      array<<temp
-      #raise array.inspect
+      
       
       respond_to do |format|
       
@@ -169,17 +177,20 @@ class SiteController < ApplicationController
       last_year=last_year.to_s
       #raise params.inspect
       @students=Student.all
-      @students=@students.where("prim_deg='PHD'")
-    #  pre_filter=("prim_deg='PHD'")
+      @students=@students.where("prim_deg='PHD'").where("year=?",year)
+    
       c_attribute=[" ","CS","CE"]
       r_attribute=["Number of PHD students from outside the North America?","Prior Year"]
       c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
-      r_filter=["year = #{year} AND country_of_origin!= ' ' AND country_of_origin!= 'United States'", "year = #{last_year} AND country_of_origin!= ' ' AND country_of_origin!='United States'"]
+      r_filter=["country_of_origin!= ' ' AND country_of_origin!= 'United States'"]
       
       respond_to do |format|
         format.csv { send_data Student.csv_table(@students, c_filter,r_filter,c_attribute,r_attribute) }
       end
   end
+  
+  
+  
   #page that shows the results
   def studentOutput
   
