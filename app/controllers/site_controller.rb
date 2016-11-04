@@ -129,7 +129,6 @@ class SiteController < ApplicationController
       #raise params.inspect
       @students=Student.all
       @students=@students.where("prim_deg='PHD'").where("year=?",year)
-    
       c_attribute=[" ","CS","CE"]
       r_attribute=["Number of PHD students from outside the North America?","Prior Year"]
       c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
@@ -152,8 +151,6 @@ class SiteController < ApplicationController
       r_filter=["residency='R' AND ethnicity='I'","residency='R' AND ethnicity='T'","residency='R' AND ethnicity='B'","residency='R' AND ethnicity='N'"] 
       r_filter=r_filter+["residency='R' AND ethnicity='W'","residency='R' AND ethnicity='M'","residency='R' AND ethnicity='H'","residency='R' AND ethnicity='O'"]
       r_filter=r_filter+["residency!='R' AND residency!='U'","residency='U'"]
-     
-      
       array=[]
       array<<c_attribute
       temp=[r_attribute[0]," "," "," "," "]
@@ -163,11 +160,9 @@ class SiteController < ApplicationController
         temp=[]
         temp<<r_attribute[i]
         i=i+1
-        
         c_filter.each do |c|
         temp<< @students.where(c).where(r).count.to_s
         end
-        
         array<<temp
       end
       temp=["k. Total"]
@@ -177,11 +172,8 @@ class SiteController < ApplicationController
       array<<temp
       
       respond_to do |format|
-      
-        format.csv { send_data Student.altercsv(array) }
-       
+         format.csv { send_data Student.altercsv(array) }
       end
-      
   end
   
   def fromI_2
@@ -196,8 +188,6 @@ class SiteController < ApplicationController
       r_filter=["residency='R' AND ethnicity='I'","residency='R' AND ethnicity='T'","residency='R' AND ethnicity='B'","residency='R' AND ethnicity='N'"] 
       r_filter=r_filter+["residency='R' AND ethnicity='W'","residency='R' AND ethnicity='M'","residency='R' AND ethnicity='H'","residency='R' AND ethnicity='O'"]
       r_filter=r_filter+["residency!='R' AND residency!='U'","residency='U'"]
-     
-      
       array=[]
       array<<c_attribute
       temp=[r_attribute[0]," "," "," "," "]
@@ -207,11 +197,9 @@ class SiteController < ApplicationController
         temp=[]
         temp<<r_attribute[i]
         i=i+1
-        
         c_filter.each do |c|
         temp<< @students.where(c).where(r).count.to_s
         end
-        
         array<<temp
       end
       temp=["k. Total"]
@@ -219,11 +207,8 @@ class SiteController < ApplicationController
       temp<< @students.where(c).count.to_s
       end
       array<<temp
-      
       respond_to do |format|
-      
-        format.csv { send_data Student.altercsv(array) }
-       
+       format.csv { send_data Student.altercsv(array) }
       end
       
   end
@@ -232,18 +217,15 @@ class SiteController < ApplicationController
       year=params[:year]
       next_year=year.to_i+1 
       next_year=next_year.to_s
-    
       h1="Summer #{year} - College Station"
       h2="Fall #{year} - College Station"
       h3="Spring #{next_year} - College Station"
       @students=Student.all
       @students=@students.where("prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN'").where("year=#{year}")
-    
       c_attribute=[" ","CS","CE"]
       r_attribute=["Number of newly-admitted master students from outside the North America?","Prior Year"]
       c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
       r_filter=["country_of_origin!= ' ' AND country_of_origin!= 'United States'"]
-      
       array=[]
       array<<c_attribute
       temp=[]
@@ -251,12 +233,8 @@ class SiteController < ApplicationController
       temp<<@students.where(c_filter[0]).where("prim_deg_cat=? OR prim_deg_cat=? OR prim_deg_cat=?",h1,h2,h3).where(r_filter[0]).count.to_s
       temp<<@students.where(c_filter[1]).where("prim_deg_cat=? OR prim_deg_cat=? OR prim_deg_cat=?",h1,h2,h3).where(r_filter[0]).count.to_s
       array<<temp
-      
-      
       respond_to do |format|
-      
         format.csv { send_data Student.altercsv(array) }
-       
       end
   end
   
