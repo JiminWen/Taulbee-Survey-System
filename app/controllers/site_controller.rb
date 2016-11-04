@@ -151,7 +151,7 @@ class SiteController < ApplicationController
       c_filter=["sex='M'","sex='F'","sex=' '","sex='M' OR sex='F' OR sex=' '"]
       r_filter=["residency='R' AND ethnicity='I'","residency='R' AND ethnicity='T'","residency='R' AND ethnicity='B'","residency='R' AND ethnicity='N'"] 
       r_filter=r_filter+["residency='R' AND ethnicity='W'","residency='R' AND ethnicity='M'","residency='R' AND ethnicity='H'","residency='R' AND ethnicity='O'"]
-      r_filter=r_filter+["residency='U'","residency!='R' AND residency!='U'"]
+      r_filter=r_filter+["residency!='R' AND residency!='U'","residency='U'"]
      
       
       array=[]
@@ -195,7 +195,7 @@ class SiteController < ApplicationController
       c_filter=["sex='M'","sex='F'","sex=' '","sex='M' OR sex='F' OR sex=' '"]
       r_filter=["residency='R' AND ethnicity='I'","residency='R' AND ethnicity='T'","residency='R' AND ethnicity='B'","residency='R' AND ethnicity='N'"] 
       r_filter=r_filter+["residency='R' AND ethnicity='W'","residency='R' AND ethnicity='M'","residency='R' AND ethnicity='H'","residency='R' AND ethnicity='O'"]
-      r_filter=r_filter+["residency='U'","residency!='R' AND residency!='U'"]
+      r_filter=r_filter+["residency!='R' AND residency!='U'","residency='U'"]
      
       
       array=[]
@@ -272,9 +272,7 @@ class SiteController < ApplicationController
       c_filter=["sex='M'","sex='F'","sex=' '","sex='M' OR sex='F' OR sex=' '"]
       r_filter=["residency='R' AND ethnicity='I'","residency='R' AND ethnicity='T'","residency='R' AND ethnicity='B'","residency='R' AND ethnicity='N'"] 
       r_filter=r_filter+["residency='R' AND ethnicity='W'","residency='R' AND ethnicity='M'","residency='R' AND ethnicity='H'","residency='R' AND ethnicity='O'"]
-      r_filter=r_filter+["residency='U'","residency!='R' AND residency!='U'"]
-     
-      
+      r_filter=r_filter+["residency!='R' AND residency!='U'","residency='U'"]
       array=[]
       array<<c_attribute
       temp=[r_attribute[0]," "," "," "," "]
@@ -284,11 +282,9 @@ class SiteController < ApplicationController
         temp=[]
         temp<<r_attribute[i]
         i=i+1
-        
         c_filter.each do |c|
         temp<< @students.where(c).where(r).count.to_s
         end
-        
         array<<temp
       end
       temp=["k. Total"]
@@ -298,9 +294,45 @@ class SiteController < ApplicationController
       array<<temp
       
       respond_to do |format|
+       format.csv { send_data Student.altercsv(array) }
+      end
       
-        format.csv { send_data Student.altercsv(array) }
-       
+  end
+  
+   def fromM_2
+      year=params[:year]
+      @students=Student.all
+      #raise @students.inspect
+      @students=@students.where("prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN'").where("prim_deg='BS'").where("year=?",year)
+      c_attribute=[" ","Male","Female","Not Avaliable","Total"]
+      r_attribute=["Residents (a.-h.)","a. American Indian or Alaska Native, not Hispanic", "b. Asain, not Hispanic","c. Black or African-American, not Hispanic","d. Native Hawallian or Other Pacific Islander, not Hispanic","e. White, not Hispanic"]
+      r_attribute=r_attribute+["f. More than one race, not Hispanic","g. Hispanic or Latino, any race", "h. Race/Ethnicity Unknown","i. Nonresident Alien","j. Not available","k. Total"]
+      c_filter=["sex='M'","sex='F'","sex=' '","sex='M' OR sex='F' OR sex=' '"]
+      r_filter=["residency='R' AND ethnicity='I'","residency='R' AND ethnicity='T'","residency='R' AND ethnicity='B'","residency='R' AND ethnicity='N'"] 
+      r_filter=r_filter+["residency='R' AND ethnicity='W'","residency='R' AND ethnicity='M'","residency='R' AND ethnicity='H'","residency='R' AND ethnicity='O'"]
+      r_filter=r_filter+["residency!='R' AND residency!='U'","residency='U'"]
+      array=[]
+      array<<c_attribute
+      temp=[r_attribute[0]," "," "," "," "]
+      array<<temp
+      i=1
+      r_filter.each do |r|
+        temp=[]
+        temp<<r_attribute[i]
+        i=i+1
+        c_filter.each do |c|
+        temp<< @students.where(c).where(r).count.to_s
+        end
+        array<<temp
+      end
+      temp=["k. Total"]
+      c_filter.each do |c|
+      temp<< @students.where(c).count.to_s
+      end
+      array<<temp
+      
+      respond_to do |format|
+       format.csv { send_data Student.altercsv(array) }
       end
       
   end
