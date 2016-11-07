@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-07T19:43:28+00:00">2016-11-07T19:43:28+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-07T22:43:23+00:00">2016-11-07T22:43:23+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">51.5%</span></span>
+    (<span class="covered_percent"><span class="red">46.79%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         35.5
+         32.1
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>15</b> files in total.
-    <b>534</b> relevant lines. 
-    <span class="green"><b>275</b> lines covered</span> and
-    <span class="red"><b>259</b> lines missed </span>
+    <b>592</b> relevant lines. 
+    <span class="green"><b>277</b> lines covered</span> and
+    <span class="red"><b>315</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#df8cc14a310bf9f7173ab31380b9d4299cc8f822" class="src_link" title="app/controllers/site_controller.rb">app/controllers/site_controller.rb</a></td>
-        <td class="red strong">39.08 %</td>
-        <td>422</td>
-        <td>284</td>
-        <td>111</td>
-        <td>173</td>
-        <td>2.2</td>
+        <td class="red strong">33.04 %</td>
+        <td>495</td>
+        <td>342</td>
+        <td>113</td>
+        <td>229</td>
+        <td>1.9</td>
       </tr>
       
       <tr>
@@ -77,7 +77,7 @@
         <td>108</td>
         <td>69</td>
         <td>39</td>
-        <td>163.6</td>
+        <td>163.8</td>
       </tr>
       
       <tr>
@@ -267,11 +267,11 @@
         <div class="source_table" id="df8cc14a310bf9f7173ab31380b9d4299cc8f822">
   <div class="header">
     <h3>app/controllers/site_controller.rb</h3>
-    <h4><span class="red">39.08 %</span> covered</h4>
+    <h4><span class="red">33.04 %</span> covered</h4>
     <div>
-      <b>284</b> relevant lines. 
-      <span class="green"><b>111</b> lines covered</span> and
-      <span class="red"><b>173</b> lines missed.</span>
+      <b>342</b> relevant lines. 
+      <span class="green"><b>113</b> lines covered</span> and
+      <span class="red"><b>229</b> lines missed.</span>
     </div>
   </div>
   
@@ -2228,400 +2228,400 @@
           <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="326">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="327">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="328">
-          
-          
-          <code class="ruby">  #page that shows the results</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="329">
+        <li class="covered" data-hits="1" data-linenumber="326">
           <span class="hits">1</span>
           
-          <code class="ruby">  def studentOutput</code>
+          <code class="ruby">def fromE_1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="330">
+        <li class="missed" data-hits="0" data-linenumber="327">
           
           
-          <code class="ruby">  #skip_before_filter :verify_authenticity_token </code>
+          <code class="ruby">      year=params[:year]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="331">
+        <li class="missed" data-hits="0" data-linenumber="328">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby">      @students=Student.all</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="332">
-          <span class="hits">6</span>
+        <li class="never" data-hits="" data-linenumber="329">
           
-          <code class="ruby">  if params[&quot;commit&quot;] == &quot;generate&quot;</code>
+          
+          <code class="ruby">      #raise @students.inspect</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="330">
+          
+          
+          <code class="ruby">      @students=@students.where(&quot;prim_deg_maj_1=&#39;CPSC&#39; OR prim_deg_maj_1=&#39;CPSL&#39;&quot;).where(&quot;prim_deg=&#39;PHD&#39;&quot;).where(&quot;year=?&quot;,year)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="331">
+          
+          
+          <code class="ruby">      c_attribute=[&quot; &quot;,&quot;Male&quot;,&quot;Female&quot;,&quot;Not Avaliable&quot;,&quot;Total&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="332">
+          
+          
+          <code class="ruby">      r_attribute=[&quot;Residents (a.-h.)&quot;,&quot;a. American Indian or Alaska Native, not Hispanic&quot;, &quot;b. Asain, not Hispanic&quot;,&quot;c. Black or African-American, not Hispanic&quot;,&quot;d. Native Hawallian or Other Pacific Islander, not Hispanic&quot;,&quot;e. White, not Hispanic&quot;]</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="333">
           
           
-          <code class="ruby">      @year=params[:cur_year]</code>
+          <code class="ruby">      r_attribute=r_attribute+[&quot;f. More than one race, not Hispanic&quot;,&quot;g. Hispanic or Latino, any race&quot;, &quot;h. Race/Ethnicity Unknown&quot;,&quot;i. Nonresident Alien&quot;,&quot;j. Not available&quot;,&quot;k. Total&quot;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="334">
+        <li class="missed" data-hits="0" data-linenumber="334">
           
           
-          <code class="ruby">      #raise params.inspect  </code>
+          <code class="ruby">      c_filter=[&quot;sex=&#39;M&#39;&quot;,&quot;sex=&#39;F&#39;&quot;,&quot;sex=&#39; &#39;&quot;,&quot;sex=&#39;M&#39; OR sex=&#39;F&#39; OR sex=&#39; &#39;&quot;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="335">
+        <li class="missed" data-hits="0" data-linenumber="335">
           
           
-          <code class="ruby">     # form2_4(year)</code>
+          <code class="ruby">      r_filter=[&quot;residency=&#39;R&#39; AND ethnicity=&#39;I&#39;&quot;,&quot;residency=&#39;R&#39; AND ethnicity=&#39;T&#39;&quot;,&quot;residency=&#39;R&#39; AND ethnicity=&#39;B&#39;&quot;,&quot;residency=&#39;R&#39; AND ethnicity=&#39;N&#39;&quot;] </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="336">
+        <li class="missed" data-hits="0" data-linenumber="336">
           
           
-          <code class="ruby">      </code>
+          <code class="ruby">      r_filter=r_filter+[&quot;residency=&#39;R&#39; AND ethnicity=&#39;W&#39;&quot;,&quot;residency=&#39;R&#39; AND ethnicity=&#39;M&#39;&quot;,&quot;residency=&#39;R&#39; AND ethnicity=&#39;H&#39;&quot;,&quot;residency=&#39;R&#39; AND ethnicity=&#39;O&#39;&quot;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="337">
+        <li class="missed" data-hits="0" data-linenumber="337">
           
           
-          <code class="ruby">      </code>
+          <code class="ruby">      r_filter=r_filter+[&quot;residency!=&#39;R&#39; AND residency!=&#39;U&#39;&quot;,&quot;residency=&#39;U&#39;&quot;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="338">
+        <li class="missed" data-hits="0" data-linenumber="338">
           
           
-          <code class="ruby">  else  </code>
+          <code class="ruby">      array=[]</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="339">
-          <span class="hits">6</span>
+        <li class="missed" data-hits="0" data-linenumber="339">
           
-          <code class="ruby">    if params[&quot;commit&quot;] == &quot;Save&quot;</code>
+          
+          <code class="ruby">      array&lt;&lt;c_attribute</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="340">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="340">
           
-          <code class="ruby">      saveQuery(params)</code>
+          
+          <code class="ruby">      temp=[r_attribute[0],&quot; &quot;,&quot; &quot;,&quot; &quot;,&quot; &quot;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="341">
+        <li class="missed" data-hits="0" data-linenumber="341">
           
           
-          <code class="ruby">    else</code>
+          <code class="ruby">      array&lt;&lt;temp</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="342">
+        <li class="missed" data-hits="0" data-linenumber="342">
           
           
-          <code class="ruby">      #if the query is not being saved</code>
+          <code class="ruby">      i=1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="343">
+        <li class="missed" data-hits="0" data-linenumber="343">
           
           
-          <code class="ruby">      #select all the filters and filter values chosen</code>
+          <code class="ruby">      r_filter.each do |r|</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="344">
-          <span class="hits">36</span>
+        <li class="missed" data-hits="0" data-linenumber="344">
           
-          <code class="ruby">      filters = params.select { |key, value| key.to_s.match(/filter\d+/) }</code>
+          
+          <code class="ruby">        temp=[]</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="345">
-          <span class="hits">36</span>
+        <li class="missed" data-hits="0" data-linenumber="345">
           
-          <code class="ruby">      comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }</code>
+          
+          <code class="ruby">        temp&lt;&lt;r_attribute[i]</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="346">
-          <span class="hits">36</span>
+        <li class="missed" data-hits="0" data-linenumber="346">
           
-          <code class="ruby">      filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }</code>
+          
+          <code class="ruby">        i=i+1</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="347">
-          <span class="hits">36</span>
+        <li class="missed" data-hits="0" data-linenumber="347">
           
-          <code class="ruby">      @attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }</code>
+          
+          <code class="ruby">        c_filter.each do |c|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="348">
+        <li class="missed" data-hits="0" data-linenumber="348">
           
           
-          <code class="ruby">      </code>
+          <code class="ruby">        temp&lt;&lt; @students.where(c).where(r).count.to_s</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="349">
           
           
-          <code class="ruby">      #store all these values if the user chooses to repeat the query</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="350">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      flash[:existingQuery] = 1</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="351">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      flash[:filters] = filters</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="352">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      flash[:comparators] = comparators</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="353">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      flash[:filterValues] = filterValues</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="354">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      flash[:headers] = @attributes</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="355">
-          
-          
-          <code class="ruby">      </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="356">
-          
-          
-          <code class="ruby">      #determine if the user wants the count</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="357">
-          <span class="hits">8</span>
-          
-          <code class="ruby">      @count = @attributes.any? { |hash| hash[1].include?(&quot;count&quot;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="358">
-          
-          
-          <code class="ruby">      #raise filters.inspect</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="359">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="360">
-          
-          
-          <code class="ruby">      #if no filters selected, display all data for that year</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="361">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      if filters.length == 0</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="362">
-          <span class="hits">3</span>
-          
-          <code class="ruby">        if session[&quot;yearSelected&quot;] != nil</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="363">
-          
-          
-          <code class="ruby">          queryString = &quot;year = \&#39;&quot; + session[&quot;yearSelected&quot;] + &quot;\&#39;&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="364">
-          
-          
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="365">
+        <li class="missed" data-hits="0" data-linenumber="350">
           
           
-          <code class="ruby">      else</code>
+          <code class="ruby">        array&lt;&lt;temp</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="366">
-          
-          
-          <code class="ruby">        #create query string from selected values</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="367">
-          
-          
-          <code class="ruby">        </code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="368">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        queryString = &quot;&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="369">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        i = 0</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="370">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        filters.each do |filter|</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="371">
-          <span class="hits">2</span>
-          
-          <code class="ruby">          filterValue = filterValues[&quot;filterValue&quot; + i.to_s]</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="372">
-          <span class="hits">2</span>
-          
-          <code class="ruby">          if filterValue != nil</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="373">
-          <span class="hits">2</span>
-          
-          <code class="ruby">            if i &gt; 0</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="374">
-          
-          
-          <code class="ruby">              queryString = queryString + &quot; AND &quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="375">
-          
-          
-          <code class="ruby">            end</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="376">
-          <span class="hits">2</span>
-          
-          <code class="ruby">            queryString = queryString + filters[&quot;filter&quot; + i.to_s] + comparators[&quot;comparator&quot; + i.to_s] + &quot;\&#39;&quot; + filterValue + &quot;\&#39;&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="377">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="378">
-          <span class="hits">2</span>
-          
-          <code class="ruby">          i = i + 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="379">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="380">
-          
-          
-          <code class="ruby">        </code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="381">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        if session[&quot;yearSelected&quot;] != nil</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="382">
-          <span class="hits">2</span>
-          
-          <code class="ruby">          queryString = queryString + &quot; AND year = \&#39;&quot; + session[&quot;yearSelected&quot;] + &quot;\&#39;&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="383">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="384">
+        <li class="never" data-hits="" data-linenumber="351">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="385">
+        <li class="missed" data-hits="0" data-linenumber="352">
           
           
-          <code class="ruby">     # raise queryString.inspect</code>
+          <code class="ruby">      temp=[&quot;k. Total&quot;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="386">
+        <li class="missed" data-hits="0" data-linenumber="353">
           
           
-          <code class="ruby">     # raise @attributes.values.inspect</code>
+          <code class="ruby">      c_filter.each do |c|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="387">
+        <li class="missed" data-hits="0" data-linenumber="354">
+          
+          
+          <code class="ruby">      temp&lt;&lt; @students.where(c).count.to_s</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="355">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="356">
+          
+          
+          <code class="ruby">      array&lt;&lt;temp</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="357">
           
           
           <code class="ruby">      </code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="388">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="358">
           
-          <code class="ruby">      @students = Student.where(queryString)</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="389">
-          <span class="hits">5</span>
           
           <code class="ruby">      respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="390">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="359">
           
-          <code class="ruby">        format.html</code>
+          
+          <code class="ruby">         format.csv { send_data Student.altercsv(array) }</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="391">
-          <span class="hits">5</span>
+        <li class="never" data-hits="" data-linenumber="360">
           
-          <code class="ruby">        format.csv { send_data Student.to_csv(@students, @attributes.values) }</code>
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="361">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="362">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="363">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def fromE_2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="364">
+          
+          
+          <code class="ruby">      year=params[:year]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="365">
+          
+          
+          <code class="ruby">      @students=Student.all</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="366">
+          
+          
+          <code class="ruby">      #raise @students.inspect</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="367">
+          
+          
+          <code class="ruby">      @students=@students.where(&quot;prim_deg_maj_1=&#39;CECL&#39; OR prim_deg_maj_1=&#39;CECN&#39;&quot;).where(&quot;prim_deg=&#39;PHD&#39;&quot;).where(&quot;year=?&quot;,year)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="368">
+          
+          
+          <code class="ruby">      c_attribute=[&quot; &quot;,&quot;Male&quot;,&quot;Female&quot;,&quot;Not Avaliable&quot;,&quot;Total&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="369">
+          
+          
+          <code class="ruby">      r_attribute=[&quot;Residents (a.-h.)&quot;,&quot;a. American Indian or Alaska Native, not Hispanic&quot;, &quot;b. Asain, not Hispanic&quot;,&quot;c. Black or African-American, not Hispanic&quot;,&quot;d. Native Hawallian or Other Pacific Islander, not Hispanic&quot;,&quot;e. White, not Hispanic&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="370">
+          
+          
+          <code class="ruby">      r_attribute=r_attribute+[&quot;f. More than one race, not Hispanic&quot;,&quot;g. Hispanic or Latino, any race&quot;, &quot;h. Race/Ethnicity Unknown&quot;,&quot;i. Nonresident Alien&quot;,&quot;j. Not available&quot;,&quot;k. Total&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="371">
+          
+          
+          <code class="ruby">      c_filter=[&quot;sex=&#39;M&#39;&quot;,&quot;sex=&#39;F&#39;&quot;,&quot;sex=&#39; &#39;&quot;,&quot;sex=&#39;M&#39; OR sex=&#39;F&#39; OR sex=&#39; &#39;&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="372">
+          
+          
+          <code class="ruby">      r_filter=[&quot;residency=&#39;R&#39; AND ethnicity=&#39;I&#39;&quot;,&quot;residency=&#39;R&#39; AND ethnicity=&#39;T&#39;&quot;,&quot;residency=&#39;R&#39; AND ethnicity=&#39;B&#39;&quot;,&quot;residency=&#39;R&#39; AND ethnicity=&#39;N&#39;&quot;] </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="373">
+          
+          
+          <code class="ruby">      r_filter=r_filter+[&quot;residency=&#39;R&#39; AND ethnicity=&#39;W&#39;&quot;,&quot;residency=&#39;R&#39; AND ethnicity=&#39;M&#39;&quot;,&quot;residency=&#39;R&#39; AND ethnicity=&#39;H&#39;&quot;,&quot;residency=&#39;R&#39; AND ethnicity=&#39;O&#39;&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="374">
+          
+          
+          <code class="ruby">      r_filter=r_filter+[&quot;residency!=&#39;R&#39; AND residency!=&#39;U&#39;&quot;,&quot;residency=&#39;U&#39;&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="375">
+          
+          
+          <code class="ruby">      array=[]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="376">
+          
+          
+          <code class="ruby">      array&lt;&lt;c_attribute</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="377">
+          
+          
+          <code class="ruby">      temp=[r_attribute[0],&quot; &quot;,&quot; &quot;,&quot; &quot;,&quot; &quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="378">
+          
+          
+          <code class="ruby">      array&lt;&lt;temp</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="379">
+          
+          
+          <code class="ruby">      i=1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="380">
+          
+          
+          <code class="ruby">      r_filter.each do |r|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="381">
+          
+          
+          <code class="ruby">        temp=[]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="382">
+          
+          
+          <code class="ruby">        temp&lt;&lt;r_attribute[i]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="383">
+          
+          
+          <code class="ruby">        i=i+1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="384">
+          
+          
+          <code class="ruby">        c_filter.each do |c|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="385">
+          
+          
+          <code class="ruby">        temp&lt;&lt; @students.where(c).where(r).count.to_s</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="386">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="387">
+          
+          
+          <code class="ruby">        array&lt;&lt;temp</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="388">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="389">
+          
+          
+          <code class="ruby">      temp=[&quot;k. Total&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="390">
+          
+          
+          <code class="ruby">      c_filter.each do |c|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="391">
+          
+          
+          <code class="ruby">      temp&lt;&lt; @students.where(c).count.to_s</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="392">
@@ -2630,181 +2630,619 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="393">
+        <li class="missed" data-hits="0" data-linenumber="393">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      array&lt;&lt;temp</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="394">
           
           
-          <code class="ruby">  end  </code>
+          <code class="ruby">      </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="395">
+        <li class="missed" data-hits="0" data-linenumber="395">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      respond_to do |format|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="396">
+        <li class="missed" data-hits="0" data-linenumber="396">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby">         format.csv { send_data Student.altercsv(array) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="397">
           
           
-          <code class="ruby">  #unused</code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="398">
+        <li class="never" data-hits="" data-linenumber="398">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="399">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="400">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="401">
+          
+          
+          <code class="ruby">  #page that shows the results</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="402">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">  def studentOutput</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="399">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="403">
           
-          <code class="ruby">    def populate_db(csvFile)</code>
+          
+          <code class="ruby">  #skip_before_filter :verify_authenticity_token </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="400">
-          
-          
-          <code class="ruby">      csv_data = CSV.read csvFile</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="401">
-          
-          
-          <code class="ruby">      headers = csv_data.shift</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="402">
-          
-          
-          <code class="ruby">      tableNameStartIndex = csvFile.rindex(&#39;/&#39;) + 1</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="403">
-          
-          
-          <code class="ruby">      tableName = csvFile[tableNameStartIndex..csvFile.length-5]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="404">
-          
-          
-          <code class="ruby">      tableName = tableName.underscore.camelize</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="405">
-          
-          
-          <code class="ruby">      tableName = &quot;Data&quot; + tableName</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="406">
-          
-          
-          <code class="ruby">      table = tableName.constantize</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="407">
-          
-          
-          <code class="ruby">      string_data = csv_data.map do |row| </code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="408">
-          
-          
-          <code class="ruby">          row.map do |cell|</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="409">
-          
-          
-          <code class="ruby">              cell.to_s</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="410">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="411">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="412">
-          
-          
-          <code class="ruby">      array_of_hashes = []</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="413">
-          
-          
-          <code class="ruby">      string_data.map do |row| </code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="414">
-          
-          
-          <code class="ruby">          array_of_hashes &lt;&lt; Hash[*headers.zip(row).flatten]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="415">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="416">
-          
-          
-          <code class="ruby">      puts array_of_hashes</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="417">
-          
-          
-          <code class="ruby">      array_of_hashes.each do |value|</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="418">
-          
-          
-          <code class="ruby">          table.create!(value)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="419">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="420">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="421">
+        <li class="never" data-hits="" data-linenumber="404">
           
           
           <code class="ruby">    </code>
         </li>
       
+        <li class="covered" data-hits="6" data-linenumber="405">
+          <span class="hits">6</span>
+          
+          <code class="ruby">  if params[&quot;commit&quot;] == &quot;generate&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="406">
+          
+          
+          <code class="ruby">      @year=params[:cur_year]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="407">
+          
+          
+          <code class="ruby">      #raise params.inspect  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="408">
+          
+          
+          <code class="ruby">     # form2_4(year)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="409">
+          
+          
+          <code class="ruby">      </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="410">
+          
+          
+          <code class="ruby">      </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="411">
+          
+          
+          <code class="ruby">  else  </code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="412">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    if params[&quot;commit&quot;] == &quot;Save&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="413">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      saveQuery(params)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="414">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="415">
+          
+          
+          <code class="ruby">      #if the query is not being saved</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="416">
+          
+          
+          <code class="ruby">      #select all the filters and filter values chosen</code>
+        </li>
+      
+        <li class="covered" data-hits="36" data-linenumber="417">
+          <span class="hits">36</span>
+          
+          <code class="ruby">      filters = params.select { |key, value| key.to_s.match(/filter\d+/) }</code>
+        </li>
+      
+        <li class="covered" data-hits="36" data-linenumber="418">
+          <span class="hits">36</span>
+          
+          <code class="ruby">      comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }</code>
+        </li>
+      
+        <li class="covered" data-hits="36" data-linenumber="419">
+          <span class="hits">36</span>
+          
+          <code class="ruby">      filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }</code>
+        </li>
+      
+        <li class="covered" data-hits="36" data-linenumber="420">
+          <span class="hits">36</span>
+          
+          <code class="ruby">      @attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="421">
+          
+          
+          <code class="ruby">      </code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="422">
+          
+          
+          <code class="ruby">      #store all these values if the user chooses to repeat the query</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="423">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      flash[:existingQuery] = 1</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="424">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      flash[:filters] = filters</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="425">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      flash[:comparators] = comparators</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="426">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      flash[:filterValues] = filterValues</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="427">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      flash[:headers] = @attributes</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="428">
+          
+          
+          <code class="ruby">      </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="429">
+          
+          
+          <code class="ruby">      #determine if the user wants the count</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="430">
+          <span class="hits">8</span>
+          
+          <code class="ruby">      @count = @attributes.any? { |hash| hash[1].include?(&quot;count&quot;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="431">
+          
+          
+          <code class="ruby">      #raise filters.inspect</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="432">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="433">
+          
+          
+          <code class="ruby">      #if no filters selected, display all data for that year</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="434">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      if filters.length == 0</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="435">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        if session[&quot;yearSelected&quot;] != nil</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="436">
+          
+          
+          <code class="ruby">          queryString = &quot;year = \&#39;&quot; + session[&quot;yearSelected&quot;] + &quot;\&#39;&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="437">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="438">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="439">
+          
+          
+          <code class="ruby">        #create query string from selected values</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="440">
+          
+          
+          <code class="ruby">        </code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="441">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        queryString = &quot;&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="442">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        i = 0</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="443">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        filters.each do |filter|</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="444">
+          <span class="hits">2</span>
+          
+          <code class="ruby">          filterValue = filterValues[&quot;filterValue&quot; + i.to_s]</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="445">
+          <span class="hits">2</span>
+          
+          <code class="ruby">          if filterValue != nil</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="446">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            if i &gt; 0</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="447">
+          
+          
+          <code class="ruby">              queryString = queryString + &quot; AND &quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="448">
+          
+          
+          <code class="ruby">            end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="449">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            queryString = queryString + filters[&quot;filter&quot; + i.to_s] + comparators[&quot;comparator&quot; + i.to_s] + &quot;\&#39;&quot; + filterValue + &quot;\&#39;&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="450">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="451">
+          <span class="hits">2</span>
+          
+          <code class="ruby">          i = i + 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="452">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="453">
+          
+          
+          <code class="ruby">        </code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="454">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        if session[&quot;yearSelected&quot;] != nil</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="455">
+          <span class="hits">2</span>
+          
+          <code class="ruby">          queryString = queryString + &quot; AND year = \&#39;&quot; + session[&quot;yearSelected&quot;] + &quot;\&#39;&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="456">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="457">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="458">
+          
+          
+          <code class="ruby">     # raise queryString.inspect</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="459">
+          
+          
+          <code class="ruby">     # raise @attributes.values.inspect</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="460">
+          
+          
+          <code class="ruby">      </code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="461">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      @students = Student.where(queryString)</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="462">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="463">
+          <span class="hits">5</span>
+          
+          <code class="ruby">        format.html</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="464">
+          <span class="hits">5</span>
+          
+          <code class="ruby">        format.csv { send_data Student.to_csv(@students, @attributes.values) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="465">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="466">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="467">
+          
+          
+          <code class="ruby">  end  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="468">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="469">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="470">
+          
+          
+          <code class="ruby">  #unused</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="471">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="472">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def populate_db(csvFile)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="473">
+          
+          
+          <code class="ruby">      csv_data = CSV.read csvFile</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="474">
+          
+          
+          <code class="ruby">      headers = csv_data.shift</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="475">
+          
+          
+          <code class="ruby">      tableNameStartIndex = csvFile.rindex(&#39;/&#39;) + 1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="476">
+          
+          
+          <code class="ruby">      tableName = csvFile[tableNameStartIndex..csvFile.length-5]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="477">
+          
+          
+          <code class="ruby">      tableName = tableName.underscore.camelize</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="478">
+          
+          
+          <code class="ruby">      tableName = &quot;Data&quot; + tableName</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="479">
+          
+          
+          <code class="ruby">      table = tableName.constantize</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="480">
+          
+          
+          <code class="ruby">      string_data = csv_data.map do |row| </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="481">
+          
+          
+          <code class="ruby">          row.map do |cell|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="482">
+          
+          
+          <code class="ruby">              cell.to_s</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="483">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="484">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="485">
+          
+          
+          <code class="ruby">      array_of_hashes = []</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="486">
+          
+          
+          <code class="ruby">      string_data.map do |row| </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="487">
+          
+          
+          <code class="ruby">          array_of_hashes &lt;&lt; Hash[*headers.zip(row).flatten]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="488">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="489">
+          
+          
+          <code class="ruby">      puts array_of_hashes</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="490">
+          
+          
+          <code class="ruby">      array_of_hashes.each do |value|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="491">
+          
+          
+          <code class="ruby">          table.create!(value)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="492">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="493">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="494">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="495">
           
           
           <code class="ruby">end</code>
@@ -2948,8 +3386,8 @@
           <code class="ruby">    #@@val is the value of whether or not the upload has finished</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="21">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="22" data-linenumber="21">
+          <span class="hits">22</span>
           
           <code class="ruby">    data = {:value =&gt; @@val}</code>
         </li>
@@ -2960,14 +3398,14 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="23">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="22" data-linenumber="23">
+          <span class="hits">22</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="24">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="44" data-linenumber="24">
+          <span class="hits">44</span>
           
           <code class="ruby">      format.json { render :json =&gt; data }</code>
         </li>
@@ -3047,7 +3485,7 @@
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby">    #raise params.inspect</code>
         </li>
       
         <li class="covered" data-hits="10" data-linenumber="38">

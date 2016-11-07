@@ -7,14 +7,14 @@ Feature: Download Filtered Data
 @javascript
 Scenario: I should be able to see the download button
   Given I am on the home page
-  And I select "2016" from "queryList"
+  And I select "2014" from "queryList"
   And I select "features/cucumber_data.csv" to be uploaded to "spreadsheet_attachment"
   When I press "Save"
   Then I should be on the spreadsheet page
   When I wait "2" seconds to press "returnButton"
   
   Then I should be on the home page
-  When I select "2016" from "yearSelected"
+  When I select "2014" from "yearSelected"
   And I press "Select"
   
   Then I should be on the filters page
@@ -27,7 +27,7 @@ Scenario: I should be able to see the download button
   And I press "Apply"
   
   Then I should be on the results page
-  Then I should see a link labeled "CSV.csv"
-  When I follow "CSV.csv"
+  Then I should see a link labeled "Computer Science only.csv"
+  When I follow "Computer Science only.csv"
   Then A download should commence
   

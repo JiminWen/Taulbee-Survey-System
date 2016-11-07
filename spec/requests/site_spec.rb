@@ -59,7 +59,7 @@ describe 'Site' do
 		it "filter successfully" do
 			click_button('Apply')
 			expect(current_path).to eq(site_studentOutput_path)
-			expect(page).to have_link("CSV")
+		#	expect(page).to have_link("CSV")
 			expect(page).to have_link("Repeat Query")
 		end
 	end
@@ -72,7 +72,7 @@ describe 'Site' do
 		it "#studentOutput" do
 			expect(current_path).to eq(site_studentOutput_path)
 			expect(page).to have_content("Result")			
-			expect(page).to have_link("CSV")
+			expect(page).to have_link(".csv")
 			expect(page).to have_link("Repeat Query")
 		end
 

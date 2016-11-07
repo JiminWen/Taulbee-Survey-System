@@ -14,10 +14,11 @@ RSpec.describe "site/studentFilterSelection.html.haml", type: :view do
 	# 	expect(rendered).to include("Who are you looking for?")
 	# end	
 
-	# it "include buttons" do
-	# 	expect(rendered).to have_button("Select")
-	# 	expect(rendered).to have_button("Apply selected filters")
-	# end
+#	 it "include buttons" do
+#	 	render
+#	 	expect(rendered).to have_button("Select")
+#	 	expect(rendered).to have_button("Apply selected filters")
+#	 end
 
 	# it "have select options" do
 	# 	expect(rendered).to have_select("Gender", :options => ['Male', 'Female'])
