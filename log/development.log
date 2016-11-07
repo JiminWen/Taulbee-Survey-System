@@ -32,3 +32,29 @@ Cannot render console from 165.91.12.38! Allowed networks: 10.240.0.139, 127.0.0
 Processing by SiteController#studentOutput as HTML
   Rendered site/studentOutput.html.haml within layouts/application (9.7ms)
 Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.232 at 2016-11-07 19:43:45 +0000
+Cannot render console from 165.91.13.232! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (36.1ms)
+Completed 200 OK in 283ms (Views: 261.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2014" for 165.91.13.232 at 2016-11-07 19:43:48 +0000
+Cannot render console from 165.91.13.232! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2014"}
+  [1m[36mQuery Load (0.2ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (27.9ms)
+Completed 200 OK in 55ms (Views: 45.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/site/studentOutput" for 165.91.13.232 at 2016-11-07 19:43:49 +0000
+Cannot render console from 165.91.13.232! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"commit"=>"generate", "cur_year"=>"2014", "authenticity_token"=>"MrAD0wnM1MXRCwNSVMXODBKCedrF7+Czk/IFbEbKbCCIKyYWvaxAwmQHh6clrmndaU54Vzs09HvzDwhIHbnxaA=="}
+  Rendered site/studentOutput.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 51ms (Views: 50.8ms | ActiveRecord: 0.0ms)
