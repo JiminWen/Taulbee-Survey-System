@@ -63,8 +63,8 @@
   
   %h4 other PhD Questions
   
-  %label Newly-admitted PhD students enroll this fall
-  //#{link_to "formF_1.csv", formE_1_path(format: 'csv',:year=>@year)}
+  -#%label Newly-admitted PhD students enroll this fall
+  #{link_to "Number of newly admitted PhD Students.csv", formF_3_path(format: 'csv',:year=>@year)}
   %br
   //%label Number of PhD students from outside North America
   #{link_to "Number of PhD students from outside North America.csv", formF_4_path(format: 'csv',:year=>@year)}
@@ -81,8 +81,8 @@
   
   %h4 other Masters Questions
 
-  %label Newly-admitted Masters students enroll this fall
-  //#{link_to "formJ_1.csv", formJ_1_path(format: 'csv',:year=>@year)}
+  -#%label Newly-admitted Masters students enroll this fall
+  #{link_to "Number of Masters Students newly admitted.csv", formJ_1_path(format: 'csv',:year=>@year)}
   %br
   //%label Number of Masters students from outside North America
   #{link_to "Number of Masters students from outside North America.csv", formJ_2_path(format: 'csv',:year=>@year)}
