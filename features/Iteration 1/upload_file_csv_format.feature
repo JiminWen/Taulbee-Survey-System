@@ -1,4 +1,4 @@
-Feature: Upload a csv file and return home
+Feature: Upload a non-csv file and return home
   
   As a User
   So that I can upload a csv file and see the progress once it is finished. 

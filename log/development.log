@@ -887,3 +887,37 @@ Processing by SiteController#fromM_2 as CSV
   Rendered text template (0.0ms)
 Sent data  (0.5ms)
 Completed 200 OK in 326ms (Views: 0.4ms | ActiveRecord: 306.5ms)
+
+
+Started GET "/" for 66.76.2.61 at 2016-11-07 05:48:17 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (25.9ms)
+Completed 200 OK in 240ms (Views: 222.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2014" for 66.76.2.61 at 2016-11-07 05:48:20 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2014"}
+  [1m[36mQuery Load (0.2ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (34.3ms)
+Completed 200 OK in 68ms (Views: 58.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/site/studentOutput" for 66.76.2.61 at 2016-11-07 05:48:21 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"commit"=>"generate", "cur_year"=>"2014", "authenticity_token"=>"SsTP2xnRlb0WDGmh76OVF0GpcjCi8oHKHz9BqJoKJsPwX+oerbEBuqMA7VSeyDLGOmVzvVwplQJ/wkyMwXm7iw=="}
+  Rendered site/studentOutput.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 32ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/studentFilterSelection" for 66.76.2.61 at 2016-11-07 05:48:28 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  [1m[35mQuery Load (0.4ms)[0m  SELECT "queries".* FROM "queries"
+  Rendered site/studentFilterSelection.html.haml within layouts/application (34.7ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.4ms)
