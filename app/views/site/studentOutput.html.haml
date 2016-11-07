@@ -23,7 +23,18 @@
       th, td {
         padding: 1px 5px 1px 5px;
       }
+      
+      h3{
+        color: #800000;
+      }
+      
+      h4{
+        color: #800000;
+      }
+      
+      
   %body
+  %form
     %h1.centered.heading Taulbee Survey
     %p
       %a{:id => "Home", :href => site_index_path}
@@ -38,11 +49,11 @@
     -#%img{:align => "center", :height => "250", :src => "/images/table.png", :width => "600"}/
     
     
-%p
-  Results to Download
+
+  %h3 Results to Download
   %hr
-  %label PhD Enrollment
-  %br
+  %h4 PhD Enrollment
+
   %label Computer Science only
   //#{link_to "formE_1.csv", formE_1_path(format: 'csv',:year=>@year)}
   %br
@@ -50,40 +61,41 @@
   //#{link_to "formE_2.csv", formE_2_path(format: 'csv',:year=>@year)}
   %hr
   
-  %label other PhD Questions
-  %br
+  %h4 other PhD Questions
+  
   %label Newly-admitted PhD students enroll this fall
   //#{link_to "formF_1.csv", formE_1_path(format: 'csv',:year=>@year)}
   %br
-  %label Number of PhD students from outside North America
-  #{link_to "formF_4.csv", formF_4_path(format: 'csv',:year=>@year)}
+  //%label Number of PhD students from outside North America
+  #{link_to "Number of PhD students from outside North America.csv", formF_4_path(format: 'csv',:year=>@year)}
   %hr
   
-  %label Masters Enrollment
+  %h4 Masters Enrollment
+
+  //%label Computer Science only
+  #{link_to "Computer Science only.csv", formI_1_path(format: 'csv',:year=>@year)}
   %br
-  %label Computer Science only
-  #{link_to "formI_1.csv", formI_1_path(format: 'csv',:year=>@year)}
-  %br
-  %label Computer Enineering only
-  #{link_to "formI_2.csv", formI_2_path(format: 'csv',:year=>@year)}
+  //%label Computer Enineering only
+  #{link_to "Computer Enineering only.csv", formI_2_path(format: 'csv',:year=>@year)}
   %hr
   
-  %label other Masters Questions
-  %br
+  %h4 other Masters Questions
+
   %label Newly-admitted Masters students enroll this fall
   //#{link_to "formJ_1.csv", formJ_1_path(format: 'csv',:year=>@year)}
   %br
-  %label Number of Masters students from outside North America
-  #{link_to "formJ_2.csv", formJ_2_path(format: 'csv',:year=>@year)}
+  //%label Number of Masters students from outside North America
+  #{link_to "Number of Masters students from outside North America.csv", formJ_2_path(format: 'csv',:year=>@year)}
   %hr
   
-  %label Bachelors Enrollment
+  %h4 Bachelors Enrollment
+
+
+  //%label Computer Science only
+  #{link_to "Computer Science only.csv", formM_1_path(format: 'csv',:year=>@year)}
   %br
-  %label Computer Science only
-  #{link_to "formM_1.csv", formM_1_path(format: 'csv',:year=>@year)}
-  %br
-  %label Computer Enineering only
-  #{link_to "formM_2.csv", formM_2_path(format: 'csv',:year=>@year)}
+  //%label Computer Enineering only
+  #{link_to "Computer Enineering only.csv", formM_2_path(format: 'csv',:year=>@year)}
   %hr
   
   
