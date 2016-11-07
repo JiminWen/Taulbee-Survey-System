@@ -327,7 +327,7 @@ class SiteController < ApplicationController
   
   #page that shows the results
   def studentOutput
-  
+  #skip_before_filter :verify_authenticity_token 
     
   if params["commit"] == "generate"
       @year=params[:cur_year]
