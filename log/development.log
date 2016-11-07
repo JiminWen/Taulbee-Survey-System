@@ -1,0 +1,34 @@
+
+
+Started GET "/site/studentOutput" for 165.91.12.38 at 2016-11-07 19:40:48 +0000
+Cannot render console from 165.91.12.38! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#studentOutput as HTML
+  Rendered site/studentOutput.html.haml within layouts/application (18.8ms)
+Completed 200 OK in 410ms (Views: 395.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 165.91.12.38 at 2016-11-07 19:40:49 +0000
+Cannot render console from 165.91.12.38! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 165.91.12.38 at 2016-11-07 19:40:49 +0000
+Cannot render console from 165.91.12.38! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 165.91.12.38 at 2016-11-07 19:40:50 +0000
+Cannot render console from 165.91.12.38! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/site/studentOutput" for 165.91.12.38 at 2016-11-07 19:41:45 +0000
+Cannot render console from 165.91.12.38! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Rendered site/studentOutput.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/studentOutput" for 165.91.12.38 at 2016-11-07 19:42:22 +0000
+Cannot render console from 165.91.12.38! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Rendered site/studentOutput.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms)
