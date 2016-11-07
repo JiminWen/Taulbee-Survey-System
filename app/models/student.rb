@@ -20,6 +20,8 @@ class Student < ActiveRecord::Base
         end
     end
     
+   
+    
     def self.csv_table(product,c_filter,r_filter,c_attri,r_attri)
         CSV.generate do |csv|
          #   raise params.inspect

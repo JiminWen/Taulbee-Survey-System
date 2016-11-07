@@ -21,7 +21,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   
   get 'CSV.csv', to: 'site#studentOutput', as: :download
+  get 'formF_3.csv', to: 'site#formF_3', as: :formF_3
   get 'formF_4.csv', to: 'site#formF_4', as: :formF_4
+  get 'formJ_1.csv', to: 'site#formJ_1', as: :formJ_1
   get 'formJ_2.csv', to: 'site#formJ_2', as: :formJ_2
   get 'formI_1.csv', to: 'site#fromI_1', as: :formI_1
   get 'formI_2.csv', to: 'site#fromI_2', as: :formI_2
