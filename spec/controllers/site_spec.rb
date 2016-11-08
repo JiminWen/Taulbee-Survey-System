@@ -24,9 +24,19 @@ RSpec.describe SiteController, type: :controller do
 			expect(response).to render_template :studentOutput
 		end
 	end
-	
+#Additional test cases added in iteration 1	
+	describe "test download links" do
 	it "should have proper routes" do
     {:get =>'formE_1.csv' }.should be_routable
-         
+    {:get =>'formE_2.csv' }.should be_routable
+    {:get =>'formM_1.csv' }.should be_routable
+    {:get =>'formM_2.csv' }.should be_routable
+    {:get =>'formI_1.csv' }.should be_routable
+    {:get =>'formI_2.csv' }.should be_routable
+    {:get =>'formJ_1.csv' }.should be_routable
+    {:get =>'formJ_2.csv' }.should be_routable
+    {:get =>'formF_3.csv' }.should be_routable
+    {:get =>'formF_4.csv' }.should be_routable
+    end
     end
 end
