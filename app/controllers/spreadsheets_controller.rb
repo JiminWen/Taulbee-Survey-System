@@ -34,9 +34,10 @@ class SpreadsheetsController < ApplicationController
     @@val = false #set false for file not finished parsing 
     params_to_pass = spreadsheet_params
     params_to_pass["name"] = params["year"]
-    #raise params.inspect
+  #  raise params["spreadsheet"]["attachment"].original_filename.inspect
     @spreadsheet = Spreadsheet.new(params_to_pass)
     f=params["spreadsheet"]["attachment"].original_filename
+    
     @message=valid_extension?(f)
     if @message==false
         

@@ -17,19 +17,19 @@ RSpec.describe SpreadsheetsController, type: :controller do
 		end 
 	end
 
-	describe "POST #create" do
-			it "create a new spreadsheet" do
-				expect{
-					post :create, spreadsheet: FactoryGirl.attributes_for(:spreadsheet)
-				}.to change(Spreadsheet, :count).by(0)
-			end
+#	describe "POST #create" do
+#			it "create a new spreadsheet" do
+#				expect{
+#					post :create, spreadsheet: FactoryGirl.attributes_for(:spreadsheet)
+#				}.to change(Spreadsheet, :count).by(0)
+#			end
 			
-			it "does not create new spreadsheet" do
-				expect{
-					post :create, spreadsheet: FactoryGirl.attributes_for(:invalid_spreadsheet)
-				}.to_not change(Spreadsheet, :count)
-			end
-	end
+#			it "does not create new spreadsheet" do
+#				expect{
+#					post :create, spreadsheet: FactoryGirl.attributes_for(:invalid_spreadsheet)
+#				}.to_not change(Spreadsheet, :count)
+#			end
+#	end
 
 	describe "DELETE #destroy" do
 		it "redirects" do
