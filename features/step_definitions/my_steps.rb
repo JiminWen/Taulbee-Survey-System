@@ -36,6 +36,10 @@ When(/^I follow "([^"]*)"$/) do |link|
   click_link(link)
 end
 
+When(/^I follow "([^"]*)" number "([^"]*)"$/) do |text, number|
+  page.all(:link,text)[number.to_i - 1].click
+end
+
 Then(/^I should see a "([^"]*)"$/) do |field|
   expect(page).to have_xpath("//#{field}")
 end
@@ -69,6 +73,11 @@ Then(/^A download should commence$/) do
   header = page.response_headers['Content-Disposition']
   header.should (match (/^attachment/))
 end
+
+Then(/^I should get a download with the filename "([^\"]*)"$/) do |filename|
+     page.response_headers['Content-Disposition'].should include("filename=\"#{filename}\"")
+end
+
 
 Then(/^I should be on the (.+) page$/) do |page_name|
   uri = URI.parse(current_url)
