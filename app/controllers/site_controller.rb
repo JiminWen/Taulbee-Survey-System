@@ -147,7 +147,7 @@ class SiteController < ApplicationController
       end
   end
   
-  def fromI_1
+  def formI_1
       year=params[:year]
       @students=Student.all
       #raise @students.inspect
@@ -184,7 +184,7 @@ class SiteController < ApplicationController
       end
   end
   
-  def fromI_2
+  def formI_2
       year=params[:year]
       @students=Student.all
       #raise @students.inspect
@@ -247,7 +247,7 @@ class SiteController < ApplicationController
   end
   
  
-  def fromM_1
+  def formM_1
       year=params[:year]
       @students=Student.all
       #raise @students.inspect
@@ -285,7 +285,7 @@ class SiteController < ApplicationController
       
   end
   
-   def fromM_2
+   def formM_2
       year=params[:year]
       @students=Student.all
       #raise @students.inspect
@@ -323,7 +323,7 @@ class SiteController < ApplicationController
       
   end
   
-def fromE_1
+def formE_1
       year=params[:year]
       @students=Student.all
       #raise @students.inspect
@@ -360,7 +360,7 @@ def fromE_1
       end
   end
   
-  def fromE_2
+  def formE_2
       year=params[:year]
       @students=Student.all
       #raise @students.inspect
