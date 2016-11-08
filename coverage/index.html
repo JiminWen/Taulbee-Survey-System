@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.0/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_red.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.0/favicon.png" />
   </head>
   
@@ -14,18 +14,18 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-08T20:51:06+00:00">2016-11-08T20:51:06+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-08T22:01:09+00:00">2016-11-08T22:01:09+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">81.88%</span></span>
+    (<span class="covered_percent"><span class="red">77.35%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         33.51
+         25.37
        </span>
     </span> hits/line)
   </h2>
@@ -33,8 +33,8 @@
   <div>
     <b>15</b> files in total.
     <b>596</b> relevant lines. 
-    <span class="green"><b>488</b> lines covered</span> and
-    <span class="red"><b>108</b> lines missed </span>
+    <span class="green"><b>461</b> lines covered</span> and
+    <span class="red"><b>135</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#df8cc14a310bf9f7173ab31380b9d4299cc8f822" class="src_link" title="app/controllers/site_controller.rb">app/controllers/site_controller.rb</a></td>
-        <td class="green strong">92.4 %</td>
+        <td class="yellow strong">84.5 %</td>
         <td>495</td>
         <td>342</td>
-        <td>316</td>
-        <td>26</td>
-        <td>4.3</td>
+        <td>289</td>
+        <td>53</td>
+        <td>3.5</td>
       </tr>
       
       <tr>
@@ -77,7 +77,7 @@
         <td>108</td>
         <td>69</td>
         <td>39</td>
-        <td>163.5</td>
+        <td>122.7</td>
       </tr>
       
       <tr>
@@ -147,7 +147,7 @@
         <td>26</td>
         <td>22</td>
         <td>4</td>
-        <td>7.2</td>
+        <td>5.1</td>
       </tr>
       
       <tr>
@@ -157,7 +157,7 @@
         <td>29</td>
         <td>8</td>
         <td>21</td>
-        <td>3.3</td>
+        <td>3.6</td>
       </tr>
       
       <tr>
@@ -167,7 +167,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>20.8</td>
+        <td>14.8</td>
       </tr>
       
       <tr>
@@ -177,7 +177,7 @@
         <td>54</td>
         <td>46</td>
         <td>8</td>
-        <td>6.1</td>
+        <td>4.8</td>
       </tr>
       
       <tr>
@@ -187,7 +187,7 @@
         <td>14</td>
         <td>8</td>
         <td>6</td>
-        <td>9.4</td>
+        <td>7.4</td>
       </tr>
       
       <tr>
@@ -267,11 +267,11 @@
         <div class="source_table" id="df8cc14a310bf9f7173ab31380b9d4299cc8f822">
   <div class="header">
     <h3>app/controllers/site_controller.rb</h3>
-    <h4><span class="green">92.4 %</span> covered</h4>
+    <h4><span class="yellow">84.5 %</span> covered</h4>
     <div>
       <b>342</b> relevant lines. 
-      <span class="green"><b>316</b> lines covered</span> and
-      <span class="red"><b>26</b> lines missed.</span>
+      <span class="green"><b>289</b> lines covered</span> and
+      <span class="red"><b>53</b> lines missed.</span>
     </div>
   </div>
   
@@ -314,8 +314,8 @@
           <code class="ruby">    #grabs all uniq values for the given column</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="7">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="6" data-linenumber="7">
+          <span class="hits">6</span>
           
           <code class="ruby">    dataToSend = Student.select(params[:c_name].to_sym).map(&amp;params[:c_name].to_sym).uniq.inspect</code>
         </li>
@@ -326,8 +326,8 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="9">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="6" data-linenumber="9">
+          <span class="hits">6</span>
           
           <code class="ruby">    data = {:value =&gt; dataToSend}</code>
         </li>
@@ -338,14 +338,14 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="11">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="6" data-linenumber="11">
+          <span class="hits">6</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="12">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="12" data-linenumber="12">
+          <span class="hits">12</span>
           
           <code class="ruby">      format.json { render :json =&gt; data }</code>
         </li>
@@ -380,14 +380,14 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="18">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="30" data-linenumber="18">
+          <span class="hits">30</span>
           
           <code class="ruby">    @spreadsheet = Spreadsheet.new</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="19">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="30" data-linenumber="19">
+          <span class="hits">30</span>
           
           <code class="ruby">    @spreadsheets = Spreadsheet.all</code>
         </li>
@@ -428,20 +428,20 @@
           <code class="ruby">    #stores the selected year</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="26">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="19" data-linenumber="26">
+          <span class="hits">19</span>
           
           <code class="ruby">    if(params[&quot;yearSelected&quot;])</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="27">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="4" data-linenumber="27">
+          <span class="hits">4</span>
           
           <code class="ruby">      session[&quot;yearSelected&quot;] = params[&quot;yearSelected&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="28">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="4" data-linenumber="28">
+          <span class="hits">4</span>
           
           <code class="ruby">      @year=params[&quot;yearSelected&quot;]</code>
         </li>
@@ -464,14 +464,14 @@
           <code class="ruby">    #if year wasn&#39;t stored, it should be a new selected year, store it</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="32">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="19" data-linenumber="32">
+          <span class="hits">19</span>
           
           <code class="ruby">    if (session[&quot;yearSelected&quot;] != nil)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="33">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="6" data-linenumber="33">
+          <span class="hits">6</span>
           
           <code class="ruby">      @students = Student.where(&quot;year = \&#39;&quot; + session[&quot;yearSelected&quot;] + &quot;\&#39;&quot;)</code>
         </li>
@@ -488,8 +488,8 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="36">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="19" data-linenumber="36">
+          <span class="hits">19</span>
           
           <code class="ruby">    @queries = Query.all #gets all the stored queries</code>
         </li>
@@ -506,8 +506,8 @@
           <code class="ruby">    #if a query was loaded</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="39">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="19" data-linenumber="39">
+          <span class="hits">19</span>
           
           <code class="ruby">    if params[&quot;queryLoad&quot;]</code>
         </li>
@@ -542,50 +542,50 @@
           <code class="ruby">      #if the user said to repeat the query</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="45">
+          
           
           <code class="ruby">      values = {}</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="46">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="46">
+          
           
           <code class="ruby">      values.merge!(flash[:filters])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="47">
+          
           
           <code class="ruby">      values.merge!(flash[:comparators])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="48">
+          
           
           <code class="ruby">      values.merge!(flash[:filterValues])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="49">
+          
           
           <code class="ruby">      values.merge!(flash[:headers])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="50">
+          
           
           <code class="ruby">      @query = unsavedQuery(values)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="51">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="51">
+          
           
           <code class="ruby">      @filterCount = flash[:filters].count</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="52">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="52">
+          
           
           <code class="ruby">      @headerCount = flash[:headers].count</code>
         </li>
@@ -608,26 +608,26 @@
           <code class="ruby">    #grab the existing filter values</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="56">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="19" data-linenumber="56">
+          <span class="hits">19</span>
           
           <code class="ruby">    @filterValues = []</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="57">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="19" data-linenumber="57">
+          <span class="hits">19</span>
           
           <code class="ruby">    if @query</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="58">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
           
           <code class="ruby">      @query.filters.each do |filter|</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="59">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
           
           <code class="ruby">        @filterValues &lt;&lt; filter.value</code>
         </li>
@@ -644,20 +644,20 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="62">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="18" data-linenumber="62">
+          <span class="hits">18</span>
           
           <code class="ruby">      @query = nil</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="63">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="18" data-linenumber="63">
+          <span class="hits">18</span>
           
           <code class="ruby">      @filterCount = 0</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="64">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="18" data-linenumber="64">
+          <span class="hits">18</span>
           
           <code class="ruby">      @headerCount = 0</code>
         </li>
@@ -872,26 +872,26 @@
           <code class="ruby">  def unsavedQuery(params)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="100">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="100">
+          
           
           <code class="ruby">    filters = params.select { |key, value| key.to_s.match(/filter\d+/) }</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="101">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="101">
+          
           
           <code class="ruby">    comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="102">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="102">
+          
           
           <code class="ruby">    filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="103">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="103">
+          
           
           <code class="ruby">    attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }</code>
         </li>
@@ -902,8 +902,8 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="105">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="105">
+          
           
           <code class="ruby">    @query = Query.new({:name =&gt; &quot;No Save&quot;})</code>
         </li>
@@ -914,38 +914,38 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="107">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="107">
+          
           
           <code class="ruby">    i = 0</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="108">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="108">
+          
           
           <code class="ruby">    filters.each do |filter|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="109">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="109">
+          
           
           <code class="ruby">      filterRecord = Filter.create(:field =&gt; filters[&quot;filter&quot; + i.to_s], :comparator =&gt; comparators[&quot;comparator&quot; + i.to_s], :value =&gt; filterValues[&quot;filterValue&quot; + i.to_s])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="110">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="110">
+          
           
           <code class="ruby">      puts filterRecord.inspect</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="111">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="111">
+          
           
           <code class="ruby">      @query.filters &lt;&lt; filterRecord</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="112">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="112">
+          
           
           <code class="ruby">      i = i + 1</code>
         </li>
@@ -962,32 +962,32 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="115">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="115">
+          
           
           <code class="ruby">    i = 0</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="116">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="116">
+          
           
           <code class="ruby">    attributes.each do |attribute|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="117">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="117">
+          
           
           <code class="ruby">      headerRecord = Header.create(:field =&gt; attributes[&quot;attribute&quot; + i.to_s])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="118">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="118">
+          
           
           <code class="ruby">      @query.headers &lt;&lt; headerRecord</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="119">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="119">
+          
           
           <code class="ruby">      i = i + 1</code>
         </li>
@@ -1004,8 +1004,8 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="122">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="122">
+          
           
           <code class="ruby">    return @query</code>
         </li>
@@ -1073,7 +1073,7 @@
         <li class="covered" data-hits="1" data-linenumber="133">
           <span class="hits">1</span>
           
-          <code class="ruby">      @students=@students.where(&quot;prim_deg=&#39;PHD&#39;&quot;).where(&quot;year=#{year}&quot;)</code>
+          <code class="ruby">      @students=@students.where(&quot;prim_deg=&#39;PHD&#39;&quot;).where(&quot;year=?&quot;,year)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="134">
@@ -1130,26 +1130,26 @@
           <code class="ruby">      temp&lt;&lt;@students.where(c_filter[0]).where(&quot;prim_deg_cat=? OR prim_deg_cat=? OR prim_deg_cat=?&quot;,h1,h2,h3).where(r_filter).count.to_s</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="143">
-          
+        <li class="covered" data-hits="1" data-linenumber="143">
+          <span class="hits">1</span>
           
           <code class="ruby">      temp&lt;&lt;@students.where(c_filter[1]).where(&quot;prim_deg_cat=? OR prim_deg_cat=? OR prim_deg_cat=?&quot;,h1,h2,h3).where(r_filter).count.to_s</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="144">
-          
+        <li class="covered" data-hits="1" data-linenumber="144">
+          <span class="hits">1</span>
           
           <code class="ruby">      array&lt;&lt;temp</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="145">
-          
+        <li class="covered" data-hits="1" data-linenumber="145">
+          <span class="hits">1</span>
           
           <code class="ruby">      respond_to do |format|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="146">
-          
+        <li class="covered" data-hits="2" data-linenumber="146">
+          <span class="hits">2</span>
           
           <code class="ruby">        format.csv { send_data Student.altercsv(array) }</code>
         </li>
@@ -1667,7 +1667,7 @@
         <li class="covered" data-hits="1" data-linenumber="232">
           <span class="hits">1</span>
           
-          <code class="ruby">      @students=@students.where(&quot;prim_deg=&#39;MS&#39; OR prim_deg=&#39;MCS&#39; OR prim_deg=&#39;MEN&#39;&quot;).where(&quot;year=#{year}&quot;)</code>
+          <code class="ruby">      @students=@students.where(&quot;prim_deg=&#39;MS&#39; OR prim_deg=&#39;MCS&#39; OR prim_deg=&#39;MEN&#39;&quot;).where(&quot;year=?&quot;,year)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="233">
@@ -1724,26 +1724,26 @@
           <code class="ruby">      temp&lt;&lt;@students.where(c_filter[0]).where(&quot;prim_deg_cat=? OR prim_deg_cat=? OR prim_deg_cat=?&quot;,h1,h2,h3).where(r_filter).count.to_s</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="242">
-          
+        <li class="covered" data-hits="1" data-linenumber="242">
+          <span class="hits">1</span>
           
           <code class="ruby">      temp&lt;&lt;@students.where(c_filter[1]).where(&quot;prim_deg_cat=? OR prim_deg_cat=? OR prim_deg_cat=?&quot;,h1,h2,h3).where(r_filter).count.to_s</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="243">
-          
+        <li class="covered" data-hits="1" data-linenumber="243">
+          <span class="hits">1</span>
           
           <code class="ruby">      array&lt;&lt;temp</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="244">
-          
+        <li class="covered" data-hits="1" data-linenumber="244">
+          <span class="hits">1</span>
           
           <code class="ruby">      respond_to do |format|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="245">
-          
+        <li class="covered" data-hits="2" data-linenumber="245">
+          <span class="hits">2</span>
           
           <code class="ruby">        format.csv { send_data Student.altercsv(array) }</code>
         </li>
@@ -2702,8 +2702,8 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="405">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="12" data-linenumber="405">
+          <span class="hits">12</span>
           
           <code class="ruby">  if params[&quot;commit&quot;] == &quot;generate&quot;</code>
         </li>
@@ -2744,8 +2744,8 @@
           <code class="ruby">  else  </code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="412">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="4" data-linenumber="412">
+          <span class="hits">4</span>
           
           <code class="ruby">    if params[&quot;commit&quot;] == &quot;Save&quot;</code>
         </li>
@@ -2774,26 +2774,26 @@
           <code class="ruby">      #select all the filters and filter values chosen</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="417">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="13" data-linenumber="417">
+          <span class="hits">13</span>
           
           <code class="ruby">      filters = params.select { |key, value| key.to_s.match(/filter\d+/) }</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="418">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="13" data-linenumber="418">
+          <span class="hits">13</span>
           
           <code class="ruby">      comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="419">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="13" data-linenumber="419">
+          <span class="hits">13</span>
           
           <code class="ruby">      filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="420">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="13" data-linenumber="420">
+          <span class="hits">13</span>
           
           <code class="ruby">      @attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }</code>
         </li>
@@ -2810,32 +2810,32 @@
           <code class="ruby">      #store all these values if the user chooses to repeat the query</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="423">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="423">
+          <span class="hits">3</span>
           
           <code class="ruby">      flash[:existingQuery] = 1</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="424">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="424">
+          <span class="hits">3</span>
           
           <code class="ruby">      flash[:filters] = filters</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="425">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="425">
+          <span class="hits">3</span>
           
           <code class="ruby">      flash[:comparators] = comparators</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="426">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="426">
+          <span class="hits">3</span>
           
           <code class="ruby">      flash[:filterValues] = filterValues</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="427">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="427">
+          <span class="hits">3</span>
           
           <code class="ruby">      flash[:headers] = @attributes</code>
         </li>
@@ -2852,8 +2852,8 @@
           <code class="ruby">      #determine if the user wants the count</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="430">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="3" data-linenumber="430">
+          <span class="hits">3</span>
           
           <code class="ruby">      @count = @attributes.any? { |hash| hash[1].include?(&quot;count&quot;) }</code>
         </li>
@@ -2876,8 +2876,8 @@
           <code class="ruby">      #if no filters selected, display all data for that year</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="434">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="434">
+          <span class="hits">3</span>
           
           <code class="ruby">      if filters.length == 0</code>
         </li>
@@ -2918,38 +2918,38 @@
           <code class="ruby">        </code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="441">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="441">
+          
           
           <code class="ruby">        queryString = &quot;&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="442">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="442">
+          
           
           <code class="ruby">        i = 0</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="443">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="443">
+          
           
           <code class="ruby">        filters.each do |filter|</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="444">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="444">
+          
           
           <code class="ruby">          filterValue = filterValues[&quot;filterValue&quot; + i.to_s]</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="445">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="445">
+          
           
           <code class="ruby">          if filterValue != nil</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="446">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="446">
+          
           
           <code class="ruby">            if i &gt; 0</code>
         </li>
@@ -2966,8 +2966,8 @@
           <code class="ruby">            end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="449">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="449">
+          
           
           <code class="ruby">            queryString = queryString + filters[&quot;filter&quot; + i.to_s] + comparators[&quot;comparator&quot; + i.to_s] + &quot;\&#39;&quot; + filterValue + &quot;\&#39;&quot;</code>
         </li>
@@ -2978,8 +2978,8 @@
           <code class="ruby">          end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="451">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="451">
+          
           
           <code class="ruby">          i = i + 1</code>
         </li>
@@ -2996,14 +2996,14 @@
           <code class="ruby">        </code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="454">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="454">
+          
           
           <code class="ruby">        if session[&quot;yearSelected&quot;] != nil</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="455">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="455">
+          
           
           <code class="ruby">          queryString = queryString + &quot; AND year = \&#39;&quot; + session[&quot;yearSelected&quot;] + &quot;\&#39;&quot;</code>
         </li>
@@ -3038,26 +3038,26 @@
           <code class="ruby">      </code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="461">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="461">
+          <span class="hits">3</span>
           
           <code class="ruby">      @students = Student.where(queryString)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="462">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="462">
+          <span class="hits">3</span>
           
           <code class="ruby">      respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="463">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="463">
+          <span class="hits">3</span>
           
           <code class="ruby">        format.html</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="464">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="464">
+          <span class="hits">3</span>
           
           <code class="ruby">        format.csv { send_data Student.to_csv(@students, @attributes.values) }</code>
         </li>
@@ -3452,8 +3452,8 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="32">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="32">
+          <span class="hits">7</span>
           
           <code class="ruby">    Rails.logger.debug params.inspect</code>
         </li>
@@ -3464,20 +3464,20 @@
           <code class="ruby">    #raise params.inspect</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="34">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="34">
+          <span class="hits">7</span>
           
           <code class="ruby">    @@val = false #set false for file not finished parsing </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="35">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="35">
+          <span class="hits">7</span>
           
           <code class="ruby">    params_to_pass = spreadsheet_params</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="36">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="36">
+          <span class="hits">7</span>
           
           <code class="ruby">    params_to_pass[&quot;name&quot;] = params[&quot;year&quot;]</code>
         </li>
@@ -3488,26 +3488,26 @@
           <code class="ruby">    #raise params.inspect</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="38">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="38">
+          <span class="hits">7</span>
           
           <code class="ruby">    @spreadsheet = Spreadsheet.new(params_to_pass)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="39">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="39">
+          <span class="hits">7</span>
           
           <code class="ruby">    f=params[&quot;spreadsheet&quot;][&quot;attachment&quot;].original_filename</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="40">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="40">
+          <span class="hits">7</span>
           
           <code class="ruby">    @message=valid_extension?(f)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="41">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="41">
+          <span class="hits">7</span>
           
           <code class="ruby">    if @message==false</code>
         </li>
@@ -3530,8 +3530,8 @@
           <code class="ruby">    #do the database population in separate thread</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="45">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="45">
+          <span class="hits">7</span>
           
           <code class="ruby">    Thread.new do</code>
         </li>
@@ -3542,8 +3542,8 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="47">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="47">
+          <span class="hits">7</span>
           
           <code class="ruby">      saved = @spreadsheet.saveAndMove</code>
         </li>
@@ -3554,20 +3554,20 @@
           <code class="ruby">        </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="49">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="49">
+          <span class="hits">7</span>
           
           <code class="ruby">      location = &quot;public/uploads/spreadsheet/attachment/&quot; + params[&quot;spreadsheet&quot;][&quot;attachment&quot;].original_filename </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="50">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="50">
+          <span class="hits">7</span>
           
           <code class="ruby">      command = &quot;cat &quot; + location </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="51">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="51">
+          <span class="hits">7</span>
           
           <code class="ruby">      system(command) </code>
         </li>
@@ -3578,26 +3578,26 @@
           <code class="ruby">        </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="53">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="53">
+          <span class="hits">7</span>
           
           <code class="ruby">      csv_data = CSV.read location </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="54">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="54">
+          <span class="hits">7</span>
           
           <code class="ruby">      headerFields = csv_data[0] </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="55">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="55">
+          <span class="hits">7</span>
           
           <code class="ruby">      headerFields = headerFields.map { |header| </code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="56">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="56">
+          <span class="hits">924</span>
           
           <code class="ruby">        CreateHeaderString(header).to_sym </code>
         </li>
@@ -3614,20 +3614,20 @@
           <code class="ruby">      #raise headerFields.inspect  </code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="59">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="6" data-linenumber="59">
+          <span class="hits">6</span>
           
           <code class="ruby">      iteration = 0 </code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="60">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="6" data-linenumber="60">
+          <span class="hits">6</span>
           
           <code class="ruby">      csv_data.each do |data| </code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="61">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="12" data-linenumber="61">
+          <span class="hits">12</span>
           
           <code class="ruby">       if iteration &gt; 0   </code>
         </li>
@@ -3638,8 +3638,8 @@
           <code class="ruby">        # raise data.inspect</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="63">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="6" data-linenumber="63">
+          <span class="hits">6</span>
           
           <code class="ruby">         createStudent(headerFields, data, params[&quot;year&quot;]) </code>
         </li>
@@ -3650,8 +3650,8 @@
           <code class="ruby">       end </code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="65">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="12" data-linenumber="65">
+          <span class="hits">12</span>
           
           <code class="ruby">       iteration = iteration + 1 </code>
         </li>
@@ -3662,8 +3662,8 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="67">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="6" data-linenumber="67">
+          <span class="hits">6</span>
           
           <code class="ruby">      ActiveRecord::Base.connection.close</code>
         </li>
@@ -3680,8 +3680,8 @@
           <code class="ruby">          </code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="70">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="6" data-linenumber="70">
+          <span class="hits">6</span>
           
           <code class="ruby">      @@val = true</code>
         </li>
@@ -3704,8 +3704,8 @@
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="74">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="74">
+          <span class="hits">7</span>
           
           <code class="ruby">    data = {:value =&gt; &quot;Howdy&quot;} #likely was just used for testing</code>
         </li>
@@ -3716,20 +3716,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="76">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="76">
+          <span class="hits">7</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="77">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="77">
+          <span class="hits">7</span>
           
           <code class="ruby">      format.html</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="78">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="78">
+          <span class="hits">7</span>
           
           <code class="ruby">      format.js</code>
         </li>
@@ -3764,8 +3764,8 @@
           <code class="ruby">  def valid_extension?(filename)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="84">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="84">
+          <span class="hits">7</span>
           
           <code class="ruby">    ext = File.extname(filename)</code>
         </li>
@@ -3776,8 +3776,8 @@
           <code class="ruby">   # raise ext.inspect</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="86">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="86">
+          <span class="hits">7</span>
           
           <code class="ruby">    return ext==&quot;.csv&quot;</code>
         </li>
@@ -3806,8 +3806,8 @@
           <code class="ruby">  def createStudent(headerFields, student, year)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="91">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="6" data-linenumber="91">
+          <span class="hits">6</span>
           
           <code class="ruby">    studentData = Hash[headerFields.zip student]</code>
         </li>
@@ -3818,14 +3818,14 @@
           <code class="ruby">    #raise studentData.inspect</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="93">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="6" data-linenumber="93">
+          <span class="hits">6</span>
           
           <code class="ruby">    studentData[:year] = year</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="94">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="6" data-linenumber="94">
+          <span class="hits">6</span>
           
           <code class="ruby">    Student.create(studentData)</code>
         </li>
@@ -3932,14 +3932,14 @@
           <code class="ruby">  def CreateHeaderString(header)</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="112">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="112">
+          <span class="hits">924</span>
           
           <code class="ruby">    if header.gsub(&#39; &#39;, &#39;_&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="113">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="113">
+          <span class="hits">924</span>
           
           <code class="ruby">        header.gsub!(&#39; &#39;, &#39;_&#39;)</code>
         </li>
@@ -3950,14 +3950,14 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="115">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="115">
+          <span class="hits">924</span>
           
           <code class="ruby">      if header.gsub(&#39;(&#39;, &#39;&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="116">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="116">
+          <span class="hits">924</span>
           
           <code class="ruby">        header.gsub!(&#39;(&#39;, &#39;&#39;)</code>
         </li>
@@ -3968,14 +3968,14 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="118">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="118">
+          <span class="hits">924</span>
           
           <code class="ruby">      if header.gsub(&#39;)&#39;, &#39;&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="119">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="119">
+          <span class="hits">924</span>
           
           <code class="ruby">        header.gsub!(&#39;)&#39;, &#39;&#39;)</code>
         </li>
@@ -3986,14 +3986,14 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="121">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="121">
+          <span class="hits">924</span>
           
           <code class="ruby">      if header.gsub(&#39;/&#39;, &#39;&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="122">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="122">
+          <span class="hits">924</span>
           
           <code class="ruby">        header.gsub!(&#39;/&#39;, &#39;&#39;)</code>
         </li>
@@ -4004,14 +4004,14 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="124">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="124">
+          <span class="hits">924</span>
           
           <code class="ruby">      if header.gsub(&#39;-&#39;, &#39;_&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="125">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="125">
+          <span class="hits">924</span>
           
           <code class="ruby">        header.gsub!(&#39;-&#39;, &#39;_&#39;)</code>
         </li>
@@ -4022,20 +4022,20 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="127">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="127">
+          <span class="hits">924</span>
           
           <code class="ruby">      headerString = header.to_s.downcase</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="128">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="128">
+          <span class="hits">924</span>
           
           <code class="ruby">      if headerString == &quot;class&quot;</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="129">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="6" data-linenumber="129">
+          <span class="hits">6</span>
           
           <code class="ruby">        headerString = &quot;classification&quot;</code>
         </li>
@@ -4052,8 +4052,8 @@
           <code class="ruby">     # raise headerString.inspect</code>
         </li>
       
-        <li class="covered" data-hits="1232" data-linenumber="132">
-          <span class="hits">1232</span>
+        <li class="covered" data-hits="924" data-linenumber="132">
+          <span class="hits">924</span>
           
           <code class="ruby">      return headerString</code>
         </li>
@@ -4118,8 +4118,8 @@
           <code class="ruby">      def spreadsheet_params</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="143">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="143">
+          <span class="hits">7</span>
           
           <code class="ruby">        params.require(:spreadsheet).permit(:name, :attachment)</code>
         </li>
@@ -4754,8 +4754,8 @@
           <code class="ruby">    def saveAndMove</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="19">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="19">
+          <span class="hits">7</span>
           
           <code class="ruby">        saved = self.save </code>
         </li>
@@ -4766,68 +4766,68 @@
           <code class="ruby">        </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="21">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="21">
+          <span class="hits">7</span>
           
           <code class="ruby">        if saved</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="22">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="22">
+          <span class="hits">7</span>
           
           <code class="ruby">            system(&#39;find public/uploads/spreadsheet/attachment/ -type d &gt; Folders.txt&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="23">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="23">
+          <span class="hits">7</span>
           
           <code class="ruby">            line_num=1</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="24">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="24">
+          <span class="hits">7</span>
           
           <code class="ruby">            text=File.open(&#39;Folders.txt&#39;).read</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="25">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="25">
+          <span class="hits">7</span>
           
           <code class="ruby">            text.gsub!(/\r\n?/, &quot;\n&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="26">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="26">
+          <span class="hits">7</span>
           
           <code class="ruby">            text.each_line do |line|</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="27">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="14" data-linenumber="27">
+          <span class="hits">14</span>
           
           <code class="ruby">                if line_num &gt; 1 </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="28">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="28">
+          <span class="hits">7</span>
           
           <code class="ruby">                    line = line.gsub(/\n/,&quot;&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="29">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="29">
+          <span class="hits">7</span>
           
           <code class="ruby">                    puts &#39;mv &#39; + line +&#39;/* public/uploads/spreadsheet/attachment/&#39;</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="30">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="30">
+          <span class="hits">7</span>
           
           <code class="ruby">                    system(&#39;mv &#39; + line +&#39;/* public/uploads/spreadsheet/attachment/&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="31">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="31">
+          <span class="hits">7</span>
           
           <code class="ruby">                    system(&#39;rm &#39; + line +&#39;/ -r&#39;)</code>
         </li>
@@ -4838,8 +4838,8 @@
           <code class="ruby">                end</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="33">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="14" data-linenumber="33">
+          <span class="hits">14</span>
           
           <code class="ruby">                line_num += 1</code>
         </li>
@@ -4862,8 +4862,8 @@
           <code class="ruby">        </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="37">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="37">
+          <span class="hits">7</span>
           
           <code class="ruby">        savedsaved = self.save </code>
         </li>
@@ -4874,8 +4874,8 @@
           <code class="ruby">        </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="39">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="39">
+          <span class="hits">7</span>
           
           <code class="ruby">        if saved</code>
         </li>
@@ -4898,8 +4898,8 @@
           <code class="ruby">        </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="43">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="43">
+          <span class="hits">7</span>
           
           <code class="ruby">        saved</code>
         </li>
@@ -5222,20 +5222,20 @@
           <code class="ruby">    def self.altercsv (array)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="48">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="48">
+          <span class="hits">8</span>
           
           <code class="ruby">    CSV.generate do |csv|</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="49">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="49">
+          <span class="hits">8</span>
           
           <code class="ruby">    array.each do |t|</code>
         </li>
       
-        <li class="covered" data-hits="78" data-linenumber="50">
-          <span class="hits">78</span>
+        <li class="covered" data-hits="82" data-linenumber="50">
+          <span class="hits">82</span>
           
           <code class="ruby">        csv&lt;&lt;t</code>
         </li>
@@ -5384,8 +5384,8 @@
           <code class="ruby">  def store_dir</code>
         </li>
       
-        <li class="covered" data-hits="80" data-linenumber="16">
-          <span class="hits">80</span>
+        <li class="covered" data-hits="56" data-linenumber="16">
+          <span class="hits">56</span>
           
           <code class="ruby">    &quot;uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}&quot;</code>
         </li>
@@ -5624,8 +5624,8 @@
           <code class="ruby">Given(/^I am on the (.+) page$/) do |page_name|</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="2">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="26" data-linenumber="2">
+          <span class="hits">26</span>
           
           <code class="ruby">  visit path_to(page_name)</code>
         </li>
@@ -5648,8 +5648,8 @@
           <code class="ruby">Given(/^I select &quot;([^&quot;]*)&quot; to be uploaded to &quot;([^&quot;]*)&quot;$/) do |path, field|</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="6">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="6">
+          <span class="hits">7</span>
           
           <code class="ruby">  attach_file(field, File.expand_path(path))</code>
         </li>
@@ -5672,8 +5672,8 @@
           <code class="ruby">When(/^I press &quot;([^&quot;]*)&quot;$/) do |button|</code>
         </li>
       
-        <li class="covered" data-hits="55" data-linenumber="10">
-          <span class="hits">55</span>
+        <li class="covered" data-hits="40" data-linenumber="10">
+          <span class="hits">40</span>
           
           <code class="ruby">  click_button(button)</code>
         </li>
@@ -5696,14 +5696,14 @@
           <code class="ruby">When(/^I wait &quot;([^&quot;]*)&quot; seconds to press &quot;([^&quot;]*)&quot;$/) do |sec, button|</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="14">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="14">
+          <span class="hits">7</span>
           
           <code class="ruby">  sleep(Integer(sec))</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="15">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="15">
+          <span class="hits">7</span>
           
           <code class="ruby">  click_button(button)</code>
         </li>
@@ -5780,8 +5780,8 @@
           <code class="ruby">When(/^I select &quot;([^&quot;]*)&quot; from &quot;([^&quot;]*)&quot;$/) do |value, field|</code>
         </li>
       
-        <li class="covered" data-hits="42" data-linenumber="28">
-          <span class="hits">42</span>
+        <li class="covered" data-hits="24" data-linenumber="28">
+          <span class="hits">24</span>
           
           <code class="ruby">  select value, from: field</code>
         </li>
@@ -5828,8 +5828,8 @@
           <code class="ruby">When(/^I follow &quot;([^&quot;]*)&quot;$/) do |link|</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="36">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="36">
+          <span class="hits">4</span>
           
           <code class="ruby">  click_link(link)</code>
         </li>
@@ -6050,14 +6050,14 @@
           <code class="ruby">  #page.response_headers[&#39;Content-Disposition&#39;].should include(&quot;filename=\&quot;CSV.csv\&quot;&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="73">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="73">
+          <span class="hits">8</span>
           
           <code class="ruby">  header = page.response_headers[&#39;Content-Disposition&#39;]</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="74">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="74">
+          <span class="hits">8</span>
           
           <code class="ruby">  header.should (match (/^attachment/))</code>
         </li>
@@ -6110,14 +6110,14 @@
           <code class="ruby">Then(/^I should be on the (.+) page$/) do |page_name|</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="83">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="24" data-linenumber="83">
+          <span class="hits">24</span>
           
           <code class="ruby">  uri = URI.parse(current_url)</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="84">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="24" data-linenumber="84">
+          <span class="hits">24</span>
           
           <code class="ruby">  &quot;#{uri.path}&quot;.should == path_to(page_name)</code>
         </li>
@@ -6140,8 +6140,8 @@
           <code class="ruby">Then(/^I should see &quot;([^&quot;]*)&quot;$/) do |text|</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="88">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="18" data-linenumber="88">
+          <span class="hits">18</span>
           
           <code class="ruby">  page.should have_content(text)</code>
         </li>
@@ -6188,8 +6188,8 @@
           <code class="ruby">Then(/^I expect to see &quot;([^&quot;]*)&quot; selected from &quot;([^&quot;]*)&quot;$/) do |option, field|</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="96">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="6" data-linenumber="96">
+          <span class="hits">6</span>
           
           <code class="ruby">  expect(page).to have_select(field, selected: option)</code>
         </li>
@@ -6344,8 +6344,8 @@
           <code class="ruby">  def path_to(page_name)</code>
         </li>
       
-        <li class="covered" data-hits="64" data-linenumber="14">
-          <span class="hits">64</span>
+        <li class="covered" data-hits="50" data-linenumber="14">
+          <span class="hits">50</span>
           
           <code class="ruby">    case page_name</code>
         </li>
@@ -6362,8 +6362,8 @@
           <code class="ruby">    when /home/i</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="17">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="30" data-linenumber="17">
+          <span class="hits">30</span>
           
           <code class="ruby">      &#39;/site/index&#39;</code>
         </li>
@@ -6374,8 +6374,8 @@
           <code class="ruby">    when /filter/i</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="19">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="10" data-linenumber="19">
+          <span class="hits">10</span>
           
           <code class="ruby">      &#39;/site/studentFilterSelection&#39;</code>
         </li>
@@ -6386,8 +6386,8 @@
           <code class="ruby">    when /result/i</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="21">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="21">
+          <span class="hits">3</span>
           
           <code class="ruby">      &#39;/site/studentOutput&#39;</code>
         </li>
@@ -6398,8 +6398,8 @@
           <code class="ruby">    when /spreadsheet/i</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="23">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="7" data-linenumber="23">
+          <span class="hits">7</span>
           
           <code class="ruby">      &#39;/spreadsheets&#39;</code>
         </li>

@@ -130,7 +130,7 @@ class SiteController < ApplicationController
       h2="Fall #{year} - College Station"
       h3="Spring #{next_year} - College Station"
       @students=Student.all
-      @students=@students.where("prim_deg='PHD'").where("year=#{year}")
+      @students=@students.where("prim_deg='PHD'").where("year=?",year)
       c_attribute=[" ","CS","CE"]
       r_attribute=["Number of newly-admitted PHD students from outside the North America?"]
       c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
@@ -229,7 +229,7 @@ class SiteController < ApplicationController
       h2="Fall #{year} - College Station"
       h3="Spring #{next_year} - College Station"
       @students=Student.all
-      @students=@students.where("prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN'").where("year=#{year}")
+      @students=@students.where("prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN'").where("year=?",year)
       c_attribute=[" ","CS","CE"]
       r_attribute=["Number of newly-admitted master students from outside the North America?"]
       c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]

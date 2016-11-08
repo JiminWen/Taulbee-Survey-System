@@ -7,7 +7,7 @@ Feature: Upload a non-csv file and return home
 @rack_test
 Scenario: I should be able to download .cvs files that are generated based on my uplodaded student record document
   Given I am on the home page
-  And I select "2015" from "queryList"
+  And I select "2014" from "queryList"
   When I press "Select"
   Then I should see "Get a standard output"
   Then I press "generate"
