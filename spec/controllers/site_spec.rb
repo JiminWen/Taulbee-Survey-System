@@ -24,4 +24,9 @@ RSpec.describe SiteController, type: :controller do
 			expect(response).to render_template :studentOutput
 		end
 	end
+	
+	it "should have proper routes" do
+    {:get =>'formE_1.csv' }.should be_routable
+         
+    end
 end

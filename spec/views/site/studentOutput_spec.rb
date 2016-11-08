@@ -7,6 +7,7 @@ RSpec.describe "site/studentOutput.html.haml", type: :view do
 		render
 	end
 
+
 	# it "can render" do
 	# 	expect(rendered).to include("Result")
 	# end	
