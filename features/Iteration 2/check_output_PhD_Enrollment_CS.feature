@@ -1,7 +1,7 @@
-Feature: Upload a non-csv file and return home
-  
-  As a User
-  So that I can download csv files from the server once I uplodaded student record document
+Feature: Automatically generate a survey for PhD Enrollment
+As: User
+So that I can: select PhD Enrollment for Computer Science or Computer Engineering based on specific filter and attributes
+
 
 @javascript
 @rack_test

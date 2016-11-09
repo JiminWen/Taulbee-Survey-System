@@ -1,7 +1,9 @@
-Feature: Upload a non-csv file and return home
+Feature: Automatically generate a survey for Bachelors Enrollment
+
   
-  As a User
-  So that I can download csv files from the server once I uplodaded student record document
+  As: User
+  So that I can: select Bachelors Enrollment for Computer Engineering based on specific filter and attributes
+
 
 @javascript
 @rack_test
