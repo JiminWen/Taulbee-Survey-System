@@ -130,7 +130,7 @@ class SiteController < ApplicationController
       h2="Fall #{year} - College Station"
       h3="Spring #{next_year} - College Station"
       @students=Student.all
-      @students=@students.where("prim_deg='PHD'").where("year=#{year}")
+      @students=@students.where("prim_deg='PHD'").where("year=?",year)
       c_attribute=[" ","CS","CE"]
       r_attribute=["Number of newly-admitted PHD students from outside the North America?"]
       c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
@@ -147,7 +147,7 @@ class SiteController < ApplicationController
       end
   end
   
-  def fromI_1
+  def formI_1
       year=params[:year]
       @students=Student.all
       #raise @students.inspect
@@ -184,7 +184,7 @@ class SiteController < ApplicationController
       end
   end
   
-  def fromI_2
+  def formI_2
       year=params[:year]
       @students=Student.all
       #raise @students.inspect
@@ -241,7 +241,7 @@ class SiteController < ApplicationController
       h2="Fall #{year} - College Station"
       h3="Spring #{next_year} - College Station"
       @students=Student.all
-      @students=@students.where("prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN'").where("year=#{year}")
+      @students=@students.where("prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN'").where("year=?",year)
       c_attribute=[" ","CS","CE"]
       r_attribute=["Number of newly-admitted master students from outside the North America?"]
       c_filter=["prim_deg_maj_1 = 'CPSL' OR prim_deg_maj_1 = 'CPSC'","prim_deg_maj_1 = 'CECN' OR prim_deg_maj_1 = 'CECL'"]
@@ -259,7 +259,7 @@ class SiteController < ApplicationController
   end
   
  
-  def fromM_1
+  def formM_1
       year=params[:year]
       @students=Student.all
       #raise @students.inspect
@@ -297,7 +297,7 @@ class SiteController < ApplicationController
       
   end
   
-   def fromM_2
+   def formM_2
       year=params[:year]
       @students=Student.all
       #raise @students.inspect
@@ -335,7 +335,7 @@ class SiteController < ApplicationController
       
   end
   
-def fromE_1
+def formE_1
       year=params[:year]
       @students=Student.all
       #raise @students.inspect
@@ -372,7 +372,7 @@ def fromE_1
       end
   end
   
-  def fromE_2
+  def formE_2
       year=params[:year]
       @students=Student.all
       #raise @students.inspect

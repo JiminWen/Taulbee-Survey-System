@@ -1,10 +1,10 @@
-Feature: Upload a csv file and return home
+Feature: Upload a non_csv file and return home
   
   As a User
-  So that I can upload a csv file and see the progress once it is finished. 
+  So that I can upload a non-csv file and get an error message. 
 
 @javascript
-Scenario: I should be able to upload a .cvs file
+Scenario: I should be able to upload a non.cvs file and get an error message
   Given I am on the home page
   And I select "features/wrong_input_file.non_csv_type" to be uploaded to "spreadsheet_attachment"
   When I press "Save"

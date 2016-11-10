@@ -25,12 +25,12 @@ Rails.application.routes.draw do
   get 'formF_4.csv', to: 'site#formF_4', as: :formF_4
   get 'formJ_1.csv', to: 'site#formJ_1', as: :formJ_1
   get 'formJ_2.csv', to: 'site#formJ_2', as: :formJ_2
-  get 'formI_1.csv', to: 'site#fromI_1', as: :formI_1
-  get 'formI_2.csv', to: 'site#fromI_2', as: :formI_2
-  get 'formM_1.csv', to: 'site#fromM_1', as: :formM_1
-  get 'formM_2.csv', to: 'site#fromM_2', as: :formM_2
-  get 'formE_1.csv', to: 'site#fromE_1', as: :formE_1
-  get 'formE_2.csv', to: 'site#fromE_2', as: :formE_2
+  get 'formI_1.csv', to: 'site#formI_1', as: :formI_1
+  get 'formI_2.csv', to: 'site#formI_2', as: :formI_2
+  get 'formM_1.csv', to: 'site#formM_1', as: :formM_1
+  get 'formM_2.csv', to: 'site#formM_2', as: :formM_2
+  get 'formE_1.csv', to: 'site#formE_1', as: :formE_1
+  get 'formE_2.csv', to: 'site#formE_2', as: :formE_2
 
    
   # You can have the root of your site routed with "root"
