@@ -221,6 +221,18 @@ class SiteController < ApplicationController
       
   end
   
+  def formJ_1
+      respond_to do |format|
+          format.csv { send_data Student.to_j1_csv(params[ :year ].to_i) }
+      end
+  end
+  
+  def formF_3
+      respond_to do |format|
+          format.csv { send_data Student.to_f3_csv(params[ :year ].to_i) }
+      end
+  end
+  
   def formJ_2
       year=params[:year]
       next_year=year.to_i+1 
