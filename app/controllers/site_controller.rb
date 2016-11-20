@@ -142,6 +142,8 @@ class SiteController < ApplicationController
       temp<<@students.where(c_filter[0]).where("prim_deg_cat=? OR prim_deg_cat=? OR prim_deg_cat=?",h1,h2,h3).where(r_filter).count.to_s
       temp<<@students.where(c_filter[1]).where("prim_deg_cat=? OR prim_deg_cat=? OR prim_deg_cat=?",h1,h2,h3).where(r_filter).count.to_s
       array<<temp
+      #raise array.inspect
+      
       respond_to do |format|
         format.csv { send_data Student.altercsv(array) }
       end
@@ -357,15 +359,36 @@ def formE_1
         temp<<r_attribute[i]
         i=i+1
         c_filter.each do |c|
-        temp<< @students.where(c).where(r).count.to_s
+        temp<< @students.where(c).where(r).count
         end
         array<<temp
       end
       temp=["k. Total"]
       c_filter.each do |c|
-      temp<< @students.where(c).count.to_s
+      temp<< @students.where(c).count
       end
       array<<temp
+      array<<[]
+      array<<c_attribute
+      array<<array[1]
+      #raise array[12][1].inspect
+      for i in 2..12
+      temp=[]
+      temp<<array[i][0]
+        for j in 1..4
+          #val=(100*temp[i][j].to_i/temp[12][j].to_i).to_f
+          val1=array[i][j]
+          val2=array[12][j]
+          val ='0'
+          if val2!=0
+            val=(100*val1.to_f/val2.to_f).to_s+"%"
+          end
+          temp<<val
+        end
+      array<<temp  
+      end
+     # raise array.inspect
+      
       
       respond_to do |format|
          format.csv { send_data Student.altercsv(array) }
@@ -394,16 +417,34 @@ def formE_1
         temp<<r_attribute[i]
         i=i+1
         c_filter.each do |c|
-        temp<< @students.where(c).where(r).count.to_s
+        temp<< @students.where(c).where(r).count
         end
         array<<temp
       end
       temp=["k. Total"]
       c_filter.each do |c|
-      temp<< @students.where(c).count.to_s
+      temp<< @students.where(c).count
       end
       array<<temp
-      
+      array<<[]
+      array<<c_attribute
+      array<<array[1]
+      #raise array[12][1].inspect
+      for i in 2..12
+      temp=[]
+      temp<<array[i][0]
+        for j in 1..4
+          #val=(100*temp[i][j].to_i/temp[12][j].to_i).to_f
+          val1=array[i][j]
+          val2=array[12][j]
+          val ='0'
+          if val2!=0
+            val=(100*val1.to_f/val2.to_f).to_s+"%"
+          end
+          temp<<val
+        end
+      array<<temp  
+      end
       respond_to do |format|
          format.csv { send_data Student.altercsv(array) }
       end
