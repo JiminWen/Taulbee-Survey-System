@@ -1,0 +1,242 @@
+
+
+Started GET "/" for 165.91.13.247 at 2016-11-20 16:45:52 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.1ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (23.5ms)
+Completed 200 OK in 203ms (Views: 185.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2014" for 165.91.13.247 at 2016-11-20 16:45:54 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2014"}
+  [1m[36mQuery Load (0.2ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (170.8ms)
+Completed 200 OK in 202ms (Views: 191.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/site/studentOutput" for 165.91.13.247 at 2016-11-20 16:45:56 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"commit"=>"generate", "cur_year"=>"2014", "authenticity_token"=>"guFvoXlVIwObfxOT/OJhewfwOWuW4kSmHAtXYi8GgYqMhfLLbijGicaK+iqWEkAYr35yA0wnFwU6f2FC4k0fuw=="}
+  Rendered site/studentOutput.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/formE_1.csv.csv?year=2014" for 165.91.13.247 at 2016-11-20 16:45:57 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#formE_1 as CSV
+  Parameters: {"year"=>"2014"}
+  [1m[35m (3.1ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='I')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='I')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='I')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='I')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='T')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='T')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='T')
+  [1m[36m (24.8ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='T')[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='B')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='B')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='B')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='B')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='N')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='N')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='N')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='N')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='W')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='W')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='W')
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='W')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='M')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='M')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='M')
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='M')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='H')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='H')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='H')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='H')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='O')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='O')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='O')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='O')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency!='R' AND residency!='U')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency!='R' AND residency!='U')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency!='R' AND residency!='U')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency!='R' AND residency!='U')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='U')
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='U')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='U')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='U')[0m
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='F')[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSC' OR prim_deg_maj_1='CPSL') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ')[0m
+  Rendered text template (0.0ms)
+Sent data  (2.5ms)
+Completed 200 OK in 98ms (Views: 2.4ms | ActiveRecord: 57.4ms)
+
+
+Started GET "/formE_2.csv.csv?year=2014" for 165.91.13.247 at 2016-11-20 16:46:51 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#formE_2 as CSV
+  Parameters: {"year"=>"2014"}
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='I')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='I')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='I')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='I')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='T')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='T')[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='T')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='T')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='B')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='B')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='B')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='B')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='N')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='N')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='N')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='N')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='W')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='W')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='W')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='W')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='M')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='M')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='M')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='M')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='H')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='H')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='H')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='H')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='O')
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='O')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='O')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='O')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency!='R' AND residency!='U')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency!='R' AND residency!='U')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency!='R' AND residency!='U')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency!='R' AND residency!='U')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M') AND (residency='U')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='F') AND (residency='U')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ') AND (residency='U')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='U')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='F')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex=' ')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CECL' OR prim_deg_maj_1='CECN') AND (prim_deg='PHD') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ')[0m
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 212ms (Views: 0.4ms | ActiveRecord: 28.3ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 165.91.13.247 at 2016-11-20 17:05:43 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[35mStudent Load (2.6ms)[0m  SELECT "students"."id" FROM "students"
+Completed 200 OK in 139ms (Views: 0.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/site/receiveAjax?id=rowfilter_0&c_name=id" for 165.91.13.247 at 2016-11-20 17:05:47 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"rowfilter_0", "c_name"=>"id"}
+  [1m[36mStudent Load (1.7ms)[0m  [1mSELECT "students"."id" FROM "students"[0m
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/site/receiveAjax?id=rowfilter_0&c_name=email" for 165.91.13.247 at 2016-11-20 17:05:49 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"rowfilter_0", "c_name"=>"email"}
+  [1m[35mStudent Load (2.5ms)[0m  SELECT "students"."email" FROM "students"
+Completed 200 OK in 21ms (Views: 0.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=name" for 165.91.13.247 at 2016-11-20 17:05:53 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"name"}
+  [1m[36mStudent Load (2.0ms)[0m  [1mSELECT "students"."name" FROM "students"[0m
+Completed 200 OK in 16ms (Views: 1.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/site/receiveAjax?id=rowfilter_0&c_name=classification" for 165.91.13.247 at 2016-11-20 17:05:56 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"rowfilter_0", "c_name"=>"classification"}
+  [1m[35mStudent Load (2.0ms)[0m  SELECT "students"."classification" FROM "students"
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2014" for 165.91.13.247 at 2016-11-20 17:11:28 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2014"}
+  [1m[36mQuery Load (0.8ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (11.1ms)
+Completed 200 OK in 133ms (Views: 127.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/site/studentOutput" for 165.91.13.247 at 2016-11-20 17:11:30 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"commit"=>"generate", "cur_year"=>"2014", "authenticity_token"=>"C9VISz0Cf+RKmQxW3mvDHzcPwOgRnpE985J9csei4NoFsdUhKn+abhds5e+0m+J8n4GLgMtbwp7V5ktSCul+6w=="}
+  Rendered site/studentOutput.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/formI_1.csv.csv?year=2014" for 165.91.13.247 at 2016-11-20 17:11:33 +0000
+Cannot render console from 165.91.13.247! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#formI_1 as CSV
+  Parameters: {"year"=>"2014"}
+  [1m[35m (2.8ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='I')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='I')[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='I')
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='I')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='T')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='T')[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='T')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='T')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='B')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='B')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='B')
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='B')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='N')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='N')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='N')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='N')[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='W')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='W')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='W')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='W')[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='M')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='M')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='M')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='M')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='H')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='H')[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='H')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='H')[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M') AND (residency='R' AND ethnicity='O')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='F') AND (residency='R' AND ethnicity='O')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex=' ') AND (residency='R' AND ethnicity='O')
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='R' AND ethnicity='O')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M') AND (residency!='R' AND residency!='U')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='F') AND (residency!='R' AND residency!='U')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex=' ') AND (residency!='R' AND residency!='U')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency!='R' AND residency!='U')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M') AND (residency='U')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='F') AND (residency='U')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex=' ') AND (residency='U')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ') AND (residency='U')[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='F')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex=' ')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE (prim_deg_maj_1='CPSL' OR prim_deg_maj_1='CPSC') AND (prim_deg='MS' OR prim_deg='MCS' OR prim_deg='MEN') AND (year='2014') AND (sex='M' OR sex='F' OR sex=' ')[0m
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 238ms (Views: 0.3ms | ActiveRecord: 33.6ms)
