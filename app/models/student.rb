@@ -37,6 +37,10 @@ class Student < ActiveRecord::Base
             csv << ["", "CS", "CE"]
             csv << ["Number of newly-admitted masters students", new_students[ "CP" ].to_s, new_students[ "CE" ].to_s]
             csv << ["Prior Year", prior_students[ "CP" ].to_s, prior_students[ "CE" ].to_s]
+            csv << []
+            csv << ["", "CS", "CE"]
+            csv << ["Number of newly-admitted masters students", (100*new_students[ "CP" ].to_f/(new_students[ "CP" ].to_f+prior_students[ "CP" ].to_f)).to_s+"%", (100*new_students[ "CE" ].to_f/(new_students[ "CE" ].to_f+prior_students[ "CE" ].to_f)).to_s+'%']
+            csv << ["Prior Year", (100*prior_students[ "CP" ].to_f/(new_students[ "CP" ].to_f+prior_students[ "CP" ].to_f)).to_s+"%", (100*prior_students[ "CE" ].to_f/(new_students[ "CE" ].to_f+prior_students[ "CE" ].to_f)).to_s+'%']
         end
     end
     
