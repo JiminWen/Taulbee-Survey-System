@@ -55,14 +55,24 @@
 
   %h3 Results to Download
   %hr
-  %h4 PhD Enrollment
+  %h4 CSV of Manually Filter Selection
 
-  #{link_to "Computer Science only.csv", formE_1_path(format: 'csv',:year=>@year)}
+  //#{link_to "Computer Science only.csv", formE_1_path(format: 'csv',:year=>@year)}
   %br
-  #{link_to "Computer Engineering only.csv", formE_2_path(format: 'csv',:year=>@year)}
   %hr
   
-
+  //detail info about three selected filters
+  %table#movies
+  %thead
+    %tr
+      %th ''
+      %th '#{pre-filter}'
+      
+      %th '#{rowfilter}'
+      %th '#{collumfilter}'
+      
+    %br
+    %tp 
   
   
   %br

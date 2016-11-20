@@ -75,7 +75,7 @@
       %input{:name => "utf8", :type => "hidden", :value => "✓"}/
       %input{:name => "authenticity_token", :type => "hidden", :value => "R6tWZgNywVkSWBBcFzhGpcvVQOpv9bTWfT/s5oH2OrLgEhEqzl2EhcnfAwHu/V/ETSdEUKUjGO4BNBKRBJbA4w=="}/
       %fieldset
-        %label{:for => "Filters"} What filters do you want to apply?
+        %label{:for => "Filters"} Choose your pre-filter
         %button#confirmNoOfFilters{:type => "button"} Add Filter
         %button#removeFilterButton{:type => "button"} Remove Last Filter
         #filterDiv{:name => "filterDiv"}
@@ -95,6 +95,19 @@
               %select{:id => "filterValue_" + filterIndex.to_s, :name => "filterValue" + filterIndex.to_s}
               %br
               - filterIndex = filterIndex + 1
+        
+        %label{:for => "rowfilter"} Choose your rowfilter
+        %button#addARowFilter{:type => "button"}Add filter
+        %button#removeARowFilter{:type => "button"}Remove filter
+        #rowfilterDiv{:name => "rowfilterDiv"}
+          
+        
+          
+        %label{:for => "collumfilter"} Choose your collumfilter
+        %button#addACollumFilter{:type => "button"}Add filter
+        %button#removeACollumFilter{:type => "button"}Remove filter
+        
+              
         %label{:for => "Attributes"} Which attributes do you want to see?
         %button#confirmNoOfInfo{:type => "button"} Add Attribute
         %button#removeAttributeButton{:type => "button"} Remove Last Attribute
@@ -132,12 +145,15 @@
       var numberOfAttributesWhenLoaded = parseInt(#{@headerCount},10);
       var nextAttribute = numberOfAttributesWhenLoaded;
       
+      var num_rowfilter=0;
+      var num_collumfilter=0;
+      
       //when the page loads, if it is loading a saved filter or repeating a query
       //then it will populate the filter values for those filters on load
       window.onload = function()
       {
         var query = #{@filterValues}
-
+        console.log('query'+query);
         for(var i = 0; i < query.length; i++)
         {
           var dropDown = $("#filter_" + i.toString())[0]
@@ -146,29 +162,71 @@
         
       };
       
+      document.getElementById("addARowFilter").onclick=function(student){
+        console.log("add row filter");
+        Addrowfilter(num_rowfilter);
+        num_rowfilter=num_rowfilter+1;
+      }
+      function Addrowfilter(number){
+        var list=document.getElementById("filtersListInner").cloneNode(true);
+        console.log("row filterlist")
+        console.log(list);
+        list.removeAttribute("hidden");
+        list.name = "rowfilter" + number.toString();
+        list.id = "rowfilter_" + number.toString();
+        rowfilterDiv.appendChild(list);
+        rowfilterDiv.appendChild (document.createTextNode (" "));
+        var comparator = document.getElementById("comparatorListInner").cloneNode(true);
+        comparator.removeAttribute("hidden");
+        comparator.name = "rowcomparator" + number.toString();
+        comparator.id = "rowcomparator_" + number.toString();
+        rowfilterDiv.appendChild(comparator);
+        rowfilterDiv.appendChild (document.createTextNode (" "));
+        console.log("rowfilter value");
+        console.log(filterValue);
+        var filterValue = document.getElementById("filterValueInner").cloneNode(true);
+        
+        filterValue.removeAttribute("hidden");
+        filterValue.name = "rowfilterValue" + number.toString();
+        filterValue.id = "rowfilterValue_" + number.toString(); 
+        rowfilterDiv.appendChild(filterValue);
+        rowfilterDiv.appendChild (document.createTextNode (" "));
+        rowfilterDiv.appendChild(document.createElement("br"));
+        rowfilterDiv.appendChild (document.createTextNode (" "));
+        DoFunc(list);
+      }
+      
       //when clicked adds a filter
       document.getElementById("confirmNoOfFilters").onclick=function(student)
-      {
+      {   console.log("nextfilter="+nextFilter)
       	  AddFilter(nextFilter);
       	  nextFilter = nextFilter + 1;
       }
       
       //is called when adding a filter, copies all the necessary elements
       function AddFilter(number)
-      {
+      { 
         var list = document.getElementById("filtersListInner").cloneNode(true);
+        console.log(list);
         list.removeAttribute("hidden");
         list.name = "filter" + number.toString();
         list.id = "filter_" + number.toString();
-        console.log("Hello")
+        console.log("filterDiv before change");
+        console.log(filterDiv);
         filterDiv.appendChild(list);
         filterDiv.appendChild (document.createTextNode (" "));
+        
         var comparator = document.getElementById("comparatorListInner").cloneNode(true);
         comparator.removeAttribute("hidden");
         comparator.name = "comparator" + number.toString();
         comparator.id = "comparator_" + number.toString();
+        
+        console.log("comparator");
+        console.log(comparator);
+        
         filterDiv.appendChild(comparator);
         filterDiv.appendChild (document.createTextNode (" "));
+        
         var filterValue = document.getElementById("filterValueInner").cloneNode(true);
         filterValue.removeAttribute("hidden");
         filterValue.name = "filterValue" + number.toString();
@@ -233,7 +291,7 @@
       //performs the ajax function to set the value of the filter value drop down dynamically
       //only used for filters that are loaded or repeat filters
       function DoFunc2(s)
-      {
+      { console.log('data.c_name'+data.c_name);
         $.ajax({
            url: "/site/receiveAjax",
            data: {
