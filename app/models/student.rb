@@ -37,6 +37,15 @@ class Student < ActiveRecord::Base
             csv << ["", "CS", "CE"]
             csv << ["Number of newly-admitted masters students", new_students[ "CP" ].to_s, new_students[ "CE" ].to_s]
             csv << ["Prior Year", prior_students[ "CP" ].to_s, prior_students[ "CE" ].to_s]
+            csv << []
+            csv << ["", "CS", "CE"]
+            if new_students[ "CP" ]+prior_students[ "CP" ] != 0 && new_students[ "CE" ]+prior_students[ "CE" ] != 0
+                csv << ["Number of newly-admitted masters students", (100*new_students[ "CP" ].to_f/(new_students[ "CP" ].to_f+prior_students[ "CP" ].to_f)).to_s+"%", (100*new_students[ "CE" ].to_f/(new_students[ "CE" ].to_f+prior_students[ "CE" ].to_f)).to_s+'%']
+                csv << ["Prior Year", (100*prior_students[ "CP" ].to_f/(new_students[ "CP" ].to_f+prior_students[ "CP" ].to_f)).to_s+"%", (100*prior_students[ "CE" ].to_f/(new_students[ "CE" ].to_f+prior_students[ "CE" ].to_f)).to_s+'%']
+            else
+                csv << ["Number of newly-admitted masters students", 0.to_s, 0.to_s]
+                csv << ["Prior Year", 0.to_s, 0.to_s]
+            end
         end
     end
     
@@ -57,6 +66,15 @@ class Student < ActiveRecord::Base
             csv << ["", "CS", "CE"]
             csv << ["Number of newly admitted PhD Students", new_students[ "CP" ].to_s, new_students[ "CE" ].to_s]
             csv << ["Number of PhD Students Prior Year", prior_students[ "CP" ].to_s, prior_students[ "CE" ].to_s]
+            csv << []
+            csv << ["", "CS", "CE"]
+            if new_students[ "CP" ]+prior_students[ "CP" ] != 0 && new_students[ "CE" ]+prior_students[ "CE" ] != 0
+                csv << ["Number of newly-admitted masters students", (100*new_students[ "CP" ].to_f/(new_students[ "CP" ].to_f+prior_students[ "CP" ].to_f)).to_s+"%", (100*new_students[ "CE" ].to_f/(new_students[ "CE" ].to_f+prior_students[ "CE" ].to_f)).to_s+'%']
+                csv << ["Prior Year", (100*prior_students[ "CP" ].to_f/(new_students[ "CP" ].to_f+prior_students[ "CP" ].to_f)).to_s+"%", (100*prior_students[ "CE" ].to_f/(new_students[ "CE" ].to_f+prior_students[ "CE" ].to_f)).to_s+'%']
+            else
+                csv << ["Number of newly-admitted masters students", 0.to_s, 0.to_s]
+                csv << ["Prior Year", 0.to_s, 0.to_s]
+            end
         end
     end
     
