@@ -467,6 +467,7 @@ def formE_1
     else
       #if the query is not being saved
       #select all the filters and filter values chosen
+      raise params.inspect
       filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
       comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
       filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
