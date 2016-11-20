@@ -2241,3 +2241,16 @@ Processing by SiteController#formJ_1 as CSV
   Rendered text template (0.0ms)
 Sent data  (0.8ms)
 Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/formJ_1.csv.csv?year=2014" for 165.91.13.45 at 2016-11-20 20:13:20 +0000
+Cannot render console from 165.91.13.45! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#formJ_1 as CSV
+  Parameters: {"year"=>"2014"}
+  [1m[35m (3.1ms)[0m  SELECT COUNT(*) FROM "students" WHERE ((prim_deg_cat like 'Summer 2014%' or prim_deg_cat like 'Fall 2014%' or prim_deg_cat like 'Spring 2015%') and prim_deg_maj_1 like 'CP%' and prim_deg like 'M%')
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ((prim_deg_cat like 'Summer 2014%' or prim_deg_cat like 'Fall 2014%' or prim_deg_cat like 'Spring 2015%') and prim_deg_maj_1 like 'CE%' and prim_deg like 'M%')[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "students" WHERE ((prim_deg_cat like 'Summer 2013%' or prim_deg_cat like 'Fall 2013%' or prim_deg_cat like 'Spring 2014%') and prim_deg_maj_1 like 'CP%' and prim_deg like 'M%')
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ((prim_deg_cat like 'Summer 2013%' or prim_deg_cat like 'Fall 2013%' or prim_deg_cat like 'Spring 2014%') and prim_deg_maj_1 like 'CE%' and prim_deg like 'M%')[0m
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 115ms (Views: 0.7ms | ActiveRecord: 8.4ms)
