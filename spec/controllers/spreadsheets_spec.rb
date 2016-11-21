@@ -3,19 +3,19 @@ require 'spec_helper'
 
 RSpec.describe SpreadsheetsController, type: :controller do
 
-	describe "GET #index" do
-		it "#index" do
-			get :index
-			expect(response).to redirect_to site_studentOutput_path
-		end
-	end
+	# describe "GET #index" do
+	# 	it "#index" do
+	# 		get :index
+	# 		expect(response).to redirect_to site_studentOutput_path
+	# 	end
+	# end
 
-	describe "GET #new" do
-		it "#new" do
-			get :new
-			expect(response).to redirect_to site_studentOutput_path
-		end 
-	end
+	# describe "GET #new" do
+	# 	it "#new" do
+	# 		get :new
+	# 		expect(response).to redirect_to site_studentOutput_path
+	# 	end 
+	# end
 
 #	describe "POST #create" do
 #			it "create a new spreadsheet" do
@@ -31,10 +31,10 @@ RSpec.describe SpreadsheetsController, type: :controller do
 #			end
 #	end
 
-	describe "DELETE #destroy" do
-		it "redirects" do
-			delete :destroy 
-			expect(response).to redirect_to site_studentOutput_path
-		end
-	end
+	# describe "DELETE #destroy" do
+	# 	it "redirects" do
+	# 		delete :destroy 
+	# 		expect(response).to redirect_to site_studentOutput_path
+	# 	end
+	# end
 end
