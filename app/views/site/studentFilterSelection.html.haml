@@ -106,6 +106,7 @@
         %label{:for => "collumfilter"} Choose your collumfilter
         %button#addACollumFilter{:type => "button"}Add filter
         %button#removeACollumFilter{:type => "button"}Remove filter
+        #collumfilterDiv{:name => "collumfilterDiv"}
         
               
         %label{:for => "Attributes"} Which attributes do you want to see?
@@ -205,6 +206,48 @@
       	num_rowfilter= num_rowfilter - 1;
       }
       
+      document.getElementById("addACollumFilter").onclick=function(student){
+        console.log("add collum filter");
+        Addcollumfilter(num_collumfilter);
+        num_collumfilter=num_collumfilter+1;
+      }
+      function Addcollumfilter(number){
+        var list=document.getElementById("filtersListInner").cloneNode(true);
+        console.log("collum filterlist")
+        console.log(list);
+        list.removeAttribute("hidden");
+        list.name = "collumfilter" + number.toString();
+        list.id = "collumfilter_" + number.toString();
+        collumfilterDiv.appendChild(list);
+        collumfilterDiv.appendChild (document.createTextNode (" "));
+        var comparator = document.getElementById("comparatorListInner").cloneNode(true);
+        comparator.removeAttribute("hidden");
+        comparator.name = "collumcomparator" + number.toString();
+        comparator.id = "collumcomparator_" + number.toString();
+        collumfilterDiv.appendChild(comparator);
+        collumfilterDiv.appendChild (document.createTextNode (" "));
+        console.log("collumfilter value");
+        console.log(filterValue);
+        var filterValue = document.getElementById("filterValueInner").cloneNode(true);
+        
+        filterValue.removeAttribute("hidden");
+        filterValue.name = "collumfilterValue" + number.toString();
+        filterValue.id = "collumfilterValue_" + number.toString(); 
+        console.log("check inner filter value");
+        console.log(filterValue);
+        collumfilterDiv.appendChild(filterValue);
+        collumfilterDiv.appendChild (document.createTextNode (" "));
+        collumfilterDiv.appendChild(document.createElement("br"));
+        collumfilterDiv.appendChild (document.createTextNode (" "));
+        DoFunc(list);
+      }
+      document.getElementById("removeACollumFilter").onclick=function(student){
+        	for(var i = 0; i< 8; i++)//8 because there are 8 elements per filter added
+      	{
+          collumfilterDiv.removeChild(collumfilterDiv.lastChild);
+        }
+      	num_collumfilter= num_collumfilter - 1;
+      }
       
       //when clicked adds a filter
       document.getElementById("confirmNoOfFilters").onclick=function(student)
@@ -288,8 +331,8 @@
             dropDown = document.getElementById("filterValue_".concat(number.toString()));
             else if (s.id.match(/^rowfilter/))
             dropDown = document.getElementById("rowfilterValue_".concat(number.toString()));
-            
-            
+            else if (s.id.match(/^collumfilter/))
+            dropDown=document.getElementById("collumfilterValue_".concat(number.toString()));
             dropDown.options.length = 0;
             var vec = JSON.parse(data["value"]);
             
