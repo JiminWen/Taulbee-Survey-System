@@ -1,0 +1,123 @@
+
+
+Started GET "/" for 10.240.0.208 at 2016-11-21 20:49:08 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (30.1ms)
+Completed 200 OK in 253ms (Views: 233.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.186 at 2016-11-21 20:49:09 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.1.32 at 2016-11-21 20:49:09 +0000
+Cannot render console from 10.240.1.32! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.187 at 2016-11-21 20:49:09 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.204 at 2016-11-21 20:49:09 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 10.240.1.60 at 2016-11-21 20:49:09 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 10.240.0.241 at 2016-11-21 20:49:09 +0000
+Cannot render console from 10.240.0.241! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 10.240.1.64 at 2016-11-21 20:49:09 +0000
+Cannot render console from 10.240.1.64! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.207 at 2016-11-21 20:49:09 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.208 at 2016-11-21 20:49:09 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.186 at 2016-11-21 20:49:10 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2014" for 10.240.1.32 at 2016-11-21 20:49:13 +0000
+Cannot render console from 10.240.1.32! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2014"}
+  [1m[36mQuery Load (0.3ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (99.8ms)
+Completed 200 OK in 136ms (Views: 123.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.240.0.33 at 2016-11-21 20:49:20 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as */*
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 10.240.0.33 at 2016-11-21 20:49:21 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 10.240.0.33 at 2016-11-21 20:49:22 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 10.240.0.33 at 2016-11-21 20:49:23 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.33 at 2016-11-21 20:49:24 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2014" for 10.240.0.214 at 2016-11-21 20:49:24 +0000
+Cannot render console from 10.240.0.214! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as */*
+  Parameters: {"yearSelected"=>"2014"}
+  [1m[36mQuery Load (0.3ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (152.5ms)
+Completed 200 OK in 180ms (Views: 178.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.213 at 2016-11-21 20:49:25 +0000
+Cannot render console from 10.240.0.213! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 10.240.0.240 at 2016-11-21 20:49:25 +0000
+Cannot render console from 10.240.0.240! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.33 at 2016-11-21 20:49:26 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 10.240.0.214 at 2016-11-21 20:49:26 +0000
+Cannot render console from 10.240.0.214! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 10.240.0.5 at 2016-11-21 20:49:28 +0000
+Cannot render console from 10.240.0.5! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.1.14 at 2016-11-21 20:49:29 +0000
+Cannot render console from 10.240.1.14! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.214 at 2016-11-21 20:49:30 +0000
+Cannot render console from 10.240.0.214! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.33 at 2016-11-21 20:49:30 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
