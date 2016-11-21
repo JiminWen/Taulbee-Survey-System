@@ -29,7 +29,7 @@
       %label Get a standard output
       %input{:name => "commit",:type => "submit", :value => "generate"}
       %input{:id => "tags_list", :name => "cur_year", :type => "hidden",:value => @year}
-      %input{:name => "authenticity_token", :type => "hidden", :value => "R6tWZgNywVkSWBBcFzhGpcvVQOpv9bTWfT/s5oH2OrLgEhEqzl2EhcnfAwHu/V/ETSdEUKUjGO4BNBKRBJbA4w=="}
+      %input{:name => "authenticity_token", :type => "hidden", :value => form_authenticity_token.to_s}
     -#form that allows the user to select which saved Query they want to load
     
     %form{:action => site_studentFilterSelection_path}
@@ -73,7 +73,7 @@
     -#if a query is being loaded or repeated, it will automatically add them to the form
     %form#daForm{"accept-charset" => "UTF-8", :action => "/site/studentOutput", :method => "post"}
       %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-      %input{:name => "authenticity_token", :type => "hidden", :value => "R6tWZgNywVkSWBBcFzhGpcvVQOpv9bTWfT/s5oH2OrLgEhEqzl2EhcnfAwHu/V/ETSdEUKUjGO4BNBKRBJbA4w=="}/
+      %input{:name => "authenticity_token", :type => "hidden", :value => form_authenticity_token.to_s}/
       %fieldset
         %label{:for => "Filters"} Choose your pre-filter
         %button#confirmNoOfFilters{:type => "button"} Add Filter
