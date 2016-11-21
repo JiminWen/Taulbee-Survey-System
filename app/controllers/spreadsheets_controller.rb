@@ -6,12 +6,12 @@ class SpreadsheetsController < ApplicationController
   
   #unused
   def index
-    redirect_to site_studentOutput_path
+   # redirect_to site_studentOutput_path
   end
 
   #unused
   def new
-    redirect_to site_studentOutput_path
+    #redirect_to site_studentOutput_path
   end
   
   #returns whether or not the upload has finished
@@ -97,7 +97,9 @@ class SpreadsheetsController < ApplicationController
   end
   
   #unused
+<<-DOC 
   def printData(data)
+  
     i = 0
     modelString = "rails g model student"
     data.each do |header|
@@ -107,6 +109,8 @@ class SpreadsheetsController < ApplicationController
       i = i + 1
     end
   end
+DOC
+ 
   
   #translates given headers from file into database friendly headers
   def CreateHeaderString(header)
@@ -135,7 +139,7 @@ class SpreadsheetsController < ApplicationController
 
   #unused
   def destroy
-    redirect_to site_studentOutput_path
+ #   redirect_to site_studentOutput_path
   end
   
   #likely all of this is unused
@@ -145,50 +149,51 @@ class SpreadsheetsController < ApplicationController
       end
       
       def create_db_schema(tableName, attrs, datatypes)    #attrs -> array of attributes as strings
-        tableName = tableName.underscore.camelize
-        tableName = "Data" + tableName
-        attributes = ""
-        ind = 0
-        attrs.each do |attr|
-          attributes << attr
-          attributes << ":"
-          attributes << datatypes[ind]
-          attributes << " "
-          ind = ind + 1
-        end
-        `rails generate model #{tableName} #{attributes}`
-        `rake db:migrate`
+        # tableName = tableName.underscore.camelize
+        # tableName = "Data" + tableName
+        # attributes = ""
+        # ind = 0
+        # attrs.each do |attr|
+        #   attributes << attr
+        #   attributes << ":"
+        #   attributes << datatypes[ind]
+        #   attributes << " "
+        #   ind = ind + 1
+        # end
+        # `rails generate model #{tableName} #{attributes}`
+        # `rake db:migrate`
       end
       
-      def isInt(value)
-        value == value.to_i.to_s
-      end
-      
+  
+      # Unknown
       def determine_db_datatypes(csv_data, headers)
-        datatypes = []
-        headers.each do |header|
-          datatypes << "integer"
-        end
-        csv_data.map do |row| 
-            ind = 0
-            row.map do |cell|
-                if datatypes[ind] == "integer"
-                  if !isInt(cell.to_s)
-                    datatypes[ind] = "string"
-                  end
-                  ind = ind+1
-                end
-            end
-        end
-        return datatypes
+        # datatypes = []
+        # headers.each do |header|
+        #   datatypes << "integer"
+        # end
+        # csv_data.map do |row| 
+        #     ind = 0
+        #     row.map do |cell|
+        #         if datatypes[ind] == "integer"
+        #           if !isInt(cell.to_s)
+        #             datatypes[ind] = "string"
+        #           end
+        #           ind = ind+1
+        #         end
+        #     end
+        # end
+        # return datatypes
       end
       
       def parse_csv(csvFile)
-        csv_data = CSV.read csvFile
-        headers = csv_data.shift
-        tableNameStartIndex = csvFile.rindex('/') + 1
-        tableName = csvFile[tableNameStartIndex..csvFile.length-5]
-        datatypes = determine_db_datatypes(csv_data, headers)
-        create_db_schema(tableName, headers, datatypes)
+        
+        # csv_data = CSV.read csvFile
+        # headers = csv_data.shift
+        # tableNameStartIndex = csvFile.rindex('/') + 1
+        # tableName = csvFile[tableNameStartIndex..csvFile.length-5]
+        # datatypes = determine_db_datatypes(csv_data, headers)
+        # create_db_schema(tableName, headers, datatypes)
+    
       end
+        
 end

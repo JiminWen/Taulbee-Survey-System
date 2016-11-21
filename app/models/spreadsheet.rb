@@ -3,18 +3,18 @@ class Spreadsheet < ActiveRecord::Base
     #validates :file_format, if: :media?
     validates :name, presence: true # Make sure the owner's name is present.
     
-
+<<-DOC
     def file_format
-    unless valid_extension? self.name
-      errors[:document] << "Invalid file format."
-    end
-    end
-
-    def valid_extension?(filename)
-    ext = File.extname(filename)
-    %w( csv ).include? ext.downcase
-    end
+        unless valid_extension? self.name
+          errors[:document] << "Invalid file format."
+        end
+        end
     
+        def valid_extension?(filename)
+        ext = File.extname(filename)
+        %w( csv ).include? ext.downcase
+    end
+DOC
     def saveAndMove
         saved = self.save 
         
