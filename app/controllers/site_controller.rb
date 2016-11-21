@@ -97,29 +97,30 @@ class SiteController < ApplicationController
   #make a query object, but don't actually save it to the database
   #used for the repeat query functionality
   def unsavedQuery(params)
-    filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
-    comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
-    filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
-    attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
     
-    @query = Query.new({:name => "No Save"})
+    # filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
+    # comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
+    # filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
+    # attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
     
-    i = 0
-    filters.each do |filter|
-      filterRecord = Filter.create(:field => filters["filter" + i.to_s], :comparator => comparators["comparator" + i.to_s], :value => filterValues["filterValue" + i.to_s])
-      puts filterRecord.inspect
-      @query.filters << filterRecord
-      i = i + 1
-    end
+    # @query = Query.new({:name => "No Save"})
     
-    i = 0
-    attributes.each do |attribute|
-      headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
-      @query.headers << headerRecord
-      i = i + 1
-    end
+    # i = 0
+    # filters.each do |filter|
+    #   filterRecord = Filter.create(:field => filters["filter" + i.to_s], :comparator => comparators["comparator" + i.to_s], :value => filterValues["filterValue" + i.to_s])
+    #   puts filterRecord.inspect
+    #   @query.filters << filterRecord
+    #   i = i + 1
+    # end
     
-    return @query
+    # i = 0
+    # attributes.each do |attribute|
+    #   headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
+    #   @query.headers << headerRecord
+    #   i = i + 1
+    # end
+    
+    # return @query
   end
   
    def formF_4
@@ -603,26 +604,26 @@ def formE_1
   #unused
   private
     def populate_db(csvFile)
-      csv_data = CSV.read csvFile
-      headers = csv_data.shift
-      tableNameStartIndex = csvFile.rindex('/') + 1
-      tableName = csvFile[tableNameStartIndex..csvFile.length-5]
-      tableName = tableName.underscore.camelize
-      tableName = "Data" + tableName
-      table = tableName.constantize
-      string_data = csv_data.map do |row| 
-          row.map do |cell|
-              cell.to_s
-          end
-      end
-      array_of_hashes = []
-      string_data.map do |row| 
-          array_of_hashes << Hash[*headers.zip(row).flatten]
-      end
-      puts array_of_hashes
-      array_of_hashes.each do |value|
-          table.create!(value)
-      end
+      # csv_data = CSV.read csvFile
+      # headers = csv_data.shift
+      # tableNameStartIndex = csvFile.rindex('/') + 1
+      # tableName = csvFile[tableNameStartIndex..csvFile.length-5]
+      # tableName = tableName.underscore.camelize
+      # tableName = "Data" + tableName
+      # table = tableName.constantize
+      # string_data = csv_data.map do |row| 
+      #     row.map do |cell|
+      #         cell.to_s
+      #     end
+      # end
+      # array_of_hashes = []
+      # string_data.map do |row| 
+      #     array_of_hashes << Hash[*headers.zip(row).flatten]
+      # end
+      # puts array_of_hashes
+      # array_of_hashes.each do |value|
+      #     table.create!(value)
+      # end
     end
     
 end
