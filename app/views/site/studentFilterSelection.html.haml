@@ -197,6 +197,14 @@
         rowfilterDiv.appendChild (document.createTextNode (" "));
         DoFunc(list);
       }
+      document.getElementById("removeARowFilter").onclick=function(student){
+        	for(var i = 0; i< 8; i++)//8 because there are 8 elements per filter added
+      	{
+          rowfilterDiv.removeChild(rowfilterDiv.lastChild);
+        }
+      	num_rowfilter= num_rowfilter - 1;
+      }
+      
       
       //when clicked adds a filter
       document.getElementById("confirmNoOfFilters").onclick=function(student)
