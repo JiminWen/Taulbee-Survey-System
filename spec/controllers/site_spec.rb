@@ -42,11 +42,11 @@ RSpec.describe SiteController, type: :controller do
     
     
     describe "formF_4" do 
-    	# before :each do
-    	# 	@student = double(Student,:prim_deg =>'PHD', :year => '2014')
-    	# end
+    	before :each do
+    		@student1 = Student.create(:prim_deg =>'PHD', :year => '2014')
+    	end
     	it 'should call the all method' do 
-    		expect(Student).to receive(:all).and_return(@student)
+    		expect(Student).to receive(:all).and_return(@student1)
     		get :formF_4, :year => '2014'
     	end
     	# it 'should call the where filter' do
