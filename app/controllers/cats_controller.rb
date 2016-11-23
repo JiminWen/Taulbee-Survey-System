@@ -1,8 +1,8 @@
 class CatsController < ApplicationController
-  def index
-    @cats = Cat.all
-    @column_names = Cat.column_names
-  end
+  # def index
+  #   @cats = Cat.all
+  #   @column_names = Cat.column_names
+  # end
 
   def new
   end

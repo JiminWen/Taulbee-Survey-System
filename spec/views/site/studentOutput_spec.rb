@@ -1,11 +1,11 @@
 require "rails_helper"
 
 RSpec.describe "site/studentOutput.html.haml", type: :view do
-	before(:each) do
-		@students = FactoryGirl.create_list(:student,3)
-		@attributes = FactoryGirl.create_list(:attribute,3)
-		render
-	end
+	# before(:each) do
+	# 	@students = FactoryGirl.create_list(:student,3)
+	# 	@attributes = FactoryGirl.create_list(:attribute,3)
+	# 	render
+	# end
 
 
 	# it "can render" do

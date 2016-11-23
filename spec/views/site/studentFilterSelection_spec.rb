@@ -1,13 +1,13 @@
 require "rails_helper"
 
 RSpec.describe "site/studentFilterSelection.html.haml", type: :view do
-	before(:each) do
-		@query = FactoryGirl.create(:query)
-		@queries = FactoryGirl.create_list(:query, 3)
-		@student = FactoryGirl.create(:student)
-		@students = FactoryGirl.create(:student)
-		render
-	end
+	# before(:each) do
+	# 	@query = FactoryGirl.create(:query)
+	# 	@queries = FactoryGirl.create_list(:query, 3)
+	# 	@student = FactoryGirl.create(:student)
+	# 	@students = FactoryGirl.create(:student)
+	# 	render
+	# end
 
 	# it "can render" do
 	# 	expect(rendered).to include("Students")
