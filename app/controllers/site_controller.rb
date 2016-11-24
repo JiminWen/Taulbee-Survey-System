@@ -68,6 +68,7 @@ class SiteController < ApplicationController
   #when the user clicks to save a query, must save all the filter columns, filter values, and attributes selected
   #then send the user back to the filter selection page
   def saveQuery(params)
+   # raise params.inspect
     filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
     comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
     filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }

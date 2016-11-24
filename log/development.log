@@ -1,0 +1,327 @@
+
+
+Started GET "/" for 165.91.49.39 at 2016-11-23 02:37:58 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (29.1ms)
+Completed 200 OK in 287ms (Views: 265.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.49.39 at 2016-11-23 02:37:59 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 165.91.49.39 at 2016-11-23 02:37:59 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.49.39 at 2016-11-23 02:37:59 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 165.91.49.39 at 2016-11-23 02:37:59 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 165.91.49.39 at 2016-11-23 02:37:59 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 165.91.49.39 at 2016-11-23 02:37:59 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 165.91.49.39 at 2016-11-23 02:37:59 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.49.39 at 2016-11-23 02:37:59 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.49.39 at 2016-11-23 02:37:59 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.49.39 at 2016-11-23 02:37:59 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/site/studentFilterSelection?yearSelected=1997" for 165.91.49.39 at 2016-11-23 02:38:01 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"1997"}
+  [1m[36mQuery Load (0.3ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (84.8ms)
+Completed 200 OK in 153ms (Views: 106.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/site/studentOutput" for 165.91.49.39 at 2016-11-23 02:38:02 +0000
+Cannot render console from 165.91.49.39! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"commit"=>"generate", "cur_year"=>"1997", "authenticity_token"=>"kMjW9yBnTWnWdPPvAkBVqpjXFZId0ALLII63Q/DcQKuL5rYLJsfOBXnz7gpC9bsWRhvWt7wWN8NMsUY+0+EoZw=="}
+  Rendered site/studentOutput.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.76.2.61 at 2016-11-24 06:59:40 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (34.1ms)
+Completed 200 OK in 320ms (Views: 301.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 66.76.2.61 at 2016-11-24 06:59:41 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 66.76.2.61 at 2016-11-24 06:59:41 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 66.76.2.61 at 2016-11-24 06:59:41 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 66.76.2.61 at 2016-11-24 06:59:41 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 66.76.2.61 at 2016-11-24 06:59:41 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 66.76.2.61 at 2016-11-24 06:59:41 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 66.76.2.61 at 2016-11-24 06:59:41 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2014" for 66.76.2.61 at 2016-11-24 06:59:44 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2014"}
+  [1m[36mQuery Load (0.3ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (65.0ms)
+Completed 200 OK in 116ms (Views: 75.4ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 66.76.2.61 at 2016-11-24 06:59:47 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[35mStudent Load (45.4ms)[0m  SELECT "students"."id" FROM "students"
+Completed 200 OK in 383ms (Views: 1.0ms | ActiveRecord: 46.0ms)
+
+
+Started GET "/site/receiveAjax?id=rowfilter_0&c_name=id" for 66.76.2.61 at 2016-11-24 06:59:49 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"rowfilter_0", "c_name"=>"id"}
+  [1m[36mStudent Load (10.5ms)[0m  [1mSELECT "students"."id" FROM "students"[0m
+Completed 200 OK in 45ms (Views: 1.0ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/site/receiveAjax?id=rowfilter_0&c_name=email" for 66.76.2.61 at 2016-11-24 06:59:52 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"rowfilter_0", "c_name"=>"email"}
+  [1m[35mStudent Load (10.1ms)[0m  SELECT "students"."email" FROM "students"
+Completed 200 OK in 48ms (Views: 0.9ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/site/receiveAjax?id=collumfilter_0&c_name=id" for 66.76.2.61 at 2016-11-24 06:59:52 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"collumfilter_0", "c_name"=>"id"}
+  [1m[36mStudent Load (8.8ms)[0m  [1mSELECT "students"."id" FROM "students"[0m
+Completed 200 OK in 43ms (Views: 1.0ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/site/receiveAjax?id=collumfilter_0&c_name=prim_deg_maj_1_dep" for 66.76.2.61 at 2016-11-24 06:59:54 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"collumfilter_0", "c_name"=>"prim_deg_maj_1_dep"}
+  [1m[35mStudent Load (11.2ms)[0m  SELECT "students"."prim_deg_maj_1_dep" FROM "students"
+Completed 200 OK in 51ms (Views: 0.2ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/site/receiveAjax?id=collumfilter_0&c_name=classification" for 66.76.2.61 at 2016-11-24 07:00:01 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"collumfilter_0", "c_name"=>"classification"}
+  [1m[36mStudent Load (10.0ms)[0m  [1mSELECT "students"."classification" FROM "students"[0m
+Completed 200 OK in 47ms (Views: 0.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/site/receiveAjax?id=collumfilter_0&c_name=term_i_hrs" for 66.76.2.61 at 2016-11-24 07:00:07 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"collumfilter_0", "c_name"=>"term_i_hrs"}
+  [1m[35mStudent Load (11.9ms)[0m  SELECT "students"."term_i_hrs" FROM "students"
+Completed 200 OK in 52ms (Views: 0.6ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/site/receiveAjax?id=rowfilter_0&c_name=first_term_in_college" for 66.76.2.61 at 2016-11-24 07:00:11 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"rowfilter_0", "c_name"=>"first_term_in_college"}
+  [1m[36mStudent Load (10.3ms)[0m  [1mSELECT "students"."first_term_in_college" FROM "students"[0m
+Completed 200 OK in 60ms (Views: 0.3ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/site/studentFilterSelection?yearSelected=2014" for 66.76.2.61 at 2016-11-24 07:03:02 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"yearSelected"=>"2014"}
+  [1m[35mQuery Load (0.2ms)[0m  SELECT "queries".* FROM "queries"
+  Rendered site/studentFilterSelection.html.haml within layouts/application (16.5ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 66.76.2.61 at 2016-11-24 07:03:02 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 66.76.2.61 at 2016-11-24 07:03:02 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 66.76.2.61 at 2016-11-24 07:03:02 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 66.76.2.61 at 2016-11-24 07:03:02 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 66.76.2.61 at 2016-11-24 07:03:02 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 66.76.2.61 at 2016-11-24 07:03:02 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 66.76.2.61 at 2016-11-24 07:03:02 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 66.76.2.61 at 2016-11-24 07:03:02 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 66.76.2.61 at 2016-11-24 07:03:02 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 66.76.2.61 at 2016-11-24 07:03:02 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/site/receiveAjax?id=rowfilter_0&c_name=id" for 66.76.2.61 at 2016-11-24 07:03:05 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"rowfilter_0", "c_name"=>"id"}
+  [1m[36mStudent Load (9.8ms)[0m  [1mSELECT "students"."id" FROM "students"[0m
+Completed 200 OK in 46ms (Views: 1.0ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/site/receiveAjax?id=collumfilter_0&c_name=id" for 66.76.2.61 at 2016-11-24 07:03:10 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"collumfilter_0", "c_name"=>"id"}
+  [1m[35mStudent Load (9.6ms)[0m  SELECT "students"."id" FROM "students"
+Completed 200 OK in 46ms (Views: 1.0ms | ActiveRecord: 9.6ms)
+
+
+Started POST "/site/studentOutput" for 66.76.2.61 at 2016-11-24 07:15:58 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YUUlmNh44zta84mC+1W0/CNQFkwLaPzWFWwRA0y+nRwkTvLbUwE9FcHQTFbNodjzr3tLuY9bbv7KzKSdg3zodw==", "rowfilter0"=>"id", "rowcomparator0"=>"=", "rowfilterValue0"=>"1", "collumfilter0"=>"id", "collumcomparator0"=>"=", "collumfilterValue0"=>"1", "commit"=>"Apply", "saveName"=>""}
+  Rendered site/studentOutput.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/studentFilterSelection?repeat=1" for 66.76.2.61 at 2016-11-24 07:16:00 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Parameters: {"repeat"=>"1"}
+  [1m[36mQuery Load (0.2ms)[0m  [1mSELECT "queries".* FROM "queries"[0m
+  Rendered site/studentFilterSelection.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/site/receiveAjax?id=filter_0&c_name=id" for 66.76.2.61 at 2016-11-24 07:16:50 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"filter_0", "c_name"=>"id"}
+  [1m[35mStudent Load (9.5ms)[0m  SELECT "students"."id" FROM "students"
+Completed 200 OK in 134ms (Views: 1.0ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/site/receiveAjax?id=rowfilter_0&c_name=id" for 66.76.2.61 at 2016-11-24 07:16:51 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"rowfilter_0", "c_name"=>"id"}
+  [1m[36mStudent Load (9.1ms)[0m  [1mSELECT "students"."id" FROM "students"[0m
+Completed 200 OK in 56ms (Views: 1.0ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/site/receiveAjax?id=collumfilter_0&c_name=id" for 66.76.2.61 at 2016-11-24 07:16:52 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"collumfilter_0", "c_name"=>"id"}
+  [1m[35mStudent Load (9.9ms)[0m  SELECT "students"."id" FROM "students"
+Completed 200 OK in 53ms (Views: 1.0ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/site/receiveAjax?id=rowfilter_0&c_name=uin" for 66.76.2.61 at 2016-11-24 07:16:55 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"rowfilter_0", "c_name"=>"uin"}
+  [1m[36mStudent Load (10.3ms)[0m  [1mSELECT "students"."uin" FROM "students"[0m
+Completed 200 OK in 50ms (Views: 0.7ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/site/receiveAjax?id=collumfilter_0&c_name=name" for 66.76.2.61 at 2016-11-24 07:16:57 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#receiveAjax as JSON
+  Parameters: {"id"=>"collumfilter_0", "c_name"=>"name"}
+  [1m[35mStudent Load (11.5ms)[0m  SELECT "students"."name" FROM "students"
+Completed 200 OK in 50ms (Views: 1.3ms | ActiveRecord: 11.5ms)
+
+
+Started POST "/site/studentOutput" for 66.76.2.61 at 2016-11-24 07:17:01 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GXqni914BKV8NMNiMopG8RCbtjFPJS8yunR19dniLHdccXDIVgHai+cXBrYEfir+nLDrxMsWvRpl1MBrFiBZHA==", "filter0"=>"id", "comparator0"=>"=", "filterValue0"=>"1", "rowfilter0"=>"uin", "rowcomparator0"=>"=", "rowfilterValue0"=>"UIN-1", "collumfilter0"=>"name", "collumcomparator0"=>"=", "collumfilterValue0"=>"Last 1, First 1", "commit"=>"Apply", "saveName"=>""}
+  Rendered site/studentOutput.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/site/studentOutput" for 66.76.2.61 at 2016-11-24 07:21:33 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9DusJGdH36785ZYNoHfY0dvPOQPMHx69VjAAOuoG8JuxMHtn7D4BgGfGU9mWg7TeV+Rk9kgsjJWJkLWkJcSF8A==", "saveName"=>"", "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "queries" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", ""], ["created_at", "2016-11-24 07:21:33.166730"], ["updated_at", "2016-11-24 07:21:33.166730"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://ttttttt-jiminwen.c9users.io/site/studentFilterSelection
+Completed 302 Found in 22ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/site/studentFilterSelection" for 66.76.2.61 at 2016-11-24 07:21:33 +0000
+Cannot render console from 66.76.2.61! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  [1m[35mQuery Load (0.2ms)[0m  SELECT "queries".* FROM "queries"
+  Rendered site/studentFilterSelection.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.7ms)
