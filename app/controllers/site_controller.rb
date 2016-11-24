@@ -531,25 +531,19 @@ def formE_1
       end
   end
   
-  
-  #page that shows the results
-  def studentOutput
-  #skip_before_filter :verify_authenticity_token 
-    
-  if params["commit"] == "generate"
-      @year=params[:cur_year]
-      #raise params.inspect  
-     # form2_4(year)
-      
-      
-  else  
+  def studentManual
     if params["commit"] == "Save"
       saveQuery(params)
     else
       #if the query is not being saved
       #select all the filters and filter values chosen
-      #raise params.inspect
-      filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
+     # raise params.inspect
+      prefilters = params.select { |key, value| key.to_s.match(/^filter\d+/) }
+      prefilters_value= params.select { |key, value| key.to_s.match(/^filterValue\d+/) }
+      collumfilters = params.select {|key, value| key.to_s.match(/^collumfilter\d+/)}
+      collumfilters_value= params.select {|key, value| key.to_s.match(/^collumfilterValue\d+/)}
+      rowfilters = params.select {|key, value| key.to_s.match(/^rowfilter\d+/)}
+      rowfilters_value = params.select {|key, value| key.to_s.match(/^rowfilterValue\d+/)}
       comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
       filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
       @attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
@@ -575,56 +569,69 @@ def formE_1
         
         queryString = ""
         i = 0
-        filters.each do |filter|
-          filterValue = filterValues["filterValue" + i.to_s]
-          if filterValue != nil
-            if i > 0
-              queryString = queryString + " AND "
-            end
-            queryString = queryString + filters["filter" + i.to_s] + comparators["comparator" + i.to_s] + "\'" + filterValue + "\'"
-          end
-          i = i + 1
-        end
+              filters.each do |filter|
+                filterValue = filterValues["filterValue" + i.to_s]
+                if filterValue != nil
+                  if i > 0
+                    queryString = queryString + " AND "
+                  end
+                  queryString = queryString + filters["filter" + i.to_s] + comparators["comparator" + i.to_s] + "\'" + filterValue + "\'"
+                end
+                i = i + 1
+              end
         
-        if session["yearSelected"] != nil
-          queryString = queryString + " AND year = \'" + session["yearSelected"] + "\'"
-        end
+            if session["yearSelected"] != nil
+              queryString = queryString + " AND year = \'" + session["yearSelected"] + "\'"
+            end
       end
-     # raise queryString.inspect
-     # raise @attributes.values.inspect
-      
-      @students = Student.where(queryString)
-      respond_to do |format|
-        format.html
-        format.csv { send_data Student.to_csv(@students, @attributes.values) }
-      end
-    end
-  end  
+              @students = Student.where(queryString)
+              # respond_to do |format|
+              #   format.html
+              #   format.csv { send_data Student.to_csv(@students, @attributes.values) }
+              # end
+  end    
   end
   
-  #unused
-  private
-    def populate_db(csvFile)
-      # csv_data = CSV.read csvFile
-      # headers = csv_data.shift
-      # tableNameStartIndex = csvFile.rindex('/') + 1
-      # tableName = csvFile[tableNameStartIndex..csvFile.length-5]
-      # tableName = tableName.underscore.camelize
-      # tableName = "Data" + tableName
-      # table = tableName.constantize
-      # string_data = csv_data.map do |row| 
-      #     row.map do |cell|
-      #         cell.to_s
-      #     end
-      # end
-      # array_of_hashes = []
-      # string_data.map do |row| 
-      #     array_of_hashes << Hash[*headers.zip(row).flatten]
-      # end
-      # puts array_of_hashes
-      # array_of_hashes.each do |value|
-      #     table.create!(value)
-      # end
-    end
+  
+  
+  #page that shows the results
+  def studentOutput
+  #skip_before_filter :verify_authenticity_token 
     
+  if params["commit"] == "generate"
+      @year=params[:cur_year]
+
+  else  
+    redirect_to studentManual_path(params)
+  end  
+   
+  
+  
+  #unused
+#   private
+#     def populate_db(csvFile)
+#       # csv_data = CSV.read csvFile
+#       # headers = csv_data.shift
+#       # tableNameStartIndex = csvFile.rindex('/') + 1
+#       # tableName = csvFile[tableNameStartIndex..csvFile.length-5]
+#       # tableName = tableName.underscore.camelize
+#       # tableName = "Data" + tableName
+#       # table = tableName.constantize
+#       # string_data = csv_data.map do |row| 
+#       #     row.map do |cell|
+#       #         cell.to_s
+#       #     end
+#       # end
+#       # array_of_hashes = []
+#       # string_data.map do |row| 
+#       #     array_of_hashes << Hash[*headers.zip(row).flatten]
+#       # end
+#       # puts array_of_hashes
+#       # array_of_hashes.each do |value|
+#       #     table.create!(value)
+#       # end
+#     end
+    
+# end
+end
 end
