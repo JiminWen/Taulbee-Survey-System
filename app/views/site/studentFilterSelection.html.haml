@@ -73,6 +73,7 @@
     -#if a query is being loaded or repeated, it will automatically add them to the form
     %form#daForm{"accept-charset" => "UTF-8", :action => "/site/studentOutput", :method => "post"}
       %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+  
       %input{:name => "authenticity_token", :type => "hidden", :value => form_authenticity_token.to_s}/
       %fieldset
         %label{:for => "Filters"} Choose your pre-filter

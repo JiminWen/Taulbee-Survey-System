@@ -540,51 +540,68 @@ def formE_1
      # raise params.inspect
       prefilters = params.select { |key, value| key.to_s.match(/^filter\d+/) }
       prefilters_value= params.select { |key, value| key.to_s.match(/^filterValue\d+/) }
+      pre_comparator=params.select{|key,value| key.to_s.match(/^comparator\d+/)}
       collumfilters = params.select {|key, value| key.to_s.match(/^collumfilter\d+/)}
       collumfilters_value= params.select {|key, value| key.to_s.match(/^collumfilterValue\d+/)}
+      collum_comparator= params.select {|key,value| key.to_s.match(/^collum_comparator\d+/)}
       rowfilters = params.select {|key, value| key.to_s.match(/^rowfilter\d+/)}
       rowfilters_value = params.select {|key, value| key.to_s.match(/^rowfilterValue\d+/)}
-      comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
+      row_comparators = params.select { |key, value| key.to_s.match(/rowcomparator\d+/) }
       filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
       @attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
+     # raise prefilters["filter0"].inspect
       
-      #store all these values if the user chooses to repeat the query
-      flash[:existingQuery] = 1
-      flash[:filters] = filters
-      flash[:comparators] = comparators
-      flash[:filterValues] = filterValues
-      flash[:headers] = @attributes
+      @student=Student.all
+      for i in 0..(prefilters.length-1) 
+      condition=prefilters["filter"+i.to_s]+pre_comparator["comparator"+i.to_s]+prefilters_value["filterValue"+i.to_s]
+      
+      @student=@student.where(condition)
+      end
+      
+      c_attribute=[]
+      r_attribute=[]
+      c_filter=[]
+      r_filter=[]
+      
+      
+      
+      
+      # flash[:existingQuery] = 1
+      # flash[:filters] = filters
+      # flash[:comparators] = comparators
+      # flash[:filterValues] = filterValues
+      # flash[:headers] = @attributes
       
       #determine if the user wants the count
-      @count = @attributes.any? { |hash| hash[1].include?("count") }
+      #@count = @attributes.any? { |hash| hash[1].include?("count") }
       #raise filters.inspect
   
       #if no filters selected, display all data for that year
-      if filters.length == 0
-        if session["yearSelected"] != nil
-          queryString = "year = \'" + session["yearSelected"] + "\'"
-        end
-      else
+      # if filters.length == 0
+      #   if session["yearSelected"] != nil
+      #     queryString = "year = \'" + session["yearSelected"] + "\'"
+      #   end
+      # else
         #create query string from selected values
         
-        queryString = ""
-        i = 0
-              filters.each do |filter|
-                filterValue = filterValues["filterValue" + i.to_s]
-                if filterValue != nil
-                  if i > 0
-                    queryString = queryString + " AND "
-                  end
-                  queryString = queryString + filters["filter" + i.to_s] + comparators["comparator" + i.to_s] + "\'" + filterValue + "\'"
-                end
-                i = i + 1
-              end
+        # queryString = ""
+        # i = 0
+        #       filters.each do |filter|
+        #         filterValue = filterValues["filterValue" + i.to_s]
+        #         if filterValue != nil
+        #           if i > 0
+        #             queryString = queryString + " AND "
+        #           end
+        #           queryString = queryString + filters["filter" + i.to_s] + comparators["comparator" + i.to_s] + "\'" + filterValue + "\'"
+        #         end
+        #         i = i + 1
+        #       end
         
-            if session["yearSelected"] != nil
-              queryString = queryString + " AND year = \'" + session["yearSelected"] + "\'"
-            end
-      end
-              @students = Student.where(queryString)
+        #     if session["yearSelected"] != nil
+        #       queryString = queryString + " AND year = \'" + session["yearSelected"] + "\'"
+        #     end
+        #end
+             # @students = Student.where(queryString)
               # respond_to do |format|
               #   format.html
               #   format.csv { send_data Student.to_csv(@students, @attributes.values) }
