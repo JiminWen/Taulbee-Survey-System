@@ -532,8 +532,8 @@ def formE_1
   end
   
   def studentManual  
-  #  raise params.inspect
-    @year=params[:cur_year]
+  # raise params.inspect
+    @params=params
     if params["commit"] == "Save"
       saveQuery(params)
     else
@@ -555,7 +555,10 @@ def formE_1
       
       @student=Student.all
      # @student=@student.where("year=?",@year)
-      
+       if session["yearSelected"]!=nil
+       @year=session["yearSelected"]
+       @student=@student.where("year=?",@year)
+      end
       for i in 0..(prefilters.length-1) 
       @student=@student.where(prefilters["filter"+i.to_s]+pre_comparator["comparator"+i.to_s]+'?',prefilters_value["filterValue"+i.to_s])
       end
