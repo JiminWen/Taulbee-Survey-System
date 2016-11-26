@@ -545,7 +545,7 @@ def formE_1
       pre_comparator=params.select{|key,value| key.to_s.match(/^comparator\d+/)}
       collumfilters = params.select {|key, value| key.to_s.match(/^collumfilter\d+/)}
       collumfilters_value= params.select {|key, value| key.to_s.match(/^collumfilterValue\d+/)}
-      collum_comparator= params.select {|key,value| key.to_s.match(/^collum_comparator\d+/)}
+      collum_comparator= params.select {|key,value| key.to_s.match(/^collumcomparator\d+/)}
       rowfilters = params.select {|key, value| key.to_s.match(/^rowfilter\d+/)}
       rowfilters_value = params.select {|key, value| key.to_s.match(/^rowfilterValue\d+/)}
       row_comparators = params.select { |key, value| key.to_s.match(/rowcomparator\d+/) }
@@ -557,16 +557,38 @@ def formE_1
       @student=@student.where("year=?",year)
       
       for i in 0..(prefilters.length-1) 
-     # condition=prefilters["filter"+i.to_s]+pre_comparator["comparator"+i.to_s]+prefilters_value["filterValue"+i.to_s]
       @student=@student.where(prefilters["filter"+i.to_s]+pre_comparator["comparator"+i.to_s]+'?',prefilters_value["filterValue"+i.to_s])
       end
-      raise @student.inspect
+     # raise @student.count.inspect
+     
       c_attribute=[]
-      r_attribute=[]
-      c_filter=[]
-      r_filter=[]
+      r_attribute=[" "]
+      for j in 0..(rowfilters.length-1)
+         condition=rowfilters["rowfilter"+j.to_s]+row_comparators["rowcomparator"+j.to_s]+rowfilters_value["rowfilterValue"+j.to_s]
+         r_attribute<<condition
+       end
       
-      
+       for i in 0..(collumfilters.length-1)
+         condition=collumfilters["collumfilter"+i.to_s]+collum_comparator["collumcomparator"+i.to_s]+collumfilters_value["collumfilterValue"+i.to_s]
+         c_attribute<<condition
+       end
+      array=[]
+      array<<r_attribute
+      k=0
+      for i in 0..(rowfilters.length-1) 
+        temp=[]
+        temp<<c_attribute[k]
+        k=k+1
+        for j in 0..(collumfilters.length-1)
+        temp<<@student.where(rowfilters["rowfilter"+i.to_s]+row_comparators["rowcomparator"+i.to_s]+'?',rowfilters_value["rowfilterValue"+i.to_s]).where(collumfilters["collumfilter"+i.to_s]+collum_comparator["collumcomparator"+i.to_s]+'?',collumfilters_value["collumfilterValue"+i.to_s]).count      
+          
+        end
+        array<<temp
+      end
+        raise array.inspect
+      respond_to do |format|
+         format.csv { send_data Student.altercsv(array) }
+      end
       
       
       # flash[:existingQuery] = 1
