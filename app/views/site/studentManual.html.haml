@@ -55,9 +55,9 @@
 
   %h3 Results to Download
   %hr
-  %h4 CSV of Manually Filter Selection
-
-  //#{link_to "Computer Science only.csv", formE_1_path(format: 'csv',:year=>@year)}
+  %p
+  Download:
+  \#{link_to "CSV.csv", studentManual_path(params.merge(format: 'csv'))}
   %br
   %hr
   

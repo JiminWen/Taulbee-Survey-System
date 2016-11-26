@@ -101,6 +101,7 @@ class Student < ActiveRecord::Base
     end
     
     def self.altercsv (array)
+    #raise array.inspect
     CSV.generate do |csv|
     array.each do |t|
         csv<<t

@@ -532,8 +532,8 @@ def formE_1
   end
   
   def studentManual  
-    #raise params.inspect
-    year=params[:cur_year]
+  #  raise params.inspect
+    @year=params[:cur_year]
     if params["commit"] == "Save"
       saveQuery(params)
     else
@@ -549,12 +549,12 @@ def formE_1
       rowfilters = params.select {|key, value| key.to_s.match(/^rowfilter\d+/)}
       rowfilters_value = params.select {|key, value| key.to_s.match(/^rowfilterValue\d+/)}
       row_comparators = params.select { |key, value| key.to_s.match(/rowcomparator\d+/) }
-      filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
+      filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) } 
       @attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
      # raise prefilters["filter0"].inspect
       
       @student=Student.all
-      @student=@student.where("year=?",year)
+     # @student=@student.where("year=?",@year)
       
       for i in 0..(prefilters.length-1) 
       @student=@student.where(prefilters["filter"+i.to_s]+pre_comparator["comparator"+i.to_s]+'?',prefilters_value["filterValue"+i.to_s])
@@ -575,19 +575,20 @@ def formE_1
       array=[]
       array<<r_attribute
       k=0
-      for i in 0..(rowfilters.length-1) 
+      for i in 0..(collumfilters.length-1) 
         temp=[]
         temp<<c_attribute[k]
         k=k+1
-        for j in 0..(collumfilters.length-1)
-        temp<<@student.where(rowfilters["rowfilter"+i.to_s]+row_comparators["rowcomparator"+i.to_s]+'?',rowfilters_value["rowfilterValue"+i.to_s]).where(collumfilters["collumfilter"+i.to_s]+collum_comparator["collumcomparator"+i.to_s]+'?',collumfilters_value["collumfilterValue"+i.to_s]).count      
+        for j in 0..(rowfilters.length-1)
+        temp<<@student.where(rowfilters["rowfilter"+j.to_s]+row_comparators["rowcomparator"+j.to_s]+'?',rowfilters_value["rowfilterValue"+j.to_s]).where(collumfilters["collumfilter"+i.to_s]+collum_comparator["collumcomparator"+i.to_s]+'?',collumfilters_value["collumfilterValue"+i.to_s]).count      
           
         end
         array<<temp
       end
-        raise array.inspect
-      respond_to do |format|
-         format.csv { send_data Student.altercsv(array) }
+       #raise array.inspect
+       respond_to do |format|
+        format.html
+        format.csv { send_data Student.altercsv(array) }
       end
       
       
