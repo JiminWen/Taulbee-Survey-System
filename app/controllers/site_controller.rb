@@ -99,29 +99,29 @@ class SiteController < ApplicationController
   #used for the repeat query functionality
   def unsavedQuery(params)
     
-    # filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
-    # comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
-    # filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
-    # attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
+    filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
+    comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
+    filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
+    attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
     
-    # @query = Query.new({:name => "No Save"})
+    @query = Query.new({:name => "No Save"})
     
-    # i = 0
-    # filters.each do |filter|
-    #   filterRecord = Filter.create(:field => filters["filter" + i.to_s], :comparator => comparators["comparator" + i.to_s], :value => filterValues["filterValue" + i.to_s])
-    #   puts filterRecord.inspect
-    #   @query.filters << filterRecord
-    #   i = i + 1
-    # end
+    i = 0
+    filters.each do |filter|
+      filterRecord = Filter.create(:field => filters["filter" + i.to_s], :comparator => comparators["comparator" + i.to_s], :value => filterValues["filterValue" + i.to_s])
+      puts filterRecord.inspect
+      @query.filters << filterRecord
+      i = i + 1
+    end
     
-    # i = 0
-    # attributes.each do |attribute|
-    #   headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
-    #   @query.headers << headerRecord
-    #   i = i + 1
-    # end
+    i = 0
+    attributes.each do |attribute|
+      headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
+      @query.headers << headerRecord
+      i = i + 1
+    end
     
-    # return @query
+    return @query
   end
   
    def formF_4
