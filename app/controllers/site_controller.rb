@@ -59,7 +59,7 @@ class SiteController < ApplicationController
       #raise values.inspect
      # values.merge!(flash[:headers])
       @query = unsavedQuery(values)
-      
+     # raise @query.rowfilters.inspect
      # @headerCount = flash[:headers].count
     end
     
@@ -169,6 +169,19 @@ class SiteController < ApplicationController
       i = i + 1
     end
     
+    i=0
+    collumfilters.each do |filter|
+      filterRecord = Collumfilter.create(:field => collumfilters["collumfilter" + i.to_s], :comparator => collum_comparator["collumcomparator" + i.to_s], :value => collumfilters_value["collumfilterValue" + i.to_s])
+      @query.collumfilters << filterRecord
+      i = i + 1
+    end
+    
+    i=0
+    rowfilters.each do |filter|
+      filterRecord = Rowfilter.create(:field => rowfilters["rowfilter" + i.to_s], :comparator => row_comparators["rowcomparator" + i.to_s], :value => rowfilters_value["rowfilterValue" + i.to_s])
+      @query.rowfilters << filterRecord
+      i = i + 1
+    end
     # i = 0
     # attributes.each do |attribute|
     #   headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
