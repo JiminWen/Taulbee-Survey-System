@@ -43,20 +43,30 @@ class SiteController < ApplicationController
     elsif params[:repeat]
       #if the user said to repeat the query
       values = {}
-      values.merge!(flash[:filters])
-      values.merge!(flash[:comparators])
-      values.merge!(flash[:filterValues])
-      values.merge!(flash[:headers])
+      values.merge!(flash[:prefilters])
+      values.merge!(flash[:pre_comparator])
+      values.merge!(flash[:prefilters_value])
+     
+      values.merge!(flash[:collumfilters])
+      values.merge!(flash[:collum_comparator])
+      values.merge!(flash[:collumfilters_value])
+      
+      values.merge!(flash[:rowfilters])
+      values.merge!(flash[:row_comparators])
+      values.merge!(flash[:rowfilters_value])
+     # values.merge!(flash[:headers])
       @query = unsavedQuery(values)
-      @filterCount = flash[:filters].count
-      @headerCount = flash[:headers].count
+      @filterCount = flash[:prefilters].count
+     # @headerCount = flash[:headers].count
     end
     
     #grab the existing filter values
-    @filterValues = []
+   
+    @prefilterValues = []
     if @query
-      @query.filters.each do |filter|
-        @filterValues << filter.value
+      @query.prefilters.each do |filter|
+      #  raise filter.inspect
+        @prefilterValues << filter.value
       end
     else
       @query = nil
@@ -112,19 +122,14 @@ class SiteController < ApplicationController
     rowfilters = params.select {|key, value| key.to_s.match(/^rowfilter\d+/)}
     rowfilters_value = params.select {|key, value| key.to_s.match(/^rowfilterValue\d+/)}
     row_comparators = params.select { |key, value| key.to_s.match(/rowcomparator\d+/) }
-    total={}
-    total<<prefilters
-    total<<pre_comparator
-    total<<prefilters_value
-    total<<rowfilter
-    raise total.inspect
+   
     @query = Query.new({:name => "No Save"})
-    
+    #raise prefilters.inspect
     i = 0
-    filters.each do |filter|
-      filterRecord = Filter.create(:field => filters["filter" + i.to_s], :comparator => comparators["comparator" + i.to_s], :value => filterValues["filterValue" + i.to_s])
-      puts filterRecord.inspect
-      @query.filters << filterRecord
+    prefilters.each do |filter|
+      filterRecord = Prefilter.create(:field => prefilters["filter" + i.to_s], :comparator => pre_comparator["comparator" + i.to_s], :value => prefilters_value["filterValue" + i.to_s])
+      #raise filterRecord.inspect
+      @query.prefilters << filterRecord
       i = i + 1
     end
     
@@ -134,7 +139,7 @@ class SiteController < ApplicationController
     #   @query.headers << headerRecord
     #   i = i + 1
     # end
-    
+    #raise @query.prefilters.inspect
     return @query
   end
   
@@ -609,11 +614,21 @@ def formE_1
       end
       
       
-      # flash[:existingQuery] = 1
-      # flash[:filters] = filters
-      # flash[:comparators] = comparators
-      # flash[:filterValues] = filterValues
-      # flash[:headers] = @attributes
+       flash[:existingQuery] = 1
+       flash[:prefilters] = prefilters
+       flash[:pre_comparator] = pre_comparator
+       flash[:prefilters_value] = prefilters_value
+       
+       flash[:collumfilters] = collumfilters
+       flash[:collum_comparator] = collum_comparator
+       flash[:collumfilters_value] = collumfilters_value
+       
+       flash[:rowfilters] = rowfilters
+       flash[:row_comparators] = row_comparators
+       flash[:rowfilters_value] = rowfilters_value
+       
+       
+      #flash[:headers] = @attributes
       
       #determine if the user wants the count
       #@count = @attributes.any? { |hash| hash[1].include?("count") }

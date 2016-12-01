@@ -82,7 +82,7 @@
         #filterDiv{:name => "filterDiv"}
           - if @query != nil
             - filterIndex = 0
-            - @query.filters.each do |filter|
+            - @query.prefilters.each do |filter|
               %select{:onchange => "DoFunc(this)", :onfocus => "this.selectedIndex = -1;", :name => "filter" + filterIndex.to_s, :id => "filter_" + filterIndex.to_s}
                 - if (@students != nil)
                   - @students.column_names.each do |column_name|
@@ -114,18 +114,18 @@
         %button#confirmNoOfInfo{:type => "button"} Add Attribute
         %button#removeAttributeButton{:type => "button"} Remove Last Attribute
         #attributeDiv{:name => "attributeDiv"}
-          - if @query != nil
-            - i = 0
-            - @query.headers.each do |header|
-              - name = "attribute" + i.to_s
-              %select#loadedHeaderList{:onchange => "getSelected(value)", :name => name, :id => "attribute_" + i.to_s}
-                - if (@students != nil)
-                  - @students.column_names.each do |column_name|
-                    %option{:value => column_name, :selected => column_name == header.field}= column_name
-                end
-                %option{:value => "count", :selected => "count" == header.field} count
-              %br
-              - i = i + 1
+          -# if @query != nil
+    -#        - i = 0
+    -#        - @query.headers.each do |header|
+    -#          - name = "attribute" + i.to_s
+    -#          %select#loadedHeaderList{:onchange => "getSelected(value)", :name => name, :id => "attribute_" + i.to_s}
+    -#            - if (@students != nil)
+    -#              - @students.column_names.each do |column_name|
+    -#                %option{:value => column_name, :selected => column_name == header.field}= column_name
+    -#            end
+    -#            %option{:value => "count", :selected => "count" == header.field} count
+    -#          %br
+    -#          - i = i + 1
         
         %br
         %input{:name => "commit", :type => "submit", :value => "Apply"}/
