@@ -114,18 +114,7 @@
         %button#confirmNoOfInfo{:type => "button"} Add Attribute
         %button#removeAttributeButton{:type => "button"} Remove Last Attribute
         #attributeDiv{:name => "attributeDiv"}
-          -# if @query != nil
-    -#        - i = 0
-    -#        - @query.headers.each do |header|
-    -#          - name = "attribute" + i.to_s
-    -#          %select#loadedHeaderList{:onchange => "getSelected(value)", :name => name, :id => "attribute_" + i.to_s}
-    -#            - if (@students != nil)
-    -#              - @students.column_names.each do |column_name|
-    -#                %option{:value => column_name, :selected => column_name == header.field}= column_name
-    -#            end
-    -#            %option{:value => "count", :selected => "count" == header.field} count
-    -#          %br
-    -#          - i = i + 1
+        
         
         %br
         %input{:name => "commit", :type => "submit", :value => "Apply"}/
@@ -153,9 +142,9 @@
       //when the page loads, if it is loading a saved filter or repeating a query
       //then it will populate the filter values for those filters on load
       window.onload = function()
-      {
-        var query = #{@filterValues}
-        console.log('query'+query);
+      { console.log('query');
+        var query = #{@prefilterValues}
+        
         for(var i = 0; i < query.length; i++)
         {
           var dropDown = $("#filter_" + i.toString())[0]
@@ -355,7 +344,8 @@
       //performs the ajax function to set the value of the filter value drop down dynamically
       //only used for filters that are loaded or repeat filters
       function DoFunc2(s)
-      { console.log('data.c_name'+data.c_name);
+      { 
+        console.log('data.c_name'+data.c_name);
         $.ajax({
            url: "/site/receiveAjax",
            data: {
