@@ -56,7 +56,7 @@ class SiteController < ApplicationController
       values.merge!(flash[:row_comparators])
       values.merge!(flash[:rowfilters_value])
       @filterCount = flash[:prefilters].count
-      
+      #raise values.inspect
      # values.merge!(flash[:headers])
       @query = unsavedQuery(values)
       
@@ -165,7 +165,6 @@ class SiteController < ApplicationController
     i = 0
     prefilters.each do |filter|
       filterRecord = Prefilter.create(:field => prefilters["filter" + i.to_s], :comparator => pre_comparator["comparator" + i.to_s], :value => prefilters_value["filterValue" + i.to_s])
-      #raise filterRecord.inspect
       @query.prefilters << filterRecord
       i = i + 1
     end
