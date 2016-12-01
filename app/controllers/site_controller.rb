@@ -38,23 +38,23 @@ class SiteController < ApplicationController
     #if a query was loaded
     if params["queryLoad"]
       @query = (Query.where("name = " + "\'" + params["queryLoad"] + "\'"))[0]
-      @filterCount = @query.filters.count
-      @headerCount = @query.headers.count
+      @filterCount = @query.prefilters.count
+    #  @headerCount = @query.headers.count
     elsif params[:repeat]
       #if the user said to repeat the query
       values = {}
-      # values.merge!(flash[:prefilters])
-      # values.merge!(flash[:pre_comparator])
-      # values.merge!(flash[:prefilters_value])
+      values.merge!(flash[:prefilters])
+      values.merge!(flash[:pre_comparator])
+      values.merge!(flash[:prefilters_value])
      
-      # values.merge!(flash[:collumfilters])
-      # values.merge!(flash[:collum_comparator])
-      # values.merge!(flash[:collumfilters_value])
+      values.merge!(flash[:collumfilters])
+      values.merge!(flash[:collum_comparator])
+      values.merge!(flash[:collumfilters_value])
       
-      # values.merge!(flash[:rowfilters])
-      # values.merge!(flash[:row_comparators])
-      # values.merge!(flash[:rowfilters_value])
-      #@filterCount = flash[:prefilters].count
+      values.merge!(flash[:rowfilters])
+      values.merge!(flash[:row_comparators])
+      values.merge!(flash[:rowfilters_value])
+      @filterCount = flash[:prefilters].count
       
      # values.merge!(flash[:headers])
       @query = unsavedQuery(values)
@@ -81,26 +81,35 @@ class SiteController < ApplicationController
   #then send the user back to the filter selection page
   def saveQuery(params)
    # raise params.inspect
-    filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
-    comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
-    filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
-    attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
+    # filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
+    # comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
+    # filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
+    # attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
+    prefilters = params.select { |key, value| key.to_s.match(/^filter\d+/) }
+    prefilters_value= params.select { |key, value| key.to_s.match(/^filterValue\d+/) }
+    pre_comparator=params.select{|key,value| key.to_s.match(/^comparator\d+/)}
+    collumfilters = params.select {|key, value| key.to_s.match(/^collumfilter\d+/)}
+    collumfilters_value= params.select {|key, value| key.to_s.match(/^collumfilterValue\d+/)}
+    collum_comparator= params.select {|key,value| key.to_s.match(/^collumcomparator\d+/)}
+    rowfilters = params.select {|key, value| key.to_s.match(/^rowfilter\d+/)}
+    rowfilters_value = params.select {|key, value| key.to_s.match(/^rowfilterValue\d+/)}
+    row_comparators = params.select { |key, value| key.to_s.match(/rowcomparator\d+/) }
     
     @query = Query.create({:name => params["saveName"]})
     
     i = 0
-    filters.each do |filter|
-      filterRecord = Filter.create(:field => filters["filter" + i.to_s], :comparator => comparators["comparator" + i.to_s], :value => filterValues["filterValue" + i.to_s])
-      @query.filters << filterRecord
+    prefilters.each do |filter|
+      filterRecord = Prefilter.create(:field => prefilters["filter" + i.to_s], :comparator => pre_comparator["comparator" + i.to_s], :value => prefilters_value["filterValue" + i.to_s])
+      @query.prefilters << filterRecord
       i = i + 1
     end
     
-    i = 0
-    attributes.each do |attribute|
-      headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
-      @query.headers << headerRecord
-      i = i + 1
-    end
+    # i = 0
+    # attributes.each do |attribute|
+    #   headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
+    #   @query.headers << headerRecord
+    #   i = i + 1
+    # end
     
     @query.save
     flash[:query] = @query

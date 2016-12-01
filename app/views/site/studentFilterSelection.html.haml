@@ -127,14 +127,16 @@
       
     :javascript
       //variables to be set on the page loading
+      //hweogwrhinbreo
+      //var numberOfAttributesWhenLoaded = parseInt(#{@headerCount},10);
+      //var nextAttribute = numberOfAttributesWhenLoaded;
       var filterChosen = "";
       var comparatorChosen= "";
       var filterValueChosen="";
       var dropdown1="";
       var numberOfFiltersWhenLoaded = parseInt(#{@filterCount},10);
       var nextFilter = numberOfFiltersWhenLoaded;
-      var numberOfAttributesWhenLoaded = parseInt(#{@headerCount},10);
-      var nextAttribute = numberOfAttributesWhenLoaded;
+ 
       
       var num_rowfilter=0;
       var num_collumfilter=0;
@@ -282,25 +284,25 @@
       }
       
       //when clicked adds an attribute
-      document.getElementById("confirmNoOfInfo").onclick=function(student)
-      {
-        AddAttribute(nextAttribute);
-      	nextAttribute = nextAttribute + 1;
+      // document.getElementById("confirmNoOfInfo").onclick=function(student)
+      // {
+      //   AddAttribute(nextAttribute);
+      // 	nextAttribute = nextAttribute + 1;
       	
-      }
+      // }
       
-      //is called when adding an attribute, copies all the necessary elements
-      function AddAttribute(number)
-      {
-          var list = document.getElementById("attributeListInner").cloneNode(true);
-          list.removeAttribute("hidden");
-          list.name = "attribute" + number.toString()
-          list.id = "attribute_" + number.toString()
-          attributeDiv.appendChild(list);
-          attributeDiv.appendChild (document.createTextNode (" "));
-          attributeDiv.appendChild(document.createElement("br"));
-          attributeDiv.appendChild (document.createTextNode (" "));
-      }
+      // //is called when adding an attribute, copies all the necessary elements
+      // function AddAttribute(number)
+      // {
+      //     var list = document.getElementById("attributeListInner").cloneNode(true);
+      //     list.removeAttribute("hidden");
+      //     list.name = "attribute" + number.toString()
+      //     list.id = "attribute_" + number.toString()
+      //     attributeDiv.appendChild(list);
+      //     attributeDiv.appendChild (document.createTextNode (" "));
+      //     attributeDiv.appendChild(document.createElement("br"));
+      //     attributeDiv.appendChild (document.createTextNode (" "));
+      // }
       
       //performs the ajax function to set the value of the filter value drop down dynamically
       function DoFunc(s)
@@ -345,7 +347,7 @@
       //only used for filters that are loaded or repeat filters
       function DoFunc2(s)
       { 
-        console.log('data.c_name'+data.c_name);
+        console.log('data.c_name');
         $.ajax({
            url: "/site/receiveAjax",
            data: {
@@ -393,13 +395,13 @@
       }
       
       //function used to remove the last attribute when the button is clicked
-      document.getElementById("removeAttributeButton").onclick=function(student)
-      {
-      	for(var i = 0; i< 4; i++)//4 because there are 4 elements per attribute added
-      	{
-          attributeDiv.removeChild(attributeDiv.lastChild);
-        }
-      	nextAttribute = nextAttribute - 1;
-      }
+      // document.getElementById("removeAttributeButton").onclick=function(student)
+      // {
+      // 	for(var i = 0; i< 4; i++)//4 because there are 4 elements per attribute added
+      // 	{
+      //     attributeDiv.removeChild(attributeDiv.lastChild);
+      //   }
+      // 	nextAttribute = nextAttribute - 1;
+      // }
 
 
