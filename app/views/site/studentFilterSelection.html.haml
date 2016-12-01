@@ -33,8 +33,6 @@
     -#form that allows the user to select which saved Query they want to load
     
     %form{:action => site_studentFilterSelection_path}
-      //%label Get a standard output
-      //%button
       %br
       %label Choose among saved queries
       %select#queryList{:name => "queryLoad" }
@@ -101,7 +99,22 @@
         %button#addARowFilter{:type => "button"}Add filter
         %button#removeARowFilter{:type => "button"}Remove filter
         #rowfilterDiv{:name => "rowfilterDiv"}
-          
+          - if @query != nil
+            - filterIndex = 0
+            - @query.rowfilters.each do |filter|
+              %select{:onchange => "DoFunc(this)", :onfocus => "this.selectedIndex = -1;", :name => "rowfilter" + filterIndex.to_s, :id => "rowfilter_" + filterIndex.to_s}
+                - if (@students != nil)
+                  - @students.column_names.each do |column_name|
+                    %option{:value => column_name, :selected => column_name == filter.field}= column_name
+              %select#loadedComparatorList{:onchange => "getSelected(value)", :name => "rowcomparator" + filterIndex.to_s}
+                %option{:value => "=", :selected => "=" == filter.comparator} =
+                -#%option{:value => ">", :selected => ">" == filter.comparator} >
+                -#%option{:value => "<", :selected => "<" == filter.comparator} <
+                -#%option{:value => ">=", :selected => ">=" == filter.comparator} >=
+                -#%option{:value => "<=", :selected => "<=" == filter.comparator} <=
+              %select{:id => "rowfilterValue_" + filterIndex.to_s, :name => "rowfilterValue" + filterIndex.to_s}
+              %br
+              - filterIndex = filterIndex + 1 
         
           
         %label{:for => "collumfilter"} Choose your collumfilter
@@ -110,10 +123,10 @@
         #collumfilterDiv{:name => "collumfilterDiv"}
         
               
-        %label{:for => "Attributes"} Which attributes do you want to see?
-        %button#confirmNoOfInfo{:type => "button"} Add Attribute
-        %button#removeAttributeButton{:type => "button"} Remove Last Attribute
-        #attributeDiv{:name => "attributeDiv"}
+        // %label{:for => "Attributes"} Which attributes do you want to see?
+        // %button#confirmNoOfInfo{:type => "button"} Add Attribute
+        // %button#removeAttributeButton{:type => "button"} Remove Last Attribute
+        // #attributeDiv{:name => "attributeDiv"}
         
         
         %br
@@ -145,11 +158,18 @@
       //then it will populate the filter values for those filters on load
       window.onload = function()
       { console.log('query');
-        var query = #{@prefilterValues}
+        var pre = #{@prefilterValues}
         
-        for(var i = 0; i < query.length; i++)
+        for(var i = 0; i < pre.length; i++)
         {
           var dropDown = $("#filter_" + i.toString())[0]
+          DoFunc2(dropDown)
+        }
+       
+        var row= #{@rowfilterValues}
+        console.log("row="+row);
+        for(var i=0;i<row.length;i++){
+          var dropDown = $("#rowfilter_" + i.toString())[0]
           DoFunc2(dropDown)
         }
         
@@ -347,7 +367,7 @@
       //only used for filters that are loaded or repeat filters
       function DoFunc2(s)
       { 
-        console.log('data.c_name');
+        console.log('do func2');
         $.ajax({
            url: "/site/receiveAjax",
            data: {
@@ -357,9 +377,20 @@
            },
            dataType: "json",
            success: function(data){
-           
+            console.log(data["value"]);
+            
+            if (s.id.match(/^filter/)){
             var number = s.id.match(/\d+/)[0]; 
             var x = document.getElementById("filterValue_".concat(number.toString()));
+            var target=#{@filterValues}[number];
+            }
+            else if(s.id.match(/^rowfilter/)){
+            var number = s.id.match(/\d+/)[0]; 
+            var x = document.getElementById("rowfilterValue_".concat(number.toString())); 
+            var target=#{@rowfilterValues}[number];
+            }
+            
+            console.log("x="+x);
             
             
             x.options.length = 0;
@@ -373,7 +404,7 @@
               x.add(option);
               
               //detects which option was selected, and sets that to the current selected value
-              if(option.text == #{@filterValues}[number])
+              if(option.text == target)
               {
                 option.selected = true
               }

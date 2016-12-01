@@ -39,6 +39,7 @@ class SiteController < ApplicationController
     if params["queryLoad"]
       @query = (Query.where("name = " + "\'" + params["queryLoad"] + "\'"))[0]
       @filterCount = @query.prefilters.count
+     # raise @query.rowfilters.inspect
     #  @headerCount = @query.headers.count
     elsif params[:repeat]
       #if the user said to repeat the query
@@ -65,16 +66,24 @@ class SiteController < ApplicationController
     #grab the existing filter values
    
     @prefilterValues = []
+    @rowfilterValues = []
+    @colfilterValues = []
     if @query
       @query.prefilters.each do |filter|
-      #  raise filter.inspect
+      # raise filter.value.inspect
         @prefilterValues << filter.value
       end
+      @query.rowfilters.each do |filter|
+      #   raise filter.value.inspect
+        @rowfilterValues << filter.value
+      end  
     else
       @query = nil
       @filterCount = 0
       @headerCount = 0
     end
+    
+    
   end
   
   #when the user clicks to save a query, must save all the filter columns, filter values, and attributes selected
@@ -104,6 +113,20 @@ class SiteController < ApplicationController
       i = i + 1
     end
     
+    i=0
+    collumfilters.each do |filter|
+      filterRecord = Collumfilter.create(:field => collumfilters["collumfilter" + i.to_s], :comparator => collum_comparator["collumcomparator" + i.to_s], :value => collumfilters_value["collumfilterValue" + i.to_s])
+      @query.collumfilters << filterRecord
+      i = i + 1
+    end
+    
+    i=0
+    rowfilters.each do |filter|
+      filterRecord = Rowfilter.create(:field => rowfilters["rowfilter" + i.to_s], :comparator => row_comparators["rowcomparator" + i.to_s], :value => rowfilters_value["rowfilterValue" + i.to_s])
+      @query.rowfilters << filterRecord
+      i = i + 1
+    end
+  #  raise @query.rowfilters.inspect
     # i = 0
     # attributes.each do |attribute|
     #   headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
