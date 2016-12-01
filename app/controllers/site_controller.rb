@@ -43,20 +43,22 @@ class SiteController < ApplicationController
     elsif params[:repeat]
       #if the user said to repeat the query
       values = {}
-      values.merge!(flash[:prefilters])
-      values.merge!(flash[:pre_comparator])
-      values.merge!(flash[:prefilters_value])
+      # values.merge!(flash[:prefilters])
+      # values.merge!(flash[:pre_comparator])
+      # values.merge!(flash[:prefilters_value])
      
-      values.merge!(flash[:collumfilters])
-      values.merge!(flash[:collum_comparator])
-      values.merge!(flash[:collumfilters_value])
+      # values.merge!(flash[:collumfilters])
+      # values.merge!(flash[:collum_comparator])
+      # values.merge!(flash[:collumfilters_value])
       
-      values.merge!(flash[:rowfilters])
-      values.merge!(flash[:row_comparators])
-      values.merge!(flash[:rowfilters_value])
+      # values.merge!(flash[:rowfilters])
+      # values.merge!(flash[:row_comparators])
+      # values.merge!(flash[:rowfilters_value])
+      #@filterCount = flash[:prefilters].count
+      
      # values.merge!(flash[:headers])
       @query = unsavedQuery(values)
-      @filterCount = flash[:prefilters].count
+      
      # @headerCount = flash[:headers].count
     end
     
