@@ -77,6 +77,9 @@ class SiteController < ApplicationController
       #   raise filter.value.inspect
         @rowfilterValues << filter.value
       end  
+      @query.collumfilters.each do |filter|
+        @colfilterValues << filter.value
+      end
     else
       @query = nil
       @filterCount = 0

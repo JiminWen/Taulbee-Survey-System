@@ -121,7 +121,22 @@
         %button#addACollumFilter{:type => "button"}Add filter
         %button#removeACollumFilter{:type => "button"}Remove filter
         #collumfilterDiv{:name => "collumfilterDiv"}
-        
+          - if @query != nil
+            - filterIndex = 0
+            - @query.rowfilters.each do |filter|
+              %select{:onchange => "DoFunc(this)", :onfocus => "this.selectedIndex = -1;", :name => "collumfilter" + filterIndex.to_s, :id => "collumfilter_" + filterIndex.to_s}
+                - if (@students != nil)
+                  - @students.column_names.each do |column_name|
+                    %option{:value => column_name, :selected => column_name == filter.field}= column_name
+              %select#loadedComparatorList{:onchange => "getSelected(value)", :name => "collumcomparator" + filterIndex.to_s}
+                %option{:value => "=", :selected => "=" == filter.comparator} =
+                -#%option{:value => ">", :selected => ">" == filter.comparator} >
+                -#%option{:value => "<", :selected => "<" == filter.comparator} <
+                -#%option{:value => ">=", :selected => ">=" == filter.comparator} >=
+                -#%option{:value => "<=", :selected => "<=" == filter.comparator} <=
+              %select{:id => "collumfilterValue_" + filterIndex.to_s, :name => "collumfilterValue" + filterIndex.to_s}
+              %br
+              - filterIndex = filterIndex + 1 
               
         // %label{:for => "Attributes"} Which attributes do you want to see?
         // %button#confirmNoOfInfo{:type => "button"} Add Attribute
@@ -172,6 +187,12 @@
           var dropDown = $("#rowfilter_" + i.toString())[0]
           DoFunc2(dropDown)
         }
+        
+        var col= #{@colfilterValues}
+        for(var i=0;i<col.length;i++){
+          var dropDown = $("#collumfilter_" + i.toString())[0]
+          DoFunc2(dropDown)
+        } 
         
       };
       
@@ -389,7 +410,11 @@
             var x = document.getElementById("rowfilterValue_".concat(number.toString())); 
             var target=#{@rowfilterValues}[number];
             }
-            
+            else{
+            var number = s.id.match(/\d+/)[0]; 
+            var x = document.getElementById("collumfilterValue_".concat(number.toString())); 
+            var target=#{@colfilterValues}[number];  
+            }
             console.log("x="+x);
             
             
