@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420050538) do
+ActiveRecord::Schema.define(version: 20161201062256) do
 
   create_table "cats", force: :cascade do |t|
     t.string   "name"
     t.string   "color"
     t.integer  "age"
     t.string   "eye_color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "collumfilters", force: :cascade do |t|
+    t.string   "field"
+    t.string   "comparator"
+    t.string   "value"
+    t.integer  "query_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -199,8 +208,26 @@ ActiveRecord::Schema.define(version: 20160420050538) do
 
   add_index "headers", ["query_id"], name: "index_headers_on_query_id"
 
+  create_table "prefilters", force: :cascade do |t|
+    t.string   "field"
+    t.string   "comparator"
+    t.string   "value"
+    t.integer  "query_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "queries", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rowfilters", force: :cascade do |t|
+    t.string   "field"
+    t.string   "comparator"
+    t.string   "value"
+    t.integer  "query_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

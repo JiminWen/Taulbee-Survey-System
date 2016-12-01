@@ -99,11 +99,25 @@ class SiteController < ApplicationController
   #used for the repeat query functionality
   def unsavedQuery(params)
     
-    filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
-    comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
-    filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
-    attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
-    
+    # filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
+    # comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
+    # filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
+    #attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
+    prefilters = params.select { |key, value| key.to_s.match(/^filter\d+/) }
+    prefilters_value= params.select { |key, value| key.to_s.match(/^filterValue\d+/) }
+    pre_comparator=params.select{|key,value| key.to_s.match(/^comparator\d+/)}
+    collumfilters = params.select {|key, value| key.to_s.match(/^collumfilter\d+/)}
+    collumfilters_value= params.select {|key, value| key.to_s.match(/^collumfilterValue\d+/)}
+    collum_comparator= params.select {|key,value| key.to_s.match(/^collumcomparator\d+/)}
+    rowfilters = params.select {|key, value| key.to_s.match(/^rowfilter\d+/)}
+    rowfilters_value = params.select {|key, value| key.to_s.match(/^rowfilterValue\d+/)}
+    row_comparators = params.select { |key, value| key.to_s.match(/rowcomparator\d+/) }
+    total={}
+    total<<prefilters
+    total<<pre_comparator
+    total<<prefilters_value
+    total<<rowfilter
+    raise total.inspect
     @query = Query.new({:name => "No Save"})
     
     i = 0
@@ -114,12 +128,12 @@ class SiteController < ApplicationController
       i = i + 1
     end
     
-    i = 0
-    attributes.each do |attribute|
-      headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
-      @query.headers << headerRecord
-      i = i + 1
-    end
+    # i = 0
+    # attributes.each do |attribute|
+    #   headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
+    #   @query.headers << headerRecord
+    #   i = i + 1
+    # end
     
     return @query
   end
