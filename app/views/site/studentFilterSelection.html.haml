@@ -26,7 +26,7 @@
         
     %form#generate{ :action => "/site/studentOutput", :method => "post"}
       %br
-      %label Get a standard output
+      %label Get a standard output for taulbee survey
       %input{:name => "commit",:type => "submit", :value => "generate"}
       %input{:id => "tags_list", :name => "cur_year", :type => "hidden",:value => @year}
       %input{:name => "authenticity_token", :type => "hidden", :value => form_authenticity_token.to_s}
@@ -39,9 +39,8 @@
         - @queries.each do |query|
           %option{:value => query.name}= query.name
         end
-      %input{:type => "submit", :value => "Delete", :name => "commit"}
       %input{:type => "submit", :value => "Load", :name => "commit"}
-      
+      %input{:type => "submit", :value => "Delete", :name => "commit"}
       
     -#filter objects that get duplicated when creating a filter
     -#this object should be hidden, and is made visible after cloning and adding
