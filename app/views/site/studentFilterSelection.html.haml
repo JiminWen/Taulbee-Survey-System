@@ -30,7 +30,7 @@
       %input{:name => "commit",:type => "submit", :value => "generate"}
       %input{:id => "tags_list", :name => "cur_year", :type => "hidden",:value => @year}
       %input{:name => "authenticity_token", :type => "hidden", :value => form_authenticity_token.to_s}
-    -#form that allows the user to select which saved Query they want to load
+    -#form that allows the user to generate standard forms
     
     %form{:action => site_studentFilterSelection_path}
       %br
@@ -123,7 +123,7 @@
         #collumfilterDiv{:name => "collumfilterDiv"}
           - if @query != nil
             - filterIndex = 0
-            - @query.rowfilters.each do |filter|
+            - @query.collumfilters.each do |filter|
               %select{:onchange => "DoFunc(this)", :onfocus => "this.selectedIndex = -1;", :name => "collumfilter" + filterIndex.to_s, :id => "collumfilter_" + filterIndex.to_s}
                 - if (@students != nil)
                   - @students.column_names.each do |column_name|
@@ -410,7 +410,7 @@
             var x = document.getElementById("rowfilterValue_".concat(number.toString())); 
             var target=#{@rowfilterValues}[number];
             }
-            else{
+            else if(s.id.match(/^collumfilter/)){
             var number = s.id.match(/\d+/)[0]; 
             var x = document.getElementById("collumfilterValue_".concat(number.toString())); 
             var target=#{@colfilterValues}[number];  

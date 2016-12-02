@@ -129,13 +129,7 @@ class SiteController < ApplicationController
       @query.rowfilters << filterRecord
       i = i + 1
     end
-  #  raise @query.rowfilters.inspect
-    # i = 0
-    # attributes.each do |attribute|
-    #   headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
-    #   @query.headers << headerRecord
-    #   i = i + 1
-    # end
+   
     
     @query.save
     flash[:query] = @query
