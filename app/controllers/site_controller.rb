@@ -723,9 +723,11 @@ def formE_1
   #page that shows the results
   def studentOutput
   #skip_before_filter :verify_authenticity_token 
-    
-  if params["commit"] == "generate"
-      @year=params[:cur_year]
+  if params["commit"]!=nil
+  session["commit"]=params["commit"]  
+  end
+  if session["commit"] == "generate"
+    @year=session["yearSelected"]
 
   else  
     redirect_to studentManual_path(params)
