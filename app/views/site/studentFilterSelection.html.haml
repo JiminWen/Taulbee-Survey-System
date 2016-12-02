@@ -39,7 +39,9 @@
         - @queries.each do |query|
           %option{:value => query.name}= query.name
         end
-      %input{:type => "submit", :value => "Load"}/
+      %input{:type => "submit", :value => "Delete", :name => "commit"}
+      %input{:type => "submit", :value => "Load", :name => "commit"}
+      
       
     -#filter objects that get duplicated when creating a filter
     -#this object should be hidden, and is made visible after cloning and adding

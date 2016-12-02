@@ -37,8 +37,15 @@ class SiteController < ApplicationController
     
     #if a query was loaded
     if params["queryLoad"]
+     # raise params.inspect
+      if params[:commit]=="Delete"
+      @query=nil
+      Query.where("name = " + "\'" + params["queryLoad"] + "\'")[0].destroy
+      else
       @query = (Query.where("name = " + "\'" + params["queryLoad"] + "\'"))[0]
       @filterCount = @query.prefilters.count
+      end
+     
      # raise @query.rowfilters.inspect
     #  @headerCount = @query.headers.count
     elsif params[:repeat]
@@ -88,6 +95,7 @@ class SiteController < ApplicationController
     
     
   end
+  
   
   #when the user clicks to save a query, must save all the filter columns, filter values, and attributes selected
   #then send the user back to the filter selection page
