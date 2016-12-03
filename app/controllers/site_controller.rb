@@ -21,11 +21,18 @@ class SiteController < ApplicationController
   
   #page that displays the fitler selection
   def studentFilterSelection
-
+  # raise params.inspect
+    
     #stores the selected year
     if(params["yearSelected"])
+      
       session["yearSelected"] = params["yearSelected"]
       @year=params["yearSelected"]
+      if(params["select"]=="Delete")
+      Student.where("year = ?",params["yearSelected"]).destroy_all
+      Spreadsheet.where("name = ?", params["yearSelected"]).destroy_all
+      redirect_to root_path
+      end
     end
     
     #if year wasn't stored, it should be a new selected year, store it
