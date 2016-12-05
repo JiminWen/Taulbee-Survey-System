@@ -24,6 +24,11 @@ describe 'Site' do
 			click_on "Select"
 			expect(current_path).to eq(site_studentFilterSelection_path)
 		end
+		
+		it "go to filter page" do
+			click_on "Delete"
+			expect(current_path).to eq(site_studentFilterSelection_path)
+		end
 	end
 
 	describe "studentFilterSelection" do
@@ -33,7 +38,7 @@ describe 'Site' do
 
 		it "on studentFilterSelection page" do
 			click_on "Apply"
-			expect(current_path).to eq(site_studentOutput_path)
+			expect(current_path).to eq(studentManual_path)
 			expect(page).to have_content("Result")  
 		end
 
@@ -43,43 +48,45 @@ describe 'Site' do
 			expect(page).to have_tag('select',:with => {:id => 'filtersListInner' })
 		end
 
-		it "can retrive multiple attributes" do
-			click_button('Add Attribute')
-			expect(page).to have_tag('select',:with => {:id => 'attributeListInner' })
-		end
+	
 	end
 
 	describe "apply filters" do
 		before(:each) do
 			visit site_studentFilterSelection_path
 			click_button('Add Filter')
-			click_button('Add Attribute')
+			
 		end
 
 		it "filter successfully" do
 			click_button('Apply')
-			expect(current_path).to eq(site_studentOutput_path)
+			expect(current_path).to eq(studentManual_path)
 		#	expect(page).to have_link("CSV")
 			expect(page).to have_link("Repeat Query")
 		end
 	end
 
-	describe "output" do
+	describe "manual output" do
 		before(:each) do
-			visit site_studentOutput_path			
+			visit studentManual_path			
 		end
 
-		it "#studentOutput" do
-			expect(current_path).to eq(site_studentOutput_path)
+		it "#studentManual" do
+			expect(current_path).to eq(studentManual_path)
 			expect(page).to have_content("Result")			
 			expect(page).to have_link(".csv")
 			expect(page).to have_link("Repeat Query")
 		end
 
-		it "#redirect correctly" do
-			click_link('Repeat Query')
-	#		expect(page).to have_content("filters")
-			expect(page).to have_content("attributes")
-		end
+	
 	end
+	# describe "standard output" do
+	# 	before(:each) do
+	# 		visit site_studentOutput_path
+	# 	end
+	# 	it '#output' do
+	# 		expect(current_path).to eq(site_studentOutput_path)
+	# 	end
+			
+	# end
 end

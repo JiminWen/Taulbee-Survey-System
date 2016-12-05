@@ -17,11 +17,11 @@ RSpec.describe SiteController, type: :controller do
 		end
 	end
 
-	describe "GET #studentOutput" do
-		it "render studentOutput template" do
-			get :studentOutput
+	describe "GET #studentManual" do
+		it "render studentManual template" do
+			get :studentManual
 			expect(response).to have_http_status(200)
-			expect(response).to render_template :studentOutput
+			expect(response).to render_template :studentManual
 		end
 	end
 #Additional test cases added in iteration 1	
