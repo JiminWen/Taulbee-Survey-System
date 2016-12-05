@@ -23,7 +23,3 @@ Scenario: I should be able to remove a filter
   When I press "removeFilterButton"
   Then I should not see a select with id "filter_0"
   
-  When I press "confirmNoOfInfo"
-  Then I should see a select with id "attribute_0"
-  When I press "removeAttributeButton"
-  Then I should not see a select with id "attribute_0"

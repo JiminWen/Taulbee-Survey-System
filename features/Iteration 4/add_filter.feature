@@ -22,5 +22,3 @@ Scenario: I should be able to add a filter or attribute
   Then I should not see a select with id "attribute_0"
   When I press "confirmNoOfFilters"
   Then I should see a select with id "filter_0"
-  When I press "confirmNoOfInfo"
-  Then I should see a select with id "attribute_0"
